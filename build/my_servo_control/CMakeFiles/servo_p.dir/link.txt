@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/servo_p.dir/src/servo_publisher.cpp.o  -o /home/ubuntu/catkin_ws/devel/lib/my_servo_control/servo_p 

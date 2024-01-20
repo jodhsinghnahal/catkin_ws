@@ -1,0 +1,10 @@
+<launch>
+  <!-- Start the pigpiod daemon if it's not already running -->
+  <node name="pigpiod" pkg="pigpio" type="pigpiod" respawn="true" output="screen"/>
+
+  <!-- Start your LED blinking node -->
+  <node name="blink_led" pkg="led" type="blink_led" output="screen">
+    <!-- You can add any required parameters here if your node uses them -->
+  </node>
+</launch>
+

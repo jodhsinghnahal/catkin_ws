@@ -1,0 +1,5 @@
+<launch>
+  <node name="servo_subscriber" pkg="my_servo_control" type="servo_subscriber" output="screen" />
+  <node name="servo_publisher" pkg="my_servo_control" type="servo_publisher" output="screen" />
+</launch>
+
