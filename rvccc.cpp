@@ -26,7 +26,7 @@ using namespace std;
 #include<signal.h>
 #include <chrono>
 #include <thread>
-#include <mosquitto.h>
+// #include <mosquitto.h>
 #include <cstring>
 #include <thread>
 #include <mutex>
@@ -74,7 +74,7 @@ std::ofstream errors("errors.txt");
 
 std::mutex devices_mutex;
 
-struct mosquitto *mosq = mosquitto_new(nullptr, true, nullptr);
+// struct mosquitto *mosq = mosquitto_new(nullptr, true, nullptr);
 
 auto start_time = std::chrono::high_resolution_clock::now();
 
@@ -313,7 +313,7 @@ public:
         }
 
         string topic =  "xnet/sts/" + name + "/OpState";
-        mosquitto_publish(mosq, nullptr, topic.c_str(), opstate.size(), opstate.c_str(), 0, false);
+        //mosquitto_publish(mosq, nullptr, topic.c_str(), opstate.size(), opstate.c_str(), 0, false);
     }
 
     void fnUpdateSubs(std::vector<std::string> subs){
@@ -441,7 +441,7 @@ public:
             // }
             const char* message = "offline";
             topic =  "xnet/sts/" + name + "/status";
-            mosquitto_publish(mosq, nullptr, topic.c_str(), strlen(message), message, 0, true);
+            //mosquitto_publish(mosq, nullptr, topic.c_str(), strlen(message), message, 0, true);
         }
         
         inst = newinst;
@@ -466,19 +466,19 @@ public:
         // }
         // string message = alerts.dump();
         
-        // mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/Alerts", message.size(), message.c_str(), 0, true);
+        // //mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/Alerts", message.size(), message.c_str(), 0, true);
 
         topic = "xnet/sts/" + name + "/status";
-        mosquitto_publish(mosq, nullptr, topic.c_str(), strlen("online"), "online", 0, true);
+        //mosquitto_publish(mosq, nullptr, topic.c_str(), strlen("online"), "online", 0, true);
         topic = "xnet/sts/" + name + "/network";
-        mosquitto_publish(mosq, nullptr, topic.c_str(), strlen("rvc"), "rvc", 0, true);
+        //mosquitto_publish(mosq, nullptr, topic.c_str(), strlen("rvc"), "rvc", 0, true);
 
         topic = "xnet/sts/" + name + "/Manufacturer";
-        mosquitto_publish(mosq, nullptr, topic.c_str(), make.size(), make.c_str(), 0, true);
+        //mosquitto_publish(mosq, nullptr, topic.c_str(), make.size(), make.c_str(), 0, true);
         topic = "xnet/sts/" + name + "/Model";
-        mosquitto_publish(mosq, nullptr, topic.c_str(), model.size(), model.c_str(), 0, true);
+        //mosquitto_publish(mosq, nullptr, topic.c_str(), model.size(), model.c_str(), 0, true);
         topic = "xnet/sts/" + name + "/SerialNumber";
-        mosquitto_publish(mosq, nullptr, topic.c_str(), serial.size(), serial.c_str(), 0, true);
+        //mosquitto_publish(mosq, nullptr, topic.c_str(), serial.size(), serial.c_str(), 0, true);
 
     }
 };
@@ -506,7 +506,7 @@ void fnPublishInstAlerts(){
         alerts["faults"].push_back(fault);
     }
     string message = alerts.dump();
-    mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/Alerts", message.size(), message.c_str(), 0, true);
+    //mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/Alerts", message.size(), message.c_str(), 0, true);
 }
 
 void fnHandleInstChange(SubscriptionList& device, int newinst, int newinst2 = -1) {
@@ -706,7 +706,7 @@ void fnExternNodeChangeCB(XB_teNODE_CHANGE teChange, uchar8 ucOldAddr, uchar8 uc
         
         const char* message = "offline";
         string topic =  "xnet/sts/" + old_devmgr.name + "/status";
-        mosquitto_publish(mosq, nullptr, topic.c_str(), strlen(message), message, 0, true);
+        //mosquitto_publish(mosq, nullptr, topic.c_str(), strlen(message), message, 0, true);
 
         int i = 0;
         int address = -1;
@@ -802,11 +802,11 @@ void fnRecvProdIdent(PGN_tzRECV_DATA *ptzRecv){
     // if(!devices[src].name.empty()){
     //     string name = devices[src].name;
     //     string topic = "xnet/sts/" + name + "/Manufacturer";
-    //     mosquitto_publish(mosq, nullptr, topic.c_str(), make.size(), make.c_str(), 0, true);
+    //     //mosquitto_publish(mosq, nullptr, topic.c_str(), make.size(), make.c_str(), 0, true);
     //     topic = "xnet/sts/" + name + "/Model";
-    //     mosquitto_publish(mosq, nullptr, topic.c_str(), model.size(), model.c_str(), 0, true);
+    //     //mosquitto_publish(mosq, nullptr, topic.c_str(), model.size(), model.c_str(), 0, true);
     //     topic = "xnet/sts/" + name + "/SerialNumber";
-    //     mosquitto_publish(mosq, nullptr, topic.c_str(), serial.size(), serial.c_str(), 0, true);
+    //     //mosquitto_publish(mosq, nullptr, topic.c_str(), serial.size(), serial.c_str(), 0, true);
 
     // }
     }
@@ -901,7 +901,7 @@ void recvCB() {
                         //     string topic = "xnet/sts/" + device.name + "/" + get<3>(values);
                         //     cout << topic << endl;
                         //     cout << value << endl;
-                        //     mosquitto_publish(mosq, nullptr, topic.c_str(), value.size(), value.c_str(), 0, true);
+                        //     //mosquitto_publish(mosq, nullptr, topic.c_str(), value.size(), value.c_str(), 0, true);
                         
                         // 834
                         // InvSts
@@ -927,7 +927,7 @@ void recvCB() {
                             // cout << value << endl;
                             //fnTranslate
                             //translator
-                            mosquitto_publish(mosq, nullptr, topic.c_str(), value.size(), value.c_str(), 0, false);
+                            //mosquitto_publish(mosq, nullptr, topic.c_str(), value.size(), value.c_str(), 0, false);
 
                             if (param == "OpMode") {
                                 device.opmode = value;
@@ -1057,18 +1057,18 @@ void tick(){
 
 }
 
-void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
-    if (reason_code != 0) {
-        std::cerr << "Connection failed, reason: " << reason_code << std::endl;
-    } else {
-        std::cout << "Connected to the broker!" << std::endl;
+// void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
+//     if (reason_code != 0) {
+//         std::cerr << "Connection failed, reason: " << reason_code << std::endl;
+//     } else {
+//         std::cout << "Connected to the broker!" << std::endl;
 
-        const char* message = "online";
-        mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/status", strlen(message), message, 0, true);
-        mosquitto_subscribe(mosq, nullptr, "xnet/cmd/#", 0);
-        mosquitto_subscribe(mosq, nullptr, "xnet/#", 0);
-    }
-}
+//         const char* message = "online";
+//         //mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/status", strlen(message), message, 0, true);
+//        // mosquitto_subscribe(mosq, nullptr, "xnet/cmd/#", 0);
+//         //mosquitto_subscribe(mosq, nullptr, "xnet/#", 0);
+//     }
+// }
 
 // Handler functions
 void fnHandleMqttCmd(const std::string& devname, const std::string& param, const std::string& payload) {
@@ -1188,50 +1188,50 @@ void fnHandleMqttUnsub(const std::string& devname, const std::string& payload) {
 }
 
 // Callback for message received event
-void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
-    // std::cout << "Received message: " << (char*)msg->payload << " on topic " << msg->topic << std::endl;
-    std::string topic(msg->topic);
-    std::string payload(static_cast<char*>(msg->payload), msg->payloadlen);
+// void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
+//     // std::cout << "Received message: " << (char*)msg->payload << " on topic " << msg->topic << std::endl;
+//     std::string topic(msg->topic);
+//     std::string payload(static_cast<char*>(msg->payload), msg->payloadlen);
 
-    std::vector<std::string> parts = split(topic, '/');
-    if (parts.size() < 3) {
-        std::cerr << "Invalid topic structure: " << topic << std::endl;
-        return;
-    }
+//     std::vector<std::string> parts = split(topic, '/');
+//     if (parts.size() < 3) {
+//         std::cerr << "Invalid topic structure: " << topic << std::endl;
+//         return;
+//     }
 
-    std::string cmd = parts[1];
-    std::string devname = parts[2];
-    // std::cout << parts[0] << std::endl << parts[1] << std::endl << parts[2] << std::endl;
-    // cout << endl;
+//     std::string cmd = parts[1];
+//     std::string devname = parts[2];
+//     // std::cout << parts[0] << std::endl << parts[1] << std::endl << parts[2] << std::endl;
+//     // cout << endl;
 
-    if (cmd == "cmd") {
-        if (parts.size() == 4) {
-            std::string param = parts[3];
-            fnHandleMqttCmd(devname, param, payload);
-        }
-    } else if (cmd == "sub") {
-        fnHandleMqttSub(devname, payload);
-    } else if (cmd == "unsub") {
-        fnHandleMqttUnsub(devname, payload);
-    }
+//     if (cmd == "cmd") {
+//         if (parts.size() == 4) {
+//             std::string param = parts[3];
+//             fnHandleMqttCmd(devname, param, payload);
+//         }
+//     } else if (cmd == "sub") {
+//         fnHandleMqttSub(devname, payload);
+//     } else if (cmd == "unsub") {
+//         fnHandleMqttUnsub(devname, payload);
+//     }
 
-}
+// }
 
 void sigint_handler(int signal) {
     const char* message = "offline";
-    mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/status", strlen(message), message, 0, true);
+    //mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/status", strlen(message), message, 0, true);
 
     printf("Disconnecting from MQTT broker...\n");
-    mosquitto_disconnect(mosq);
-
-    mosquitto_loop_stop(mosq, true);
+    // mosquitto_disconnect(mosq);
+// 
+    // mosquitto_loop_stop(mosq, true);
 
     printf("Destroying MQTT client...\n");
-    mosquitto_destroy(mosq);
+    // mosquitto_destroy(mosq);
 
     printf("Cleaning up MQTT library...\n");
-    mosquitto_lib_cleanup();
-
+    // mosquitto_lib_cleanup();
+// 
     // Add a debug message before exiting
     printf("Exiting...\n");
 
@@ -1240,15 +1240,15 @@ void sigint_handler(int signal) {
 
 void sigterm_handler(int signal) {
     const char* message = "offline";
-    mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/status", strlen(message), message, 0, true);
+    //mosquitto_publish(mosq, nullptr, "xnet/sts/rvc/status", strlen(message), message, 0, true);
 
     printf("\nReceived SIGTERM\n");
 
-    mosquitto_disconnect(mosq);
-    mosquitto_loop_stop(mosq, true);
+    // mosquitto_disconnect(mosq);
+    // mosquitto_loop_stop(mosq, true);
 
-    mosquitto_destroy(mosq);
-    mosquitto_lib_cleanup();
+    // mosquitto_destroy(mosq);
+    // mosquitto_lib_cleanup();
     exit(1);
 }
 
@@ -1300,33 +1300,33 @@ int main( void )
     sigemptyset(&sigterm_action.sa_mask);
     sigterm_action.sa_flags = 0;
     sigaction(SIGTERM, &sigterm_action, NULL);
-    mosquitto_lib_init();
+    // mosquitto_lib_init();
 
     signal(SIGSEGV, signalHandler);
 
-    if (!mosq) {
-        std::cerr << "Failed to create client instance." << std::endl;
-        return 1;
-    }
+    // if (!mosq) {
+    //     std::cerr << "Failed to create client instance." << std::endl;
+    //     return 1;
+    // }
 
     // Set the callbacks
-    mosquitto_connect_callback_set(mosq, on_connect);
-    mosquitto_message_callback_set(mosq, on_message);
+    // mosquitto_connect_callback_set(mosq, on_connect);
+    // mosquitto_message_callback_set(mosq, on_message);
     // mosquitto_subscribe_callback_set(mosq, on_subscribe);
-    // mosquitto_publish_callback_set(mosq, on_publish);
+    // //mosquitto_publish_callback_set(mosq, on_publish);
     
     const char* will_topic = "xnet/sts/rvc/status";
     const char* will_message = "offline";
-    if (mosquitto_will_set(mosq, will_topic, strlen(will_message), will_message, 0, true) != MOSQ_ERR_SUCCESS){
-        std::cerr << "Unable to will message." << std::endl;
-        return 1;
-    }
+    // if (mosquitto_will_set(mosq, will_topic, strlen(will_message), will_message, 0, true) != MOSQ_ERR_SUCCESS){
+    //     std::cerr << "Unable to will message." << std::endl;
+    //     return 1;
+    // }
 
-    if (mosquitto_connect(mosq, "localhost", 1883, 5) != MOSQ_ERR_SUCCESS) {
-        std::cerr << "Unable to connect." << std::endl;
-        return 1;
-    }
-    mosquitto_loop_start(mosq);
+    // if (mosquitto_connect(mosq, "localhost", 1883, 5) != MOSQ_ERR_SUCCESS) {
+    //     std::cerr << "Unable to connect." << std::endl;
+    //     return 1;
+    // }
+    // mosquitto_loop_start(mosq);
 
     SetName();
 
@@ -1464,11 +1464,11 @@ int main( void )
 
     cout << "kk";
 
-    mosquitto_disconnect(mosq);
-    mosquitto_loop_stop(mosq, true);
+    // mosquitto_disconnect(mosq);
+    // mosquitto_loop_stop(mosq, true);
 
-    mosquitto_destroy(mosq);
-    mosquitto_lib_cleanup();
+    // mosquitto_destroy(mosq);
+    // mosquitto_lib_cleanup();
 }
 
 
