@@ -1,0 +1,28 @@
+###############################################################################
+# (c) {{ YEAR }} Xantrex Canada ULC. All rights reserved.
+# All trademarks are owned or licensed by Xantrex Canada ULC,
+# its subsidiaries or affiliated companies.
+#
+# FILE NAME:  VersionInfo.py
+#
+# PURPOSE:
+#     This auto-generated file contains the version and build information
+#     for {{ PROGNAME }}.
+#
+###############################################################################
+
+###############################################################################
+#                             Constant Data
+###############################################################################
+
+BUILD_DATE = '{{ BUILD_DATE }}'
+VERSION = '{{ VERSION }}'
+GIT_VERSION = '{{ GIT_VERSION }}'
+
+# When compiled, was the repo modified from the last commit?
+REPO_CLEAN = {{ REPO_CLEAN }}
+
+# Is this commit the same as what is in origin/master?
+# That is, is this potentially a production build?
+MASTER_SYNCED = {{ MASTER_SYNCED }}
+

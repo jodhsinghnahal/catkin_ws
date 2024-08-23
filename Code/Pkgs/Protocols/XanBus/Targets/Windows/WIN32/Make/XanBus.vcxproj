@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>XanBus.dll</ProjectName>
+    <ProjectGuid>{C3760E18-5158-44E6-A3FD-69F73F7B3930}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Inc;..\Pkgs\Inc;..\..\..\..\Inc;..\..\..\..\..\XanBus\Common\Pkgs\API\Src;..\..\..\..\..\XanBus\Common\Pkgs\Inc;..\..\..\..\..\XanBus\Common\Inc;..\..\..\..\..\XanBus\Targets\Inc;..\..\..\..\..\XanBus\Inc;..\..\..\..\..\..\Targets\Inc;..\..\..\..\..\..\..\Inc;..\..\..\..\Devices\PROTOCOL_RVC\Inc;..\..\..\..\Devices\PROTOCOL_RVC\Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XT_FAR=;WIN32;_DEBUG;_WINDOWS;_USRDLL;XBDLL_EXPORTS;_32BIT_ARCHITECTURE;CONFIG_CANCARDX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <ShowProgress>LinkVerboseLib</ShowProgress>
+      <OutputFile>$(OutDir)XanBus.dll</OutputFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)XanBus.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)XanBus.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>..\Inc;..\Pkgs\Inc;..\..\..\..\Inc;..\..\..\..\..\XanBus\Common\Pkgs\API\Src;..\..\..\..\..\XanBus\Common\Pkgs\Inc;..\..\..\..\..\XanBus\Common\Inc;..\..\..\..\..\XanBus\Targets\Inc;..\..\..\..\..\XanBus\Inc;..\..\..\..\..\..\Targets\Inc;..\..\..\..\..\..\..\Inc;..\..\..\..\..\XanBus\Devices\PROTOCOL_RVC\Inc;..\..\..\..\..\XanBus\Devices\PROTOCOL_RVC\Src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XT_FAR=;WIN32;NDEBUG;_WINDOWS;_USRDLL;XBDLL_EXPORTS;_32BIT_ARCHITECTURE;CONFIG_CANCARDX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)XanBus.dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)XanBus.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)XanBus.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\stdafx.cpp" />
+    <ClCompile Include="..\Src\sysabort.c" />
+    <ClCompile Include="..\Src\XanBus.cpp" />
+    <ClCompile Include="..\..\..\..\Devices\PROTOCOL_RVC\Src\xbpgntbl.c" />
+    <ClCompile Include="..\Src\xbplatform.cpp" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbaddr.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbinit.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbmem.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbmltpkt.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbmsg.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbpack.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbtfx.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbtimers.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\canframe.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\dobholdr.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\PGNDOb.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\pgnrcvr.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\pgnxmtr.c" />
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\tfxlib.c" />
+    <ClCompile Include="..\Pkgs\Shim\Src\apoxdrv.c" />
+    <ClCompile Include="..\Pkgs\Shim\Src\canusb.c" />
+    <ClCompile Include="..\Pkgs\Shim\Src\CDrive.c" />
+    <ClCompile Include="..\Pkgs\Shim\Src\ifakdrv.c" />
+    <ClCompile Include="..\Pkgs\Shim\Src\msghandl.c" />
+    <ClCompile Include="..\Pkgs\Shim\Src\vector.c" />
+    <ClCompile Include="..\Pkgs\Shim\Src\xanbr.c" />
+    <ClCompile Include="..\Pkgs\Apox\Src\apox.cpp" />
+    <ClCompile Include="..\Pkgs\Apox\Src\Reg.cpp" />
+    <ClCompile Include="..\Pkgs\Apox\Src\USBFT.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Devices\PROTOCOL_RVC\Inc\rvcapprxtx.h" />
+    <ClInclude Include="..\Src\resource.h" />
+    <ClInclude Include="..\..\..\..\Inc\pgnudefs.h" />
+    <ClInclude Include="..\..\..\..\Inc\xbgdefs.h" />
+    <ClInclude Include="..\..\..\..\Inc\xbpgfns.h" />
+    <ClInclude Include="..\..\..\..\Inc\xbrxtx.h" />
+    <ClInclude Include="..\..\..\..\Inc\xbudefs.h" />
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\cdrive.h" />
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\LibCfg.h" />
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\LibCore.h" />
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\libenv.h" />
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\msghandl.h" />
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\pgn.h" />
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\xbldefs.h" />
+    <ClInclude Include="..\Pkgs\Inc\apox.h" />
+    <ClInclude Include="..\Pkgs\Inc\Ftd2xx.h" />
+    <ClInclude Include="..\Pkgs\Inc\isCANdrv.h" />
+    <ClInclude Include="..\Pkgs\Inc\isCANext.h" />
+    <ClInclude Include="..\Pkgs\Inc\USBCAN.h" />
+    <ClInclude Include="..\Pkgs\Inc\USBFT.h" />
+    <ClInclude Include="..\Pkgs\Inc\VCanD.h" />
+    <ClInclude Include="..\..\..\Inc\canbuf.h" />
+    <ClInclude Include="..\..\..\..\..\..\Targets\Inc\candrv.h" />
+    <ClInclude Include="..\Inc\config.h" />
+    <ClInclude Include="..\Inc\stdafx.h" />
+    <ClInclude Include="..\Inc\XanBus.h" />
+    <ClInclude Include="..\Inc\xbwincb.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\LIB_stddefs.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\LIB_stdtype.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\LIB_stdtype32.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\xassert.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Lib\FTD2XX.lib" />
+    <Library Include="..\Lib\isCANdrv.lib" />
+    <Library Include="..\Lib\vcandm32.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Src\XanBus.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

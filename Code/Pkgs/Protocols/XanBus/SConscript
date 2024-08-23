@@ -1,0 +1,247 @@
+# Sconscript file for building the XanBus library variants
+from __future__ import print_function
+import os
+
+Import('env', 'debug', 'xbudefs')
+
+# Create the test program for Windows
+def fnWindowsTest(env):
+    share_env = env.Clone()
+    share_env.Append(LIBPATH=['.'])
+    share_env.Replace(CPPDEFINES=['_32BIT_ARCHITECTURE',
+                                  ('XT_FAR', ''),
+                                  'WIN32',
+                                  ])
+    xbtest_sources = Glob('Targets/Windows/WIN32/Test/Src/*.c')
+    xbtest_objects = share_env.Object(xbtest_sources)
+
+    shared_test = share_env.Program('xbsharetest', xbtest_objects,
+                                    LIBS=['xanbus'])
+    Alias('WindowsTestShared', shared_test)
+
+
+# Main Sconscript
+if env['PLATFORM'] == 'win32':
+    sources = ['Targets/Windows/WIN32/Src/stdafx.cpp',
+               'Targets/Windows/WIN32/Src/XanBus.cpp',
+               'Targets/Windows/WIN32/Src/xbplatform.cpp',
+               'Targets/Windows/WIN32/Src/sysabort.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/CDrive.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/msghandl.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/canusb.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/apoxdrv.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/ifakdrv.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/vector.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/xanbr.c',
+               'Targets/Windows/WIN32/Pkgs/Apox/Src/apox.cpp',
+               'Targets/Windows/WIN32/Pkgs/Apox/Src/Reg.cpp',
+               'Targets/Windows/WIN32/Pkgs/Apox/Src/USBFT.cpp',
+               'Devices/PROTOCOL_RVC/Src/xbpgntbl.c']
+
+    sources += Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+
+    myenv = env.Clone()
+
+    if debug:
+        # Modify the build environment to the debug version
+        myenv.Replace(CCFLAGS = Split('/nologo /W3 /EHsc /Zc:wchar_t /RTC1 /Gm /MDd /ZI'))
+        myenv.Replace(LINKFLAGS = ['/VERBOSE:LIB',
+                                   '/OUT:"${TARGET.base}.dll"',
+                                   '/INCREMENTAL',
+                                   '/NOLOGO',
+                                   '/DLL',
+                                   '/DEBUG',
+                                   '/PDB:"${TARGET.base}.pdb"',
+                                   '/MAP',
+                                   '/SUBSYSTEM:WINDOWS',
+                                   '/IMPLIB:"${TARGET.base}.lib"',
+                                   '/MACHINE:X86',
+                                   ])
+
+    else:
+        # Modify the build environment to the Release version
+        myenv.Replace(CCFLAGS = Split('/nologo /W3 /EHsc /MD /FD /GS /Zc:wchar_t /Zi'))
+        myenv.Replace(LINKFLAGS = ['/NOLOGO',
+                                   '/OUT:"${TARGET.base}.dll"',
+                                   '/PDB:"${TARGET.base}.pdb"',
+                                   '/IMPLIB:"${TARGET.base}.lib"',
+                                   '/INCREMENTAL:NO',
+                                   '/MACHINE:X86',
+                                   '/DLL',
+                                   '/DEBUG',
+                                   '/SUBSYSTEM:WINDOWS'])
+        myenv.Append(CPPDEFINES = ['NDEBUG'])
+
+        # Create the test program for the release version
+        fnWindowsTest(env)
+
+    objects = myenv.Object(sources)
+    Depends(objects, xbudefs)
+    myenv.SharedLibrary('xanbus', objects)
+
+
+elif env['PLATFORM'] == 'mingw':
+    print("Building mingw xanbus dll")
+    sources = ['Targets/Windows/WIN32/Src/xbplatform.c',
+               'Targets/Windows/WIN32/Src/sysabort.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/CDrive.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/msghandl.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/ifakdrv.c',
+               'Targets/Windows/WIN32/Pkgs/Shim/Src/udpcan.c',
+               'Devices/PROTOCOL_RVC/Src/rvcpgntbl.c']
+
+    sources += Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+
+    myenv = env.Clone()
+
+    if debug:
+        myenv.Append(CCFLAGS = '-g')
+    
+    objects = myenv.Object(sources)
+    Depends(objects, xbudefs)
+    myenv.SharedLibrary('rvc', objects)
+    
+elif env['PLATFORM'] == 'posix':
+    # Build the Linux variant
+    sources = Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+    sources += ['Devices/PROTOCOL_RVC/Src/rvcpgntbl.c',
+                'Targets/Windows/WIN32/Src/sysabort.c',
+                'Targets/Windows/WIN32/Pkgs/Shim/Src/CDrive.c',
+                'Targets/Windows/WIN32/Pkgs/Shim/Src/msghandl.c',
+                #'Targets/Windows/WIN32/Pkgs/Shim/Src/canusb.c',
+                'Targets/Linux/Pkgs/Shim/Src/canvcp.c',
+                'Targets/Linux/Pkgs/Shim/Src/udpcan.c',
+                'Targets/Linux/Pkgs/Shim/Src/socketcan.c',
+                'Targets/Linux/Src/xbplatform.c',
+    ]
+
+    # Shared library and test program
+    share_env = env.Clone()
+    sharedlib = share_env.SharedLibrary('rvc', sources)
+#                                        LIBS=['ftd2xx'],    # for CANUSB
+#                                        LIBPATH=['/usr/local/lib'])
+
+    # Install locally
+    install_dir = os.path.join(os.environ['HOME'], '.local', 'lib')
+    local_install = Install(install_dir, sharedlib)
+    Alias('LinuxLocalInstall', local_install)
+
+
+
+elif env['PLATFORM'] == 'TI281x':
+    # build the variant for the TI 2812 series
+    sources = Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+    sources += ['Targets/TI/281x\Pkgs\Shim\Src\canbuf.c',
+                'Targets/TI/281x\Pkgs\Shim\Src\CDrive.c',
+                'Targets/TI/281x\Pkgs\Shim\Src\cdrvapi.c',
+                'Targets/TI/281x\Pkgs\Shim\Src\msghandl.c',
+                ]
+
+    myenv = env.Clone()
+
+    if debug:
+        myenv.Append(CPPDEFINES = ['_DEBUG'])
+        myenv.MergeFlags({'CFLAGS' : ['-g']})
+
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        tilib = myenv.StaticLibrary('XBDebug', objects)
+
+    else:
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        tilib = myenv.StaticLibrary('XB', objects)
+
+elif env['PLATFORM'] == 'TI280x':
+    # build the variant for the TI 280x series
+    sources = Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+    sources += ['Targets/TI/280x/Pkgs/Shim/Src/canbuf.c',
+                'Targets/TI/280x/Pkgs/Shim/Src/CDrive.c',
+                'Targets/TI/280x/Pkgs/Shim/Src/cdrvapi.c',
+                'Targets/TI/280x/Pkgs/Shim/Src/msghandl.c',
+                ]
+
+    myenv = env.Clone()
+
+    if debug:
+        myenv.Append(CPPDEFINES = ['_DEBUG'])
+        myenv.MergeFlags({'CFLAGS' : ['-g']})
+
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        tilib = myenv.StaticLibrary('XBDebug', objects)
+
+    else:
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        tilib = myenv.StaticLibrary('XB', objects)
+
+elif env['PLATFORM'] == 'TI2837xS':
+    # build the variant for the TI 2837xS series
+    sources = Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+    sources += ['Targets/TI/2837x/Pkgs/Shim/Src/canbuf.c',
+                'Targets/TI/2837x/Pkgs/Shim/Src/CDrive.c',
+                'Targets/TI/2837x/Pkgs/Shim/Src/cdrvapi.c',
+                'Targets/TI/2837x/Pkgs/Shim/Src/msghandl.c',
+                ]
+
+    myenv = env.Clone()
+
+    if debug:
+        myenv.Append(CPPDEFINES = ['_DEBUG'])
+        myenv.MergeFlags({'CFLAGS' : ['-g']})
+
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        tilib = myenv.StaticLibrary('XBDebug', objects)
+
+    else:
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        tilib = myenv.StaticLibrary('XB', objects)
+
+elif env['PLATFORM'] == 'MotHCS12':
+    sources = Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+    sources += Glob('Targets/Motorola/HCS12/DG256B/Pkgs/Shim/Src/*.c')
+
+    myenv = env.Clone()
+
+    if debug:
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        motlib = myenv.StaticLibrary('XBDebug', objects)
+
+    else:
+        myenv.Append(CPPDEFINES = ['NDEBUG'])
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        motlib = myenv.StaticLibrary('XB', objects)
+
+
+elif env['PLATFORM'] == 'MotHCS12X':
+    sources = Glob('Common/Pkgs/API/Src/*.c')
+    sources += Glob('Common/Pkgs/Stack/Src/*.c')
+    sources += Glob('Targets/Motorola/HCS12X/DP512/Pkgs/Shim/Src/*.c')
+
+    myenv = env.Clone()
+
+    if debug:
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        motlib = myenv.StaticLibrary('XBDebug', objects)
+
+    else:
+        myenv.Append(CPPDEFINES = ['NDEBUG'])
+        objects = myenv.Object(sources)
+        Depends(objects, xbudefs)
+        motlib = myenv.StaticLibrary('XB', objects)
+else:
+    print("Platform %s not supported" % env['PLATFORM'])
+    Exit(1)

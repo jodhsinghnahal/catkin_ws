@@ -1,0 +1,38 @@
+# Logging configuration for rvc2mqtt.service
+
+version: 1
+disable_existing_loggers: false
+
+formatters:
+    # A simple format for logging with systemd-journald, which adds its own timestamp
+    simple:
+      format: "%(levelname)s - %(name)s - %(message)s"
+
+handlers:
+    # Use this for running from command line and when running as systemd service
+    console:
+      class: logging.StreamHandler
+      formatter: simple
+      stream: ext://sys.stdout
+
+
+# root:
+#    handlers: [console]
+
+loggers:
+    Rvc2Mqtt:
+      level: INFO
+      handlers: [console]
+      # if propagation set to yes, the logger will propagate to a
+      # lower level, root
+      propagate: no
+
+    # The gmqtt module puts out lots of debug and info text.  Set it and its
+    # children's log level to warning to cut down the noise when we're wanting
+    # info level or above from the main program
+    gmqtt:
+      level: WARNING
+      handlers: [console]
+      # if the propagation is yes, this logger will propagate to a lower
+      # level, root
+      propagate: no

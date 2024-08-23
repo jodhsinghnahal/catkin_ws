@@ -1,0 +1,383 @@
+/*==============================================================================
+Copyright 2004 Xantrex International.  All rights reserved.
+
+This source file is proprietary to Xantrex International. and protected by
+copyright. The reproduction, in whole or in part, by anyone without the written
+approval of Xantrex is prohibited.
+
+FILE NAME:
+    AdcDrvTest.gel
+
+PURPOSE:
+    The purpose of this file is to provide scripting support for the unit test
+    to test the ADC driver.  This file allows the user to create a realtime
+    readout of the adc channels while the unit test is running.
+
+    This file is required to properly perform the unit test.
+
+FUNCTION(S):
+    Setup_Breakpoints  - sets up the conditional breakpoints and GEL windows
+    NonScrollingOutput - outputs to a specified GEL window
+    Close_Gel_Windows  - closes all GEL windows related to ADC unit test
+
+NOTES:
+
+
+CHANGE HISTORY:
+$History: AdcDrvTest.gel $
+;   
+;   *****************  Version 5  *****************
+;   User: Brentt       Date: 6/23/04    Time: 1:01p
+;   Updated in $/PD/Common/Targets/TI/c28x/HAL/Test/adcdrv
+;   - Commented out a problem with the GEL_Build ... it takes to long. Need
+;   a way to wait for build to finish.  Figure out when back on this if
+;   time.
+;
+;   *****************  Version 4  *****************
+;   User: Brentt       Date: 6/23/04    Time: 12:15p
+;   Updated in $/PD/Common/Targets/TI/c28x/HAL/Test/adcdrv
+;   - fixed pathing problem - absoulte pathed to
+;   G:\VSS_Working\PD\Common\Targets\TI\c28x\HAL\Test\adcdrv\Debug instead
+;   of .\Debug
+;
+;   *****************  Version 3  *****************
+;   User: Brentt       Date: 6/23/04    Time: 11:59a
+;   Updated in $/PD/Common/Targets/TI/c28x/HAL/Test/adcdrv
+;   - Added OnFileLoaded, tweaked StartUp function and changed the Readme
+;   message
+;   - GEL now loads everything and runs on startup - w00t.
+;
+;   *****************  Version 2  *****************
+;   User: Brentt       Date: 6/23/04    Time: 10:49a
+;   Updated in $/PD/Common/Targets/TI/c28x/HAL/Test/adcdrv
+;   - Added a startup message that is displayed to the user when they open
+;   the project to tell them to set the breakpoints since it doens't work
+;   automatically.
+;
+;   *****************  Version 1  *****************
+;   User: Brentt       Date: 6/22/04    Time: 2:46p
+;   Created in $/PD/Common/Targets/TI/c28x/HAL/Test/adcdrv
+
+
+==============================================================================*/
+
+
+/*==============================================================================
+                              Includes
+==============================================================================*/
+// N/A
+
+/*==============================================================================
+                              Defines
+==============================================================================*/
+// General Defines
+#define DO_NOT_APPEND               0   // Overwrite line in GEL window
+#define APPEND                      1   // Don't overwrite line in GEL window
+#define BLACK_TEXT                  0   // font is black
+#define BLUE_TEXT                   1   // font is blue
+#define RED_TEXT                    2   // font is red
+#define NON_SCROLLING_WINDOW        1   // window will not scroll
+#define GEL_WINDOW_NAME_1           "Result Register vs. Channel"
+#define GEL_WINDOW_NAME_2           "FunctionResult[chan] - MacroResult[chan]"
+#define NUM_OF_LINES_IN_WINDOW      16  // number of lines in window
+
+// Strings for the channel outputs.
+#define CHAN_0                      "Register 0: %d -> Channel %d: %d"
+#define CHAN_1                      "Register 1: %d -> Channel %d: %d"
+#define CHAN_2                      "Register 2: %d -> Channel %d: %d"
+#define CHAN_3                      "Register 3: %d -> Channel %d: %d"
+#define CHAN_4                      "Register 4: %d -> Channel %d: %d"
+#define CHAN_5                      "Register 5: %d -> Channel %d: %d"
+#define CHAN_6                      "Register 6: %d -> Channel %d: %d"
+#define CHAN_7                      "Register 7: %d -> Channel %d: %d"
+#define CHAN_8                      "Register 8: %d -> Channel %d: %d"
+#define CHAN_9                      "Register 9: %d -> Channel %d: %d"
+#define CHAN_10                     "Register 10: %d -> Channel %d: %d"
+#define CHAN_11                     "Register 11: %d -> Channel %d: %d"
+#define CHAN_12                     "Register 12: %d -> Channel %d: %d"
+#define CHAN_13                     "Register 13: %d -> Channel %d: %d"
+#define CHAN_14                     "Register 14: %d -> Channel %d: %d"
+#define CHAN_15                     "Register 15: %d -> Channel %d: %d"
+
+// Strings for the register outputs.
+#define REG_0                       "Register 0: %d"
+#define REG_1                       "Register 1: %d"
+#define REG_2                       "Register 2: %d"
+#define REG_3                       "Register 3: %d"
+#define REG_4                       "Register 4: %d"
+#define REG_5                       "Register 5: %d"
+#define REG_6                       "Register 6: %d"
+#define REG_7                       "Register 7: %d"
+#define REG_8                       "Register 8: %d"
+#define REG_9                       "Register 9: %d"
+#define REG_10                      "Register 10: %d"
+#define REG_11                      "Register 11: %d"
+#define REG_12                      "Register 12: %d"
+#define REG_13                      "Register 13: %d"
+#define REG_14                      "Register 14: %d"
+#define REG_15                      "Register 15: %d"
+
+#define FIRST_BLOCK                 0
+
+#define README                      "\n\rATTENTION (HEY! READ THIS!):\n\n\rIf you are reading this,\n\rthen the GEL has executed and\n\rthere should be two additional GEL\n\rwindows, and stuff should be\n\rupdating in them.\n\n\rIf not then rebuild/load the project,\n\rand then run the GEL script\n\rfrom the GEL menu:\n\n\rGEL>>ADC Unit Test>>Setup_Breakpoints\n\n\rThis will load all the\n\rrequired conditional breakpoints\n\rinto the code so that when\n\ryou execute you will get\n\rthe realtime output for the\n\rADC channels. Run the project.\n\n\rOn the EzDSP 2812 Eval board\n\rit is necessary to jumper pins\n\r17 and 18 on P9 together,\n\rotherwise the internal VREF will\n\rhave no ground reference and\n\rall channels will read 0.\n\n\rFor more information read header\n\rin AdcDrvTest.c\n\r"
+/*==============================================================================
+                            Type Definitions
+==============================================================================*/
+
+// N/A
+
+/*==============================================================================
+                                Enums
+==============================================================================*/
+// N/A
+
+/*=============================================================================
+                              Structures
+==============================================================================*/
+// N/A
+
+/*==============================================================================
+                           Local/Private Constants
+==============================================================================*/
+// None
+
+/*==============================================================================
+                           Local/Private Variables
+==============================================================================*/
+// Creates the menu item in the GEL menu in CCS
+menuitem "ADC Unit Test";
+
+/*==============================================================================
+                        Local/Private Function Protoypes
+==============================================================================*/
+
+
+/*==============================================================================
+                           Function Definitions
+==============================================================================*/
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    StartUp
+
+PURPOSE:
+    The GEL scripts that are to be run when this file is loaded and started.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    Naming convention can't really apply here given the restrictions of the
+    GEL scripting language
+
+VERSION HISTORY:
+
+Version 1.00    Date: June 23, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+StartUp()
+{
+    GEL_TextOut(README,,RED_TEXT);
+    // Work around later.  Find a way to wait for build to finish
+    // GEL_ProjectBuild();
+    GEL_Load(".\\Bin\\adcdrvtest.out");
+    Setup_Breakpoints();
+} // StartUp
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    OnFileLoaded
+
+PURPOSE:
+    The GEL scripts that are to be run when the output file is loaded
+
+INPUTS:
+    Passed by system.
+
+OUTPUTS:
+    None
+
+NOTES:
+    Naming convention can't really apply here given the restrictions of the
+    GEL scripting language
+
+VERSION HISTORY:
+
+Version 1.00    Date: June 23, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+OnFileLoaded(int nErrorCode, int bSymbolsOnly)
+{
+    GEL_Go(main);   // performa go main
+    GEL_Run();      // run the code
+} // OnFileLoaded
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    NonScrollingOuput
+
+PURPOSE:
+    This is a generalized function created to allow the user to output any text
+    output to the GEL windows.
+
+INPUTS:
+    OutputString - The string to display for example: "Register 15: %d"
+    WindowName   - The name of the window to write to.
+    Color        - Color of the Text you want to use
+    Line         - What line to write to
+    Param1 - 3   - The paramaters required as defined by the OutputString
+
+OUTPUTS:
+    Always returns 0.
+
+NOTES:
+    The reason that this is used instead of just calling GEL_TextOut is because
+    we need to have a function that returns a value of 0 to the debugger so
+    that it will continue execution but still output the text.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: June 21, 2004  By: Brent Tokarchuk
+    - Created
+
+*******************************************************************************/
+NonScrollingOutput(OutputString, WindowName, Color, Line, Param1, Param2, Param3)
+{
+    GEL_TextOut(OutputString, WindowName, Color, ( Line + 1 ), DO_NOT_APPEND, Param1, Param2, Param3);
+    return 0;
+} // NonScrollingOutput
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    Close_Gel_Windows
+
+PURPOSE:
+    This just closes GEL windows, GEL_WINDOW_NAME_1 and GEL_WINDOW_NAME_2.
+
+INPUTS:
+    None.
+
+OUTPUTS:
+    None.
+
+NOTES:
+    This function was created since you can't just click the X button to get
+    rid of a GEL window in CCS, you actually have to close the window in order
+    to clear it.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: June 21, 2004  By: Brent Tokarchuk
+    - Created
+
+*******************************************************************************/
+hotmenu Close_Gel_Windows()
+{
+   GEL_CloseWindow(GEL_WINDOW_NAME_1);
+   GEL_CloseWindow(GEL_WINDOW_NAME_2);
+} // Close_Gel_Windows
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    Setup_Breakpoints
+
+PURPOSE:
+    This function uses the GEL langauge to setup the neccessary conditional
+    breakpoints that allow us to update our ADC readings on the fly and have
+    a realtime-like interface.
+
+INPUTS:
+    None.
+
+OUTPUTS:
+    None.
+
+NOTES:
+    Unfortunately the lines below must be as long as they are.  They can not be
+    broken on to multiple lines since the second parameter passed to
+    GEL_BreakPtAdd must be one continuous string and putting it on to multiple
+    lines screws up the creation of the breakpoint in CCS.  Sorry. :)
+
+
+VERSION HISTORY:
+
+Version: 1.00  Date: June 21, 2004  By: Brent Tokarchuk
+    - Created
+
+*******************************************************************************/
+hotmenu Setup_Breakpoints()
+{
+    // close any existing windows with the name GEL_WINDOW_NAME_1 before proceeding
+    GEL_CloseWindow(GEL_WINDOW_NAME_1);
+
+    // open a new window with the name GEL_WINDOW_NAME_1 and make it non-scrolling
+    GEL_OpenWindow(GEL_WINDOW_NAME_1, NON_SCROLLING_WINDOW, NUM_OF_LINES_IN_WINDOW);
+
+    // delete any breakpoints at our break location so we don't start having
+    // duplicates gumming up our system
+    GEL_BreakPtDel(_BreakHere);
+
+    // Put a text title in the window
+    NonScrollingOutput(GEL_WINDOW_NAME_1, GEL_WINDOW_NAME_1, RED_TEXT, FIRST_BLOCK);
+
+    // this block sets up the breakpoints for outputting the register values
+    // and displaying the mapped channel
+    //
+    // The parameters past following the function options are :
+    //
+    // 1. Register value (AdResultsRegs[x])
+    // 2. Mapped channel from ADCHSELSEQX register (AdcRegs.ADCCHSELSEQX.bit.CONVXX)
+    // 3. Channel result (AdResultChnl[AdcRegs.ADCCHSELSEQ1.bit.CONV00])
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_0, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 1 ), AdResultRegs[0], AdcRegs.ADCCHSELSEQ1.bit.CONV00, AdResultChnl[AdcRegs.ADCCHSELSEQ1.bit.CONV00])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_1, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 2 ), AdResultRegs[1], AdcRegs.ADCCHSELSEQ1.bit.CONV01, AdResultChnl[AdcRegs.ADCCHSELSEQ1.bit.CONV01])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_2, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 3 ), AdResultRegs[2], AdcRegs.ADCCHSELSEQ1.bit.CONV02, AdResultChnl[AdcRegs.ADCCHSELSEQ1.bit.CONV02])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_3, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 4 ), AdResultRegs[3], AdcRegs.ADCCHSELSEQ1.bit.CONV03, AdResultChnl[AdcRegs.ADCCHSELSEQ1.bit.CONV03])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_4, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 5 ), AdResultRegs[4], AdcRegs.ADCCHSELSEQ2.bit.CONV04, AdResultChnl[AdcRegs.ADCCHSELSEQ2.bit.CONV04])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_5, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 6 ), AdResultRegs[5], AdcRegs.ADCCHSELSEQ2.bit.CONV05, AdResultChnl[AdcRegs.ADCCHSELSEQ2.bit.CONV05])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_6, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 7 ), AdResultRegs[6], AdcRegs.ADCCHSELSEQ2.bit.CONV06, AdResultChnl[AdcRegs.ADCCHSELSEQ2.bit.CONV06])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_7, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 8 ), AdResultRegs[7], AdcRegs.ADCCHSELSEQ2.bit.CONV07, AdResultChnl[AdcRegs.ADCCHSELSEQ2.bit.CONV07])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_8, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 9 ), AdResultRegs[8], AdcRegs.ADCCHSELSEQ3.bit.CONV08, AdResultChnl[AdcRegs.ADCCHSELSEQ3.bit.CONV08])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_9, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 10 ), AdResultRegs[9], AdcRegs.ADCCHSELSEQ3.bit.CONV09, AdResultChnl[AdcRegs.ADCCHSELSEQ3.bit.CONV09])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_10, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 11 ), AdResultRegs[10], AdcRegs.ADCCHSELSEQ3.bit.CONV10, AdResultChnl[AdcRegs.ADCCHSELSEQ3.bit.CONV10])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_11, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 12 ), AdResultRegs[11], AdcRegs.ADCCHSELSEQ3.bit.CONV11, AdResultChnl[AdcRegs.ADCCHSELSEQ3.bit.CONV11])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_12, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 13 ), AdResultRegs[12], AdcRegs.ADCCHSELSEQ4.bit.CONV12, AdResultChnl[AdcRegs.ADCCHSELSEQ4.bit.CONV12])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_13, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 14 ), AdResultRegs[13], AdcRegs.ADCCHSELSEQ4.bit.CONV13, AdResultChnl[AdcRegs.ADCCHSELSEQ4.bit.CONV13])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_14, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 15 ), AdResultRegs[14], AdcRegs.ADCCHSELSEQ4.bit.CONV14, AdResultChnl[AdcRegs.ADCCHSELSEQ4.bit.CONV14])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(CHAN_15, GEL_WINDOW_NAME_1, BLUE_TEXT, ( FIRST_BLOCK + 16 ), AdResultRegs[15], AdcRegs.ADCCHSELSEQ4.bit.CONV15, AdResultChnl[AdcRegs.ADCCHSELSEQ4.bit.CONV15])");
+
+    // close any existing windows with the name GEL_WINDOW_NAME_1
+    GEL_CloseWindow(GEL_WINDOW_NAME_2);
+
+    // open a new window with the name GEL_WINDOW_NAME_2 and make it non-scrolling
+    GEL_OpenWindow(GEL_WINDOW_NAME_2, NON_SCROLLING_WINDOW, NUM_OF_LINES_IN_WINDOW);
+
+    // Put a text title in the window
+    NonScrollingOutput(GEL_WINDOW_NAME_2, GEL_WINDOW_NAME_2, RED_TEXT, FIRST_BLOCK);
+
+    // this block of breakpoints is setup to output the difference between the
+    // ADC channels when obtained via the Function vs the Macro
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_0, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 1 ), FunctionResult[0] - MacroResult[0])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_1, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 2 ), FunctionResult[1] - MacroResult[1])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_2, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 3 ), FunctionResult[2] - MacroResult[2])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_3, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 4 ), FunctionResult[3] - MacroResult[3])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_4, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 5 ), FunctionResult[4] - MacroResult[4])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_5, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 6 ), FunctionResult[5] - MacroResult[5])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_6, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 7 ), FunctionResult[6] - MacroResult[6])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_7, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 8 ), FunctionResult[7] - MacroResult[7])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_8, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 9 ), FunctionResult[8] - MacroResult[8])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_9, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 10 ), FunctionResult[9] - MacroResult[9])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_10, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 11 ), FunctionResult[10] - MacroResult[10])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_11, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 12 ), FunctionResult[11] - MacroResult[11])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_12, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 13 ), FunctionResult[12] - MacroResult[12])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_13, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 14 ), FunctionResult[13] - MacroResult[13])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_14, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 15 ), FunctionResult[14] - MacroResult[14])");
+    GEL_BreakPtAdd(_BreakHere, "NonScrollingOutput(REG_15, GEL_WINDOW_NAME_2, BLUE_TEXT, ( FIRST_BLOCK + 16 ), FunctionResult[15] - MacroResult[15])");
+} // Setup_Breakpoints

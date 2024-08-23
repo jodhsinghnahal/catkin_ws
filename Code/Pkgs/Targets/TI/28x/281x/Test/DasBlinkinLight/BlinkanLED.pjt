@@ -1,0 +1,42 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="G:\AccuRev\NovaPfrmB\Software\Code\Common\Targets\TI\28x\Test\DasBlinkinLight\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\Lib\rts2800_ml.lib"
+Source="..\..\Src\DSP281x_CodeStartBranch.asm"
+Source="..\..\Src\DSP281x_DefaultIsr.c"
+Source="..\..\Src\DSP281x_GlobalVariableDefs.c"
+Source="..\..\Src\DSP281x_PieCtrl.c"
+Source="..\..\Src\DSP281x_PieVect.c"
+Source="..\..\Src\DSP281x_usDelay.asm"
+Source="main.c"
+Source="..\..\Make\DSP281x_Headers_nonBIOS.cmd"
+Source="..\..\Make\F2812_EzDSP_RAM_lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr".\Obj" -i"..\..\inc" -i"..\Inc" -i"..\..\..\..\Inc" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr".\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -heap400 -m".\Bin\Blink_an_LED.map" -o".\Bin\Blink_an_LED.out" -stack400 -x
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\Blink_an_LED.map" -o".\Release\Blink_an_LED.out" -w -x
+

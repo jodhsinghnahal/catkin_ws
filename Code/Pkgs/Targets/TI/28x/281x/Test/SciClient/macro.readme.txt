@@ -1,0 +1,3 @@
+Please place the macro.ini file into the $(CC_install_dir)\ti\cc\bin folder before starting Code Composer.
+Update the paths to reflect your own workspace paths.
+This ensures the CC project file build options (search path) can find all required header files.

@@ -1,0 +1,796 @@
+Key: 138
+State: 0
+Total devices: 1
+Sent ProdIdent
+Key: 62
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 67
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 139
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 74
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 133
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 59
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 70
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 129
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 142
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 63
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 128
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 69
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 60
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 143
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 75
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 134
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 135
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 76
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 77
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 136
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 132
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 66
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 78
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 137
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 138
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 79
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 140
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 141
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 71
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 130
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 131
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 61
+State: 0
+Total devices: 32
+Sent ProdIdent
+Key: 62
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 67
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 139
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 74
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 133
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 59
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 70
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 129
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 142
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 63
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 128
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 69
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 60
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 143
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 75
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 134
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 135
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 76
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 77
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 136
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 132
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 66
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 78
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 137
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 138
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 79
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 140
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 141
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 71
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 130
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 131
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 61
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 62
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 67
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 139
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 74
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 133
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 59
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 70
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 129
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 142
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 63
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 128
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 69
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 60
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 143
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 75
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 134
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 135
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 76
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 77
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 136
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 132
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 66
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 78
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 137
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 138
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 79
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 140
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 141
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 71
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 130
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 131
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 61
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 62
+State: 3
+Total devices: 32
+poll subs
+Key: 67
+State: 3
+Total devices: 32
+poll subs
+Key: 139
+State: 3
+Total devices: 32
+poll subs
+Key: 74
+State: 3
+Total devices: 32
+poll subs
+Key: 133
+State: 3
+Total devices: 32
+poll subs
+Key: 59
+State: 3
+Total devices: 32
+poll subs
+Key: 70
+State: 3
+Total devices: 32
+poll subs
+Key: 129
+State: 3
+Total devices: 32
+poll subs
+Key: 142
+State: 3
+Total devices: 32
+poll subs
+Key: 63
+State: 3
+Total devices: 32
+poll subs
+Key: 128
+State: 3
+Total devices: 32
+poll subs
+Key: 69
+State: 3
+Total devices: 32
+poll subs
+Key: 60
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 143
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 75
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 134
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 135
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 76
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 77
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 136
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 132
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 66
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 78
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 137
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 138
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 79
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 140
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 141
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 71
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 130
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 131
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 61
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 62
+State: 3
+Total devices: 32
+poll subs
+Key: 67
+State: 3
+Total devices: 32
+poll subs
+Key: 139
+State: 3
+Total devices: 32
+poll subs
+Key: 74
+State: 3
+Total devices: 32
+poll subs
+Key: 133
+State: 3
+Total devices: 32
+poll subs
+Key: 59
+State: 3
+Total devices: 32
+poll subs
+Key: 70
+State: 3
+Total devices: 32
+poll subs
+Key: 129
+State: 3
+Total devices: 32
+poll subs
+Key: 142
+State: 3
+Total devices: 32
+poll subs
+Key: 63
+State: 3
+Total devices: 32
+poll subs
+Key: 128
+State: 3
+Total devices: 32
+poll subs
+Key: 69
+State: 3
+Total devices: 32
+poll subs
+Key: 60
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 143
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 75
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 134
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 135
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 76
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 77
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 136
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 132
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 66
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 78
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 137
+State: 2
+Total devices: 32
+Sent InstSts
+Key: 138
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 79
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 140
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 141
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 71
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 130
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 131
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 61
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 62
+State: 3
+Total devices: 32
+poll subs
+Key: 67
+State: 3
+Total devices: 32
+poll subs
+Key: 139
+State: 3
+Total devices: 32
+poll subs
+Key: 74
+State: 3
+Total devices: 32
+poll subs
+Key: 133
+State: 3
+Total devices: 32
+poll subs
+Key: 59
+State: 3
+Total devices: 32
+poll subs
+Key: 70
+State: 3
+Total devices: 32
+poll subs
+Key: 129
+State: 3
+Total devices: 32
+poll subs
+Key: 142
+State: 3
+Total devices: 32
+poll subs
+Key: 63
+State: 3
+Total devices: 32
+poll subs
+Key: 128
+State: 3
+Total devices: 32
+poll subs
+Key: 69
+State: 3
+Total devices: 32
+poll subs
+Key: 60
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 143
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 75
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 134
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 135
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 76
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 77
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 136
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 132
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 66
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 78
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 137
+State: 2
+Total devices: 32
+Update fixed subs
+poll subs
+Key: 138
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 79
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 140
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 141
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 71
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 130
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 131
+State: 2
+Total devices: 32
+Sent ProdIdent again
+Key: 61
+State: 2
+Total devices: 32
+Sent ProdIdent again

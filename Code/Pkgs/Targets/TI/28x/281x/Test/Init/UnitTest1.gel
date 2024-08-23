@@ -1,0 +1,423 @@
+/*==============================================================================
+Copyright 2004 Xantrex International.  All rights reserved.
+
+This source file is proprietary to Xantrex International. and protected by
+copyright. The reproduction, in whole or in part, by anyone without the written
+approval of Xantrex is prohibited.
+
+FILE NAME:
+    UnitTest1.gel
+
+PURPOSE:
+    This file contains the alternate GPIO defines and function for Pin Config 1
+
+FUNCTION(S):
+    GPIO_Registers_Config_1 - GPIO register check function for config 1
+
+NOTES:
+    ---------------------------------------------------------------------------
+    Why is this information repeated in 3 different files?
+    ---------------------------------------------------------------------------
+    Due to the limitations of GEL I was unable to use #if statements to have
+    conditional pin layouts and now after working with this stuff for a while
+    i realize that even if there were #if statements it wouldn't help since
+    GEL is a scripting language and the #defines etc are only evaluated on load.
+
+    so in order to have different pin configuations for different unit tests i
+    had to duplicate the GPIO function in each of these files and have the
+    appropriate defines included in the same file since all #defines are local
+    to a file, not the environment.
+    ---------------------------------------------------------------------------
+
+
+CHANGE HISTORY:
+$History: UnitTest1.gel $
+;   
+;   *****************  Version 1  *****************
+;   User: Brentt       Date: 6/22/04    Time: 2:50p
+;   Created in $/PD/Common/Targets/TI/c28x/HAL/Test/Init
+
+
+==============================================================================*/
+
+
+/*==============================================================================
+                              Includes
+==============================================================================*/
+
+
+/*==============================================================================
+                              Defines
+==============================================================================*/
+//Port A assignments
+#define PORTA_PIN0_INIT     PIN_OUTPUT_LOW
+#define PORTA_PIN1_INIT     PIN_OUTPUT_HIGH
+#define PORTA_PIN2_INIT     PIN_OUTPUT_LOW
+#define PORTA_PIN3_INIT     PIN_OUTPUT_HIGH
+#define PORTA_PIN4_INIT     PIN_OUTPUT_LOW
+#define PORTA_PIN5_INIT     PIN_OUTPUT_HIGH
+#define PORTA_PIN6_INIT     PIN_OUTPUT_LOW
+#define PORTA_PIN7_INIT     PIN_OUTPUT_HIGH
+#define PORTA_PIN8_INIT     PIN_OUTPUT_LOW
+#define PORTA_PIN9_INIT     PIN_OUTPUT_HIGH
+#define PORTA_PIN10_INIT    PIN_OUTPUT_LOW
+#define PORTA_PIN11_INIT    PIN_OUTPUT_HIGH
+#define PORTA_PIN12_INIT    PIN_OUTPUT_LOW
+#define PORTA_PIN13_INIT    PIN_OUTPUT_HIGH
+#define PORTA_PIN14_INIT    PIN_OUTPUT_LOW
+#define PORTA_PIN15_INIT    PIN_OUTPUT_HIGH
+
+//Port B assignments
+#define PORTB_PIN0_INIT     PIN_OUTPUT_LOW
+#define PORTB_PIN1_INIT     PIN_OUTPUT_HIGH
+#define PORTB_PIN2_INIT     PIN_OUTPUT_LOW
+#define PORTB_PIN3_INIT     PIN_OUTPUT_HIGH
+#define PORTB_PIN4_INIT     PIN_OUTPUT_LOW
+#define PORTB_PIN5_INIT     PIN_OUTPUT_HIGH
+#define PORTB_PIN6_INIT     PIN_OUTPUT_LOW
+#define PORTB_PIN7_INIT     PIN_OUTPUT_HIGH
+#define PORTB_PIN8_INIT     PIN_OUTPUT_LOW
+#define PORTB_PIN9_INIT     PIN_OUTPUT_HIGH
+#define PORTB_PIN10_INIT    PIN_OUTPUT_LOW
+#define PORTB_PIN11_INIT    PIN_OUTPUT_HIGH
+#define PORTB_PIN12_INIT    PIN_OUTPUT_LOW
+#define PORTB_PIN13_INIT    PIN_OUTPUT_HIGH
+#define PORTB_PIN14_INIT    PIN_OUTPUT_LOW
+#define PORTB_PIN15_INIT    PIN_OUTPUT_HIGH
+
+//Port D assignments
+#define PORTD_PIN0_INIT     PIN_OUTPUT_LOW
+#define PORTD_PIN1_INIT     PIN_OUTPUT_HIGH
+#define PORTD_PIN5_INIT     PIN_OUTPUT_LOW
+#define PORTD_PIN6_INIT     PIN_OUTPUT_HIGH
+
+//Port E assignments
+#define PORTE_PIN0_INIT     PIN_OUTPUT_LOW
+#define PORTE_PIN1_INIT     PIN_OUTPUT_HIGH
+#define PORTE_PIN2_INIT     PIN_OUTPUT_LOW
+
+//Port F assignments
+#define PORTF_PIN0_INIT     PIN_OUTPUT_LOW
+#define PORTF_PIN1_INIT     PIN_OUTPUT_HIGH
+#define PORTF_PIN2_INIT     PIN_OUTPUT_LOW
+#define PORTF_PIN3_INIT     PIN_OUTPUT_HIGH
+#define PORTF_PIN4_INIT     PIN_OUTPUT_LOW
+#define PORTF_PIN5_INIT     PIN_OUTPUT_HIGH
+#define PORTF_PIN6_INIT     PIN_OUTPUT_LOW
+#define PORTF_PIN7_INIT     PIN_OUTPUT_HIGH
+#define PORTF_PIN8_INIT     PIN_OUTPUT_LOW
+#define PORTF_PIN9_INIT     PIN_OUTPUT_HIGH
+#define PORTF_PIN10_INIT    PIN_OUTPUT_LOW
+#define PORTF_PIN11_INIT    PIN_OUTPUT_HIGH
+#define PORTF_PIN12_INIT    PIN_OUTPUT_LOW
+#define PORTF_PIN13_INIT    PIN_OUTPUT_HIGH
+#define PORTF_PIN14_INIT    PIN_OUTPUT_LOW
+
+// Port G assignments
+#define PORTG_PIN4_INIT     PIN_OUTPUT_LOW
+#define PORTG_PIN5_INIT     PIN_OUTPUT_HIGH
+
+/*==============================================================================
+                            Type Definitions
+==============================================================================*/
+
+
+/*==============================================================================
+                                Enums
+==============================================================================*/
+
+
+/*=============================================================================
+                              Structures
+==============================================================================*/
+
+
+/*==============================================================================
+                           Local/Private Constants
+==============================================================================*/
+menuitem "Init Unit Test";
+
+/*==============================================================================
+                           Local/Private Variables
+==============================================================================*/
+
+
+/*==============================================================================
+                        Local/Private Function Protoypes
+==============================================================================*/
+
+
+/*==============================================================================
+                           Function Definitions
+==============================================================================*/
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    hotmenu GPIO_Registers_Config_1()
+
+PURPOSE:
+    A GEL Script that is used to check and ensure that all of the port pin,
+    direction, mux and data registers are set to what they're supposed to be.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    The Function name is used for the menu entry so for the purposes of
+    readability in the IDE a non-standard name was chosen.
+
+    Ensure that each version of this function is changed if any changes are
+    made.
+
+VERSION HISTORY:
+
+Version 1.00    Date: June 03, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+hotmenu GPIO_Registers_Config_1()
+{
+
+    // GPIO registers used during init.
+    int *GPAMUX = 0x70C0;
+    int *GPADIR = 0x70C1;
+    int *GPADAT = 0x70E0;
+
+    int *GPBMUX = 0x70C4;
+    int *GPBDIR = 0x70C5;
+    int *GPBDAT = 0x70E4;
+
+    int *GPDMUX = 0x70CC;
+    int *GPDDIR = 0x70CD;
+    int *GPDDAT = 0x70EC;
+
+    int *GPEMUX = 0x70D0;
+    int *GPEDIR = 0x70D1;
+    int *GPEDAT = 0x70F0;
+
+    int *GPFMUX = 0x70D4;
+    int *GPFDIR = 0x70D5;
+    int *GPFDAT = 0x70F4;
+
+    int *GPGMUX = 0x70D8;
+    int *GPGDIR = 0x70D9;
+    int *GPGDAT = 0x70F8;
+
+    unsigned int GPAMUX_Target = ( ( ( PORTA_PIN0_INIT & FUNC_MSK ) << 0  )
+                                 | ( ( PORTA_PIN1_INIT & FUNC_MSK ) << 1  )
+                                 | ( ( PORTA_PIN2_INIT & FUNC_MSK ) << 2  )
+                                 | ( ( PORTA_PIN3_INIT & FUNC_MSK ) << 3  )
+                                 | ( ( PORTA_PIN4_INIT & FUNC_MSK ) << 4  )
+                                 | ( ( PORTA_PIN5_INIT & FUNC_MSK ) << 5  )
+                                 | ( ( PORTA_PIN6_INIT & FUNC_MSK ) << 6  )
+                                 | ( ( PORTA_PIN7_INIT & FUNC_MSK ) << 7  )
+                                 | ( ( PORTA_PIN8_INIT & FUNC_MSK ) << 8  )
+                                 | ( ( PORTA_PIN9_INIT & FUNC_MSK ) << 9  )
+                                 | ( ( PORTA_PIN10_INIT & FUNC_MSK ) << 10 )
+                                 | ( ( PORTA_PIN11_INIT & FUNC_MSK ) << 11 )
+                                 | ( ( PORTA_PIN12_INIT & FUNC_MSK ) << 12 )
+                                 | ( ( PORTA_PIN13_INIT & FUNC_MSK ) << 13 )
+                                 | ( ( PORTA_PIN14_INIT & FUNC_MSK ) << 14 )
+                                 | ( ( PORTA_PIN15_INIT & FUNC_MSK ) << 15 )
+                                 );
+    unsigned int GPADIR_Target = ( ( ( PORTA_PIN0_INIT & DIR_MSK ) >> 15  )
+                                 | ( ( PORTA_PIN1_INIT & DIR_MSK ) >> 14  )
+                                 | ( ( PORTA_PIN2_INIT & DIR_MSK ) >> 13  )
+                                 | ( ( PORTA_PIN3_INIT & DIR_MSK ) >> 12  )
+                                 | ( ( PORTA_PIN4_INIT & DIR_MSK ) >> 11  )
+                                 | ( ( PORTA_PIN5_INIT & DIR_MSK ) >> 10  )
+                                 | ( ( PORTA_PIN6_INIT & DIR_MSK ) >> 9  )
+                                 | ( ( PORTA_PIN7_INIT & DIR_MSK ) >> 8  )
+                                 | ( ( PORTA_PIN8_INIT & DIR_MSK ) >> 7  )
+                                 | ( ( PORTA_PIN9_INIT & DIR_MSK ) >> 6  )
+                                 | ( ( PORTA_PIN10_INIT & DIR_MSK ) >> 5 )
+                                 | ( ( PORTA_PIN11_INIT & DIR_MSK ) >> 4 )
+                                 | ( ( PORTA_PIN12_INIT & DIR_MSK ) >> 3 )
+                                 | ( ( PORTA_PIN13_INIT & DIR_MSK ) >> 2 )
+                                 | ( ( PORTA_PIN14_INIT & DIR_MSK ) >> 1 )
+                                 | ( ( PORTA_PIN15_INIT & DIR_MSK ) >> 0 )
+                                 );
+    unsigned int GPADAT_Target = ( ( ( PORTA_PIN0_INIT & DAT_MSK ) >> 7 )
+                                 | ( ( PORTA_PIN1_INIT & DAT_MSK ) >> 6 )
+                                 | ( ( PORTA_PIN2_INIT & DAT_MSK ) >> 5 )
+                                 | ( ( PORTA_PIN3_INIT & DAT_MSK ) >> 4 )
+                                 | ( ( PORTA_PIN4_INIT & DAT_MSK ) >> 3 )
+                                 | ( ( PORTA_PIN5_INIT & DAT_MSK ) >> 2 )
+                                 | ( ( PORTA_PIN6_INIT & DAT_MSK ) >> 1 )
+                                 | ( ( PORTA_PIN7_INIT & DAT_MSK ) )
+                                 | ( ( PORTA_PIN8_INIT & DAT_MSK ) << 1  )
+                                 | ( ( PORTA_PIN9_INIT & DAT_MSK ) << 2 )
+                                 | ( ( PORTA_PIN10_INIT & DAT_MSK ) << 3 )
+                                 | ( ( PORTA_PIN11_INIT & DAT_MSK ) << 4 )
+                                 | ( ( PORTA_PIN12_INIT & DAT_MSK ) << 5 )
+                                 | ( ( PORTA_PIN13_INIT & DAT_MSK ) << 6 )
+                                 | ( ( PORTA_PIN14_INIT & DAT_MSK ) << 7 )
+                                 | ( ( PORTA_PIN15_INIT & DAT_MSK ) << 8 )
+                                 );
+
+    unsigned int GPBMUX_Target = ( ( ( PORTB_PIN0_INIT & FUNC_MSK ) << 0  )
+                                 | ( ( PORTB_PIN1_INIT & FUNC_MSK ) << 1  )
+                                 | ( ( PORTB_PIN2_INIT & FUNC_MSK ) << 2  )
+                                 | ( ( PORTB_PIN3_INIT & FUNC_MSK ) << 3  )
+                                 | ( ( PORTB_PIN4_INIT & FUNC_MSK ) << 4  )
+                                 | ( ( PORTB_PIN5_INIT & FUNC_MSK ) << 5  )
+                                 | ( ( PORTB_PIN6_INIT & FUNC_MSK ) << 6  )
+                                 | ( ( PORTB_PIN7_INIT & FUNC_MSK ) << 7  )
+                                 | ( ( PORTB_PIN8_INIT & FUNC_MSK ) << 8  )
+                                 | ( ( PORTB_PIN9_INIT & FUNC_MSK ) << 9  )
+                                 | ( ( PORTB_PIN10_INIT & FUNC_MSK ) << 10 )
+                                 | ( ( PORTB_PIN11_INIT & FUNC_MSK ) << 11 )
+                                 | ( ( PORTB_PIN12_INIT & FUNC_MSK ) << 12 )
+                                 | ( ( PORTB_PIN13_INIT & FUNC_MSK ) << 13 )
+                                 | ( ( PORTB_PIN14_INIT & FUNC_MSK ) << 14 )
+                                 | ( ( PORTB_PIN15_INIT & FUNC_MSK ) << 15 )
+                                 );
+    unsigned int GPBDIR_Target = ( ( ( PORTB_PIN0_INIT & DIR_MSK ) >> 15  )
+                                 | ( ( PORTB_PIN1_INIT & DIR_MSK ) >> 14  )
+                                 | ( ( PORTB_PIN2_INIT & DIR_MSK ) >> 13  )
+                                 | ( ( PORTB_PIN3_INIT & DIR_MSK ) >> 12  )
+                                 | ( ( PORTB_PIN4_INIT & DIR_MSK ) >> 11  )
+                                 | ( ( PORTB_PIN5_INIT & DIR_MSK ) >> 10  )
+                                 | ( ( PORTB_PIN6_INIT & DIR_MSK ) >> 9  )
+                                 | ( ( PORTB_PIN7_INIT & DIR_MSK ) >> 8  )
+                                 | ( ( PORTB_PIN8_INIT & DIR_MSK ) >> 7  )
+                                 | ( ( PORTB_PIN9_INIT & DIR_MSK ) >> 6  )
+                                 | ( ( PORTB_PIN10_INIT & DIR_MSK ) >> 5 )
+                                 | ( ( PORTB_PIN11_INIT & DIR_MSK ) >> 4 )
+                                 | ( ( PORTB_PIN12_INIT & DIR_MSK ) >> 3 )
+                                 | ( ( PORTB_PIN13_INIT & DIR_MSK ) >> 2 )
+                                 | ( ( PORTB_PIN14_INIT & DIR_MSK ) >> 1 )
+                                 | ( ( PORTB_PIN15_INIT & DIR_MSK ) >> 0 )
+                                 );
+    unsigned int GPBDAT_Target = ( ( ( PORTB_PIN0_INIT & DAT_MSK ) >> 7 )
+                                 | ( ( PORTB_PIN1_INIT & DAT_MSK ) >> 6 )
+                                 | ( ( PORTB_PIN2_INIT & DAT_MSK ) >> 5 )
+                                 | ( ( PORTB_PIN3_INIT & DAT_MSK ) >> 4 )
+                                 | ( ( PORTB_PIN4_INIT & DAT_MSK ) >> 3 )
+                                 | ( ( PORTB_PIN5_INIT & DAT_MSK ) >> 2 )
+                                 | ( ( PORTB_PIN6_INIT & DAT_MSK ) >> 1 )
+                                 | ( ( PORTB_PIN7_INIT & DAT_MSK ) )
+                                 | ( ( PORTB_PIN8_INIT & DAT_MSK ) << 1  )
+                                 | ( ( PORTB_PIN9_INIT & DAT_MSK ) << 2 )
+                                 | ( ( PORTB_PIN10_INIT & DAT_MSK ) << 3 )
+                                 | ( ( PORTB_PIN11_INIT & DAT_MSK ) << 4 )
+                                 | ( ( PORTB_PIN12_INIT & DAT_MSK ) << 5 )
+                                 | ( ( PORTB_PIN13_INIT & DAT_MSK ) << 6 )
+                                 | ( ( PORTB_PIN14_INIT & DAT_MSK ) << 7 )
+                                 | ( ( PORTB_PIN15_INIT & DAT_MSK ) << 8 )
+                                 );
+
+    unsigned int GPDMUX_Target = ( ( ( PORTD_PIN0_INIT & FUNC_MSK ) << 0  )
+                                 | ( ( PORTD_PIN1_INIT & FUNC_MSK ) << 1  )
+                                 | ( ( PORTD_PIN5_INIT & FUNC_MSK ) << 5  )
+                                 | ( ( PORTD_PIN6_INIT & FUNC_MSK ) << 6  )
+                                 );
+    unsigned int GPDDIR_Target = ( ( ( PORTD_PIN0_INIT & DIR_MSK ) >> 15  )
+                                 | ( ( PORTD_PIN1_INIT & DIR_MSK ) >> 14  )
+                                 | ( ( PORTD_PIN5_INIT & DIR_MSK ) >> 10  )
+                                 | ( ( PORTD_PIN6_INIT & DIR_MSK ) >> 9  )
+                                 );
+    unsigned int GPDDAT_Target = ( ( ( PORTD_PIN0_INIT & DAT_MSK ) >> 7 )
+                                 | ( ( PORTD_PIN1_INIT & DAT_MSK ) >> 6 )
+                                 | ( ( PORTD_PIN5_INIT & DAT_MSK ) >> 2 )
+                                 | ( ( PORTD_PIN6_INIT & DAT_MSK ) >> 1 )
+                                 );
+
+    unsigned int GPEMUX_Target = ( ( ( PORTE_PIN0_INIT & FUNC_MSK ) << 0  )
+                                 | ( ( PORTE_PIN1_INIT & FUNC_MSK ) << 1  )
+                                 | ( ( PORTE_PIN2_INIT & FUNC_MSK ) << 2  )
+                                 );
+    unsigned int GPEDIR_Target = ( ( ( PORTE_PIN0_INIT & DIR_MSK ) >> 15  )
+                                 | ( ( PORTE_PIN1_INIT & DIR_MSK ) >> 14  )
+                                 | ( ( PORTE_PIN2_INIT & DIR_MSK ) >> 13  )
+                                 );
+    unsigned int GPEDAT_Target = ( ( ( PORTE_PIN0_INIT & DAT_MSK ) >> 7 )
+                                 | ( ( PORTE_PIN1_INIT & DAT_MSK ) >> 6 )
+                                 | ( ( PORTE_PIN2_INIT & DAT_MSK ) >> 5 )
+                                 );
+
+    unsigned int GPFMUX_Target = ( ( ( PORTF_PIN0_INIT & FUNC_MSK ) << 0  )
+                                 | ( ( PORTF_PIN1_INIT & FUNC_MSK ) << 1  )
+                                 | ( ( PORTF_PIN2_INIT & FUNC_MSK ) << 2  )
+                                 | ( ( PORTF_PIN3_INIT & FUNC_MSK ) << 3  )
+                                 | ( ( PORTF_PIN4_INIT & FUNC_MSK ) << 4  )
+                                 | ( ( PORTF_PIN5_INIT & FUNC_MSK ) << 5  )
+                                 | ( ( PORTF_PIN6_INIT & FUNC_MSK ) << 6  )
+                                 | ( ( PORTF_PIN7_INIT & FUNC_MSK ) << 7  )
+                                 | ( ( PORTF_PIN8_INIT & FUNC_MSK ) << 8  )
+                                 | ( ( PORTF_PIN9_INIT & FUNC_MSK ) << 9  )
+                                 | ( ( PORTF_PIN10_INIT & FUNC_MSK ) << 10 )
+                                 | ( ( PORTF_PIN11_INIT & FUNC_MSK ) << 11 )
+                                 | ( ( PORTF_PIN12_INIT & FUNC_MSK ) << 12 )
+                                 | ( ( PORTF_PIN13_INIT & FUNC_MSK ) << 13 )
+                                 | ( ( PORTF_PIN14_INIT & FUNC_MSK ) << 14 )
+                                 );
+    unsigned int GPFDIR_Target = ( ( ( PORTF_PIN0_INIT & DIR_MSK ) >> 15  )
+                                 | ( ( PORTF_PIN1_INIT & DIR_MSK ) >> 14  )
+                                 | ( ( PORTF_PIN2_INIT & DIR_MSK ) >> 13  )
+                                 | ( ( PORTF_PIN3_INIT & DIR_MSK ) >> 12  )
+                                 | ( ( PORTF_PIN4_INIT & DIR_MSK ) >> 11  )
+                                 | ( ( PORTF_PIN5_INIT & DIR_MSK ) >> 10  )
+                                 | ( ( PORTF_PIN6_INIT & DIR_MSK ) >> 9  )
+                                 | ( ( PORTF_PIN7_INIT & DIR_MSK ) >> 8  )
+                                 | ( ( PORTF_PIN8_INIT & DIR_MSK ) >> 7  )
+                                 | ( ( PORTF_PIN9_INIT & DIR_MSK ) >> 6  )
+                                 | ( ( PORTF_PIN10_INIT & DIR_MSK ) >> 5 )
+                                 | ( ( PORTF_PIN11_INIT & DIR_MSK ) >> 4 )
+                                 | ( ( PORTF_PIN12_INIT & DIR_MSK ) >> 3 )
+                                 | ( ( PORTF_PIN13_INIT & DIR_MSK ) >> 2 )
+                                 | ( ( PORTF_PIN14_INIT & DIR_MSK ) >> 1 )
+                                 );
+    unsigned int GPFDAT_Target = ( ( ( PORTF_PIN0_INIT & DAT_MSK ) >> 7 )
+                                 | ( ( PORTF_PIN1_INIT & DAT_MSK ) >> 6 )
+                                 | ( ( PORTF_PIN2_INIT & DAT_MSK ) >> 5 )
+                                 | ( ( PORTF_PIN3_INIT & DAT_MSK ) >> 4 )
+                                 | ( ( PORTF_PIN4_INIT & DAT_MSK ) >> 3 )
+                                 | ( ( PORTF_PIN5_INIT & DAT_MSK ) >> 2 )
+                                 | ( ( PORTF_PIN6_INIT & DAT_MSK ) >> 1 )
+                                 | ( ( PORTF_PIN7_INIT & DAT_MSK ) )
+                                 | ( ( PORTF_PIN8_INIT & DAT_MSK ) << 1  )
+                                 | ( ( PORTF_PIN9_INIT & DAT_MSK ) << 2 )
+                                 | ( ( PORTF_PIN10_INIT & DAT_MSK ) << 3 )
+                                 | ( ( PORTF_PIN11_INIT & DAT_MSK ) << 4 )
+                                 | ( ( PORTF_PIN12_INIT & DAT_MSK ) << 5 )
+                                 | ( ( PORTF_PIN13_INIT & DAT_MSK ) << 6 )
+                                 | ( ( PORTF_PIN14_INIT & DAT_MSK ) << 7 )
+                                 );
+
+
+    unsigned int GPGMUX_Target = ( ( ( PORTG_PIN4_INIT & FUNC_MSK ) << 4  )
+                                 | ( ( PORTG_PIN5_INIT & FUNC_MSK ) << 5  )
+                                 );
+    unsigned int GPGDIR_Target = ( ( ( PORTG_PIN4_INIT & DIR_MSK ) >> 11  )
+                                 | ( ( PORTG_PIN5_INIT & DIR_MSK ) >> 10  )
+                                 );
+    unsigned int GPGDAT_Target = ( ( ( PORTG_PIN4_INIT & DAT_MSK ) >> 3 )
+                                 | ( ( PORTG_PIN5_INIT & DAT_MSK ) >> 2 )
+                                 );
+
+    GEL_TextOut( "\n\nInit Unit Test - Check GPIO Register(s) - Configuration 1\n\n",,1 );
+
+    fnOutputRegStatus( "GPAMUX", GPAMUX, GPAMUX_Target, NO_MASK );
+    fnOutputRegStatus( "GPADIR", GPADIR, GPADIR_Target, NO_MASK );
+    fnOutputRegStatus( "GPADAT", GPADAT, GPADAT_Target, NO_MASK );
+    fnOutputRegStatus( "GPBMUX", GPBMUX, GPBMUX_Target, NO_MASK );
+    fnOutputRegStatus( "GPBDIR", GPBDIR, GPBDIR_Target, NO_MASK );
+    fnOutputRegStatus( "GPBDAT", GPBDAT, GPBDAT_Target, NO_MASK );
+    fnOutputRegStatus( "GPDMUX", GPDMUX, GPDMUX_Target, NO_MASK );
+    fnOutputRegStatus( "GPDDIR", GPDDIR, GPDDIR_Target, NO_MASK );
+    fnOutputRegStatus( "GPDDAT", GPDDAT, GPDDAT_Target, NO_MASK );
+    fnOutputRegStatus( "GPEMUX", GPEMUX, GPEMUX_Target, NO_MASK );
+    fnOutputRegStatus( "GPEDIR", GPEDIR, GPEDIR_Target, NO_MASK );
+    fnOutputRegStatus( "GPEDAT", GPEDAT, GPEDAT_Target, NO_MASK );
+    fnOutputRegStatus( "GPFMUX", GPFMUX, GPFMUX_Target, GPF_MSK );
+    fnOutputRegStatus( "GPFDIR", GPFDIR, GPFDIR_Target, GPF_MSK );
+    fnOutputRegStatus( "GPFDAT", GPFDAT, GPFDAT_Target, GPF_MSK );
+    fnOutputRegStatus( "GPGMUX", GPGMUX, GPGMUX_Target, GPG_MSK );
+    fnOutputRegStatus( "GPGDIR", GPGDIR, GPGDIR_Target, GPG_MSK );
+    fnOutputRegStatus( "GPGDAT", GPGDAT, GPGDAT_Target, GPG_MSK );
+
+} // hotmenu GPIO_Registers_Config_1()

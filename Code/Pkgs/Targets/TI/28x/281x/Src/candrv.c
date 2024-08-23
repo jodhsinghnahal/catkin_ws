@@ -1,0 +1,1868 @@
+/*=============================================================================
+Copyright 2005 Xantrex International.  All rights reserved.
+
+This source file is proprietary to Xantrex International and protected by
+copyright. The reproduction, in whole or in part, by anyone without the written
+approval of Xantrex is prohibited.
+
+FILE NAME:  candrv.c
+
+PURPOSE:
+    This driver defines the Hardware Abstraction Layer for
+    the Motorola Scalable Controller Area Network module on the
+    TI F281x processor.
+
+FUNCTION(S):
+    CANDRV_fnInit       - Initialize CAN driver channel
+    CANDRV_fnEnable     - Enable channel
+    CANDRV_fnDisable    - Disable channel
+    CANDRV_fnSleep      - Put channel to sleep
+    CANDRV_fnWakeUp     - Wake channel up from sleep
+    CANDRV_fnReceive    - Non-blocking receive of CAN frame
+    CANDRV_fnTransmitOK - Check if there is a free transmit buffer
+    CANDRV_fnTransmit   - Transmit CAN frame
+    CANDRV_fnAbort      - Abort a transmitted frame
+    CANDRV_fnTxStatus   - Get transmitter status and optional error count
+    CANDRV_fnRxStatus   - Get receiver status and optional error count
+    CANDRV_fnInitCbList - Initialize the callback list
+    CANDRV_fnInstallCb  - Install a callback for an interrupt
+
+    interrupt handlers:
+        CANDRV_fnECAN0INTIsr     - Transmit and status interrupt
+        CANDRV_fnECAN1INTIsr     - Receive interrupt
+
+
+    local:
+        candrv_fnInitMBoxes   - initialize the various mailbox properties
+        candrv_fnInitInterrupt- Configure the various interrupt registers
+        candrv_fnDataId2HwId  - convert passed in ID to id as stored in
+                                registers
+        candrv_fnHwId2DataId  - convert Id as stored in registers to ID
+                                as expected by the application
+        candrv_fnSetPriority  - Set transmit priority of the next frame to
+                                transmit
+        candrv_fnGetErr      - Read the current errors from the registers
+        candrv_fnSetMode     - Set module to init or normal mode
+        candrv_fnIsTxBuffersEmpty - check to see if the buffer is empty
+        candrv_fnResetTxPrio - reset the transmit priority
+
+
+
+NOTES:
+
+    This driver does no buffering
+    of frames aside from what is implemented through the mailboxes.
+    There is also no use or assumption of any operating system services.
+
+    A number of the registers used in this module are 32-bits wide.  However,
+    this TI chip/compiler compiles it to 16-bit register access.  As a result,
+    a shadow register is created for the CAN control registers, to allow
+    32-bit access, as 16-bit accesses can potentially corrupt them.  This
+    is especially true while writing to the bits 16-31.
+
+    It is recommended that the user install callbacks for the various functions
+    of this driver.  This will let this driver inform the user when a frame is
+    received or transmitted.
+
+    This driver uses the 32 mailboxes in the eCAN module.  Any of the mailboxes
+    can be configured as tranmit or receive.  In this implementation, the first
+    25 mailboxes( 0 to 24 ) are configured to be receive mailboxes, whereas,
+    the next 7 mailboxes are configured to be tranmit mailboxes.
+
+    The highest numbered mailbox is always considered to be highest priority
+    mailbox.  For example, for receive mailboxes, if we have 25 Rx mailboxes,
+    then mailbox 24 is the first mailbox to receive a message that matches
+    its ID ( more about ID's below ), if its empty.  For transmit mailboxes,
+    the same logic applies, however, you can explicitly assign a priority
+    to the transmit mailbox that supercededs the mailbox number itself.
+
+    This eCAN module allows the user to specify a filter ID to each of the
+    receive mailboxes.  In this implementation, no such filtering is done.
+    The receive mailboxes are configured such that it accepts all messages
+    from the nodes.
+
+    Only one bit rate is currently supported, 250KBPS.  The bit timing is
+    very closely related to your current clock speed and the bit rate that
+    you require must contain certain parameters in the TSEG1 and TSEG2 values
+    such that they divide evenly with the clock speed and bit rate.  Any
+    deviation will cause a problem.  In addition, for each bit, the sampling
+    point should be between 80 and 90 %.  See diagram below:
+
+    For each bit, the following are some of the design considerations:
+    |   |                                           |                   |
+    |   |                                           |                   |
+    |   |                                   |  SJW  |           |  SJW  |
+    |   |                                   |       |           |       |
+    |--------------------------------------------------------------------
+    | ^                                                                 |
+      |  <--------------TSEG1----------------------><-----TSEG2--------->
+      |
+      |
+      |
+      SYNCSEG
+
+
+                Sampling Point = SYNCSEG + TSEG1
+                                 -----------------------  x 100%
+                                 SYNCSEG + TSEG1 + TSEG2
+
+
+                Sychronous Jump Width - SJW <= TSEG2
+
+                SYNCSEG == 1  ( always )
+
+
+                Number of Time Quantum per bit ( aka Bit Time ) =
+                                SYNCSEG + TSEG1 + TSEG2
+
+
+                Bit Rate             =  SYSCLKOUT
+                (ie 250KPBS, 1MBPS )    ------------------------------
+                                        BitRatePrescale x BitTime
+
+    Hence the calculation for BitRatePrescale =
+
+                BRP =               SYSCLKOUT
+                            -------------------------------------
+                            BitRate x BitTime
+
+                    =               SYSCLKOUT
+                            -------------------------------------
+                            BitRate x ( SYNCSEG + TSEG1 + TSEG2 )
+
+
+    BRP, Bit Rate Prescaler, must be divisible evenly or else you will
+    be an erroneous bit rate.
+
+
+HISTORY:
+$Log: candrv.c $
+
+    ***********************************************
+    Revision: NovaPfrmB_DaleM/1
+    User: DaleM     Date: 03/22/05  Time: 05:18PM
+    - In function, fnInitInterrupts, removed device enable/disable 
+
+    ***********************************************
+    Revision: NovaPfrmB_JohnB/1
+    User: JohnB     Date: 03/22/05  Time: 12:55AM
+    Update ISR setup.  Each driver now writes to the Pie vector table, the
+    address of the ISR is cares about.
+
+    Updated Main to call the default ISR copying.
+
+   ***********************************************
+   Revision: NovaPfrmB_BaldeeshK/8
+   User: BaldeeshK     Date: 03/17/05  Time: 05:36PM
+   - Added priority to all transmitted messages so that messages are sent first
+   in, first out.  Also, cleaned up comments in file header
+
+    ***********************************************
+    Revision: NovaPfrmB_BaldeeshK/7
+    User: BaldeeshK     Date: 03/09/05  Time: 07:55PM
+    - Added byte masks to transmit function
+
+
+    ***********************************************
+    Revision: NovaPfrmB_BaldeeshK/6
+    User: BaldeeshK     Date: 02/24/05  Time: 09:46PM
+    - Fixed bug with transmit interrupts, made transmit interrupts to be always
+    on, and changed operation of clearing the CANTA and CANRMP flags
+
+
+
+    ***********************************************
+    Revision: NovaPfrmB_BaldeeshK/5
+    User: BaldeeshK     Date: 02/18/05  Time: 07:45PM
+    - Changed the handler in transmit functions to be offset from 0 instead of representing
+    the mailbox number.  Added function fnGetHandle.
+
+
+    ***********************************************
+    Revision: NovaPfrmB_BaldeeshK/4
+    User: BaldeeshK     Date: 02/17/05  Time: 09:39PM
+    - Fixed text error with a misplaced line in function CANDRV_fnECAN0INTIsr
+
+
+    ***********************************************
+    Revision: NovaPfrmB_BaldeeshK/3
+    User: BaldeeshK     Date: 02/16/05  Time: 04:56PM
+    - Bug fix when extracting the bits for EXTMSGID_H.  Previously, it was masking
+    with XT_BITPOS2, when it should have been XT_BIT2.
+
+
+    ***********************************************
+    Revision: NovaPfrmB_BaldeeshK/2
+    User: BaldeeshK     Date: 02/10/05  Time: 05:23PM
+    - Initial add to Accurev of candrv source file
+
+
+
+=============================================================================*/
+
+/*==============================================================================
+                              Includes
+==============================================================================*/
+
+#include <limits.h>         // for uint32, uint16 max
+#include "candrv.h"         // CANDRV interface declarations
+#include "device.h"         // for device registers
+#include "devicemacro.h"    // for device macros
+#include "config.h"         // Hardware specifications
+#include "xassert.h"        // for assert
+
+/*=============================================================================
+                                Defines
+=============================================================================*/
+
+// number of time quantums for time segment 1
+#define CANDRV_250KBPS_TSEG1    ( 12 )
+// number of time quantumes for time segment 2
+#define CANDRV_250KBPS_TSEG2    ( 2 )
+// synchronous jump width, must be less than or equal to TSEG2, make it equal
+#define CANDRV_250KBPS_SJW      ( CANDRV_250KBPS_TSEG2 )
+// speed for 250kBps for calculation purposes
+#define CANDRV_250KBPS_BIT_RATE ( 250000L )
+
+// total number of mailboxes availabe in this module
+#define CANDRV_TOTAL_NUM_MBOXES ( 32 )
+
+// how many mailboxes of the 32 are to be tranmit mailboxes
+#define CANDRV_NUM_TX_MBOXES    ( CANDRV_TX_BUFFERS )
+
+// how many mailboxes of the 32 are to be receive mailboxes
+#define CANDRV_NUM_RX_MBOXES    ( CANDRV_TOTAL_NUM_MBOXES - \
+                                  CANDRV_NUM_TX_MBOXES )
+// mailbox mask for the transmit Mboxes.  Ie if the top three mailboxes
+// are tranmit mailboxes, the mask should be 0xE0000000
+#define CANDRV_TX_MBOX_MASK    ( CANDRV_UINT32_MAX & \
+                                ~( ( 1L << CANDRV_NUM_RX_MBOXES ) - 1 )
+#define CANDRV_RX_MBOX_MASK    ( ( 1L << CANDRV_NUM_RX_MBOXES ) - 1 )
+
+// bit masks for the general interrupt flags register, used to clear
+// the appropriate interrupt
+#define CANDRV_AAIF_BIT_POS    ( XT_BIT14 )
+#define CANDRV_WUIF_BIT_POS    ( XT_BIT12 )
+#define CANDRV_RMLI_BIT_POS    ( XT_BIT11 )
+#define CANDRV_STATUS_MASK_BITS  ( 0x00032700L )
+
+// Max tries while waiting for the CAN port to change state
+#define CANDRV_MAX_TRIES       ( 0xFFFF )
+
+#define CANDRV_UINT16_MAX   ( UINT_MAX )
+// Max value for uint32 register
+#define CANDRV_UINT32_MAX   ( ULONG_MAX )
+
+// Byte Mask
+#define CANDRV_BYTE_MASK    ( 0xFF )
+
+// mask for accepting all for filters
+#define CANDRV_ACCEPT_ALL   ( CANDRV_UINT32_MAX )
+#define CANDRV_ACCEPT_NONE  ( 0 )
+
+// Modes of the CAN module
+#define CANDRV_MODE_INIT    ( 1 )
+#define CANDRV_MODE_NORMAL  ( 0 )
+
+// define how many channels
+#define CANDRV_MAX_CHANNELS    ( 1 )
+
+// maximum number of bytes per frame
+#define CANDRV_MAX_BYTES_PER_FRAME ( 8 )
+
+// The following interrupts are enabled as part of this define:
+// Abort Acknowledge, Wake up, Receive message lost, bus-off, error passive,
+// Warning Level
+#define CANDRV_INTERRUPT_ENABLE_BITS ( 0x00005F00L )
+
+// mask for the error bits in the CANES status register
+#define CANDRV_ERROR_STATUS_BITS ( 0x01FA0000 )
+
+// value for the maximum tx priority
+#define CANDRV_MAX_TX_PRIORITY    ( 0x1F )
+
+/*=============================================================================
+                                Macros
+=============================================================================*/
+// get the number of time quantums per bit
+#define CANDRV_mGET_TQ_SIZE( x )    ( x.ucTSeg1 + x.ucTSeg2 + 1 )
+
+/*=============================================================================
+                               Data Types
+=============================================================================*/
+
+// Structure for setting parameters according to a bit rate
+typedef struct zCAN_BR_PARAMS
+{
+    CANDRV_teBIT_RATE   eBitRate;   // Enumerated supported bit rate
+    uint32              ulBitRate;  // Bit rate corresponding to the above enum
+    uchar8              ucSjwWidth; // Synchronous jump width ( in TQ )
+                                    // Note:  This value must be less than
+                                    // or equal to the value of TSEG2
+    uchar8              ucTSeg1;    // width ( in TQ ) of TSEG1
+    uchar8              ucTSeg2;    // width ( in TQ ) of TSEG2
+} tzCAN_BR_PARAMS;
+
+/*==============================================================================
+                           Local/Private Constants
+==============================================================================*/
+
+// Parameters for each supported bus speed
+const tzCAN_BR_PARAMS kazCAN_BR_PARAMS[] =
+{
+    {
+        CANDRV_eBIT_RATE_250KBPS,   // Speed
+        CANDRV_250KBPS_BIT_RATE,
+        CANDRV_250KBPS_SJW,         // Synchronous Jump Width
+        CANDRV_250KBPS_TSEG1,       // Time Segment 1
+        CANDRV_250KBPS_TSEG2,       // Time Segment 2
+    }
+};
+
+
+/*==============================================================================
+                           Local/Private Variables
+==============================================================================*/
+
+// The list of function pointers for interrupt callbacks
+static CANDRV_tpfnCALLBACK candrv_apCallback[ CANDRV_eCB_LAST ];
+
+// Handle of the latest transmitted buffer
+static uchar8 candrv_ucHandle;
+
+// transmit priority counter to ensure tx message are sent in order
+static uchar8 candrv_ucTxPrio = CANDRV_MAX_TX_PRIORITY;
+
+/*==============================================================================
+                           Local Function Definitions
+==============================================================================*/
+
+// initialize the mailboxes
+static tuiSTATUS candrv_fnInitMBoxes( CANDRV_teFILTER_MODE FilterMode );
+
+// initialize the interrupt registers
+static void candrv_fnInitInterrupts( void );
+
+// convert the ID passed in by the user to data found in the
+// mailbox registers
+static void candrv_fnDataId2HwId( union CANMSGID_REG* puDestId,
+                                  CANDRV_tzCAN_ID *ptzSrcId );
+
+// conver the ID found in the mailbox register to the user data
+// as passed in by the user
+static void candrv_fnHwId2DataId( CANDRV_tzCAN_ID *ptzSrcId,
+                                  union CANMSGID_REG* puDestId );
+
+// get the error from the module
+static CANDRV_teSTATUS candrv_fnGetError( void );
+
+// change to/from initialization mode to normal mode
+static tuiSTATUS candrv_fnSetMode( uchar8  ucMode );
+
+// check to see if the tx buffers are empty
+static tucBOOL candrv_fnIsTxBuffersEmpty( void );
+
+// reset the transmit buffer
+static void candrv_fnResetTxPrio( void );
+
+extern void ISR_fnECAN0INT( void );
+extern void ISR_fnECAN1INT( void );
+
+/*==============================================================================
+                           Function Definitions
+==============================================================================*/
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnInit
+
+PURPOSE:
+    Initialize the CAN module for a given channel
+
+INPUTS:
+    ucChannel is the channel number, usually zero  - NOT USED, only one channel
+                                                   exists on the F281x DSP's
+    BitRate is an enum of the bit rates supported
+    FilterMode indicates if the filter is to be set to pass everything or
+    nothing
+
+OUTPUTS:
+    CANDRV_eSUCCESS if all goes well
+
+NOTES:
+
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/25/05  By: Baldeesh S. Khaira
+    - Created
+Version: 1.01  Date: 02/24/05  By: Baldeesh S. Khaira
+    - Moved location of clearing CANTA and CANRMP
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnInit( uchar8 ucChannel,
+                               CANDRV_teBIT_RATE teBitRate,
+                               CANDRV_teFILTER_MODE teFilterMode )
+{
+    uchar8 ucIndex;
+    uint16 uiBitPreScaler = 0;
+
+    // only 1 channel is supported on this device
+    assert( ucChannel == 0 );
+
+    DEVICE_mACCESS_EN();
+
+    // prior to setting the mode, ensure that the CAN clock is connected
+    SysCtrlRegs.PCLKCR.bit.ECANENCLK = 1;
+
+    // set the CAN pins to be CAN receive and transmit functions instead of
+    // regular I/O pins
+    GpioMuxRegs.GPFMUX.bit.CANTXA_GPIOF6 = 1;
+    GpioMuxRegs.GPFMUX.bit.CANRXA_GPIOF7 = 1;
+    ECanaRegs.CANTIOC.bit.TXFUNC = 1;
+    ECanaRegs.CANRIOC.bit.RXFUNC = 1;
+
+    // Ensure that we are using HECC mode instead of SCC mode
+    ECanaRegs.CANMC.bit.SCB = 1;
+
+    // before setting bit timing parameters, we must first
+    // be in initialization mode
+    if( candrv_fnSetMode( CANDRV_MODE_INIT ) != eSTATUS_OK )
+    {
+        return(  CANDRV_eRET_INIT_FAIL );
+    }
+
+    // --- Set the bit timing ---
+    // Search for data entry for given bit rate
+    for( ucIndex = 0; ucIndex < XT_mDIM( kazCAN_BR_PARAMS ); ucIndex++ )
+    {
+        // Are we at the right entry in the parameter table?
+        if( teBitRate == kazCAN_BR_PARAMS[ ucIndex ].eBitRate )
+        {
+            // We're done with this loop
+            break;
+        }
+    }
+
+    // Are we at the end of the table?
+    if ( ucIndex >= XT_mDIM( kazCAN_BR_PARAMS ) )
+    {
+        // We're at the end of the parameter list -> bit rate not supported
+        return( CANDRV_eRET_BAD_BIT_RATE );
+    }
+
+    // Calculate the prescaler
+    uiBitPreScaler = CTRL_CPU_MAXSPEED /
+                       ( CANDRV_mGET_TQ_SIZE( kazCAN_BR_PARAMS[ ucIndex ] ) *
+                       kazCAN_BR_PARAMS[ ucIndex ].ulBitRate );
+
+    // Assign the bit timing parameters, the synchronous jump width,
+    // time segment 1, and time segment 2
+    // Time segment 1 comprises of the propogation delay and phase
+    // delays
+    // Time segment 2 comprises of the receiver phase delays
+    //
+    // One is subtracted to each of these values because the register
+    // contains values from 0...n-1, whereas the minimum value is
+    // 1...n
+    ECanaRegs.CANBTC.bit.BRPREG = uiBitPreScaler - 1;
+    ECanaRegs.CANBTC.bit.SJWREG = kazCAN_BR_PARAMS[ ucIndex ].ucSjwWidth - 1;
+    ECanaRegs.CANBTC.bit.TSEG2REG = kazCAN_BR_PARAMS[ ucIndex ].ucTSeg2 - 1;
+    ECanaRegs.CANBTC.bit.TSEG1REG = kazCAN_BR_PARAMS[ ucIndex ].ucTSeg1 - 1;
+
+    // bit timing parameters have been set, go back to normal mode
+    if( candrv_fnSetMode( CANDRV_MODE_NORMAL ) != eSTATUS_OK )
+    {
+        return(  CANDRV_eRET_INIT_FAIL );
+    }
+
+    // Set the data format in the registers to be big endian
+    ECanaRegs.CANMC.bit.DBO = 1;
+
+
+    // initialize the control registers of the mailboxes
+    if( candrv_fnInitMBoxes( teFilterMode ) != eSTATUS_OK )
+    {
+        return ( CANDRV_eRET_INIT_FAIL );
+    }
+
+    // setup the interrupt registers
+    candrv_fnInitInterrupts();
+
+    // reset the transmit priority
+    candrv_fnResetTxPrio();
+
+    // enable the two interrupt lines
+    ECanaRegs.CANGIM.bit.I0EN = 1;
+    ECanaRegs.CANGIM.bit.I1EN = 1;
+
+    PieCtrlRegs.PIEIER9.bit.INTx5 = 1;  // Enable INTx.5 of INT9 (eCAN0INT)
+    PieCtrlRegs.PIEIER9.bit.INTx6 = 1;  // Enable INTx.6 of INT9 (eCAN1INT)
+    DEVICE_mINT9_EN();
+
+    // Enable the mailboxes
+    ECanaRegs.CANME.all = CANDRV_UINT32_MAX;
+
+    // Clear all the transmission acknowledge bits
+    ECanaRegs.CANTA.all = CANDRV_UINT32_MAX;
+
+    // Clear all messages pending in all mailboxes
+    ECanaRegs.CANRMP.all = CANDRV_UINT32_MAX;
+
+    // disable register access
+    DEVICE_mACCESS_DIS();
+
+    // return ok
+    return ( CANDRV_eRET_SUCCESS );
+
+
+}
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnEnable
+
+PURPOSE:
+    This function enables the specified CAN channel and brings it out of
+    init mode.
+
+INPUTS:
+    ucChannel - unused, cause there is only one channel
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if all goes well
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 02/08/05  By: BaldeeshK
+    - New version for 281x processor
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnEnable( uchar8 ucChannel )
+{
+
+    // only a single channel defined
+    assert( ucChannel == 0 );
+
+    // enable the mailboxes
+    ECanaRegs.CANME.all = CANDRV_UINT32_MAX;
+
+    // make sure the pins are assigned to the CAN module
+    ECanaRegs.CANTIOC.bit.TXFUNC = 1;
+    ECanaRegs.CANRIOC.bit.RXFUNC = 1;
+
+    // enable the two interrupt lines
+    ECanaRegs.CANGIM.bit.I0EN = 0;
+    ECanaRegs.CANGIM.bit.I1EN = 0;
+
+    return ( CANDRV_eRET_SUCCESS );
+
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnDisable
+
+PURPOSE:
+    This function disables the indicated CAN channel.  It attempts to do so
+    safely by by first putting the channel into sleep mode so that any
+    frames that are being transmitted get a chance to finish.  Then the
+    module is put into init mode so that it is possible to change
+    filters.
+
+INPUTS:
+    ucChannel is the number of the CAN module to disable, usually zero.
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if all goes well
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 02/08/05  By: BaldeeshK
+    - New version for 281x processor
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnDisable( uchar8 ucChannel )
+{
+
+     // only a single channel defined
+    assert( ucChannel == 0 );
+
+    // disable the mailboxes
+    ECanaRegs.CANME.all = 0;
+
+    // set the direction to be input so we don't drive anything to the line
+    GpioMuxRegs.GPFMUX.bit.CANTXA_GPIOF6 = 0;
+    GpioMuxRegs.GPFMUX.bit.CANRXA_GPIOF7 = 0;
+
+    // disable the CAN functionality from the pins
+    ECanaRegs.CANTIOC.bit.TXFUNC = 0;
+    ECanaRegs.CANRIOC.bit.RXFUNC = 0;
+
+    // disable the two interrupt lines
+    ECanaRegs.CANGIM.bit.I0EN = 1;
+    ECanaRegs.CANGIM.bit.I1EN = 1;
+
+    return ( CANDRV_eRET_SUCCESS );
+
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnSleep
+
+PURPOSE:
+    Put CAN channel to sleep so that the CPU can use less power.
+
+INPUTS:
+    ucChannel is the number of the CAN module to put to sleep, usually zero.
+    WakeEnable is TRUE if the module is to automatically wake up if there
+        is traffic on the CAN bus.
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if all goes well
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/08/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnSleep( uchar8 ucChannel,
+                                tucBOOL tucWakeEnable )
+{
+    uchar8 ucIndex;
+
+    // assert channel is 0
+    assert( ucChannel == 0 );
+
+    // enable access
+    DEVICE_mACCESS_EN();
+
+    // if automatic wakeup is requried, then set the WUBA bit, otherwise
+    // disable it
+    if( tucWakeEnable == FALSE )
+    {
+        ECanaRegs.CANMC.bit.WUBA = 0;
+    }
+    else
+    {
+        ECanaRegs.CANMC.bit.WUBA = 1;
+    }
+
+
+    // begin request for sleep by setting PDR bit in CANMC register
+    ECanaRegs.CANMC.bit.PDR = 1;
+
+    //disable access
+    DEVICE_mACCESS_DIS();
+
+    // set how long to wait until the bit changes
+    ucIndex = CANDRV_MAX_TRIES;
+    while( ucIndex-- != 0 )
+    {
+        // if the PDA bit changes, the sleep took effect, so we can return
+        // success
+        if( ECanaRegs.CANES.bit.PDA == 1 )
+        {
+            return ( CANDRV_eRET_SUCCESS );
+        }
+    }
+
+    // going to power down failed
+    return ( CANDRV_eRET_SLEEP_FAIL );
+
+}
+
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnWakeUp
+
+PURPOSE:
+    Wake channel up from sleep
+
+INPUTS:
+    ucChannel is the number of the CAN module to wake up, usually zero.
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if all goes well
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/08/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+CANDRV_teRETURN CANDRV_fnWakeUp( uchar8 ucChannel )
+{
+    uchar8 ucIndex;
+
+    // assert channel is 0
+    assert( ucChannel == 0 );
+
+    // enable access
+    DEVICE_mACCESS_EN();
+
+    // begin request for sleep by setting PDR bit in CANMC register
+    ECanaRegs.CANMC.bit.PDR = 0;
+
+    //disable access
+    DEVICE_mACCESS_DIS();
+
+    // set how long to wait until the bit changes
+    ucIndex = CANDRV_MAX_TRIES;
+    while( ucIndex-- != 0 )
+    {
+        // if the PDA bit changes, the sleep took effect, so we can return
+        // success
+        if( ECanaRegs.CANES.bit.PDA == 0 )
+        {
+            return ( CANDRV_eRET_SUCCESS );
+        }
+    }
+
+    // going to power up failed
+    return ( CANDRV_eRET_SLEEP_FAIL );
+
+}
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnReceive
+
+PURPOSE:
+    Check if there is a new frame in the MSCAN module and if there is, copy
+    it into the driver buffer pointed to by pRxFrame
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+    pRxFrame points to the destination frame structure
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if all goes well
+    CANDRV_eRET_NO_DATA if no frame has been received
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 03/06/03  By: Dale Mernett
+    - Do not clear interrupt here. It is done can_fnRxISR.
+Version: 1.02  Date: 02/08/05  By: BaldeeshK
+    - New version for 281x processor
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnReceive( uchar8 ucChannel,
+                                  CANDRV_tzCAN_FRAME *ptzRxFrame )
+{
+    uchar8 ucIndex;   // index for counting
+    uchar8 ucCount;   // counter
+    struct MBOX *CurrentMBox; // pointer to current mailbox
+    uint16* Data;     // temporary data pointer
+
+    // only a single channel defined
+    assert( ucChannel == 0 );
+    // assert frame
+    assert( ptzRxFrame );
+
+    // we have to count downwards because if data has arrived, then
+    // it will put data in the highest priority mailbox, and the highest
+    // priority mailbox, as defined by TI, is the mailbox with the highest
+    // number.  So, if we set mailboxes 0...15 as receive mailboxes, then
+    // mailbox 15 is highest priority receive mailbox
+    ucIndex = CANDRV_NUM_RX_MBOXES - 1;
+    do
+    {
+        // if this mailbox has a message pending
+        if( ( ECanaRegs.CANRMP.all & ( 1L << ucIndex ) ) != 0 )
+        {
+            CurrentMBox = ( ( struct MBOX* )( &ECanaMboxes.MBOX0 ) ) + ucIndex;
+
+            // Copy the byte count (only the last four bits count)
+            ptzRxFrame->ucByteCount = CurrentMBox->MSGCTRL.bit.DLC;
+            Data = ( uint16* )&CurrentMBox->MDL.all;
+
+            // This mbox has a message
+            // Pack the data from the registers
+            for( ucCount = 0; ucCount < CANDRV_MAX_BYTES_PER_FRAME; ++ucCount )
+            {
+                ptzRxFrame->aucData[ ucCount++ ] = *Data & CANDRV_BYTE_MASK;
+                ptzRxFrame->aucData[ ucCount ] = ( *Data >> XT_BITPOS8 ) &
+                                                            CANDRV_BYTE_MASK;
+                Data++;
+
+            }
+
+            candrv_fnHwId2DataId( &ptzRxFrame->tzCanId,
+                                  &CurrentMBox->MSGID );
+
+            // reset the ID to be all FF's so it passes the filter
+            CurrentMBox->MSGID.all = CANDRV_UINT32_MAX;
+
+            ECanaRegs.CANRMP.all = ( 1L << ucIndex );
+            return ( CANDRV_eRET_SUCCESS );
+
+        }
+    // move to the next mailbox
+    }while( ucIndex-- != 0 );
+
+    return( CANDRV_eRET_FAILURE );
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnTransmitOK
+
+PURPOSE:
+    See if at least one transmit buffer is empty and ready for use.
+    This function is used to check the availability of the hardware before
+    removing a buffer from a queue.
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if at least one transmit buffer is idle
+    CANDRV_eRET_TX_BUSY if no transmit buffers are available
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/13/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 08/26/03  By: Dalem
+    - Check TFLG and TIER bytes as in CANDRV_fnTransmit
+Version: 1.02  Date: 02/08/05  By: BaldeeshK
+    - New version for 281x processor
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnTransmitOk( uchar8 ucChannel )
+{
+
+    uint32 ulShadowReg;
+
+    // only a single channel defined
+    assert( ucChannel == 0 );
+
+    // check the transmit buffers
+    ulShadowReg = ECanaRegs.CANTRS.all | CANDRV_RX_MBOX_MASK;
+
+    // check the transmit set register
+    if( ulShadowReg != CANDRV_UINT32_MAX )
+    {
+        return( CANDRV_eRET_SUCCESS );
+    }
+
+    // All buffers are full, awaiting transmission
+    return( CANDRV_eRET_TX_BUSY );
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnTransmit
+
+PURPOSE:
+    Transmit CAN frame to bus.
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+    pTxFrame points to the driver frame to be transmitted
+    pHandle points to where the user wants the 'Handle' of the transmitted
+        frame.  The handle is a bitmask that indicates which transmit buffer
+        was used.  If the frame doesn't make it onto the bus on time, it
+        may be necessary to abort it.  This handle bitmask will be used
+        to abort the frame.
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if all goes well
+    CANDRV_eRET_TX_BUSY if no transmit buffers are available
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/27/05  By: Baldeesh S. Khaira
+    - Created
+Version: 1.01  Date: 02/25/05  By: Baldeesh S. Khaira
+    - Modified so that it doesn't set the interrupt in this function anymore,
+      it is always on by default
+Version: 1.10  Date: 03/16/05  By: Baldeesh S. Khaira
+    - Added priority feature so that messages are sent first in first out
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnTransmit( uchar8 ucChannel,
+                                   CANDRV_tzCAN_FRAME *ptzTxFrame,
+                                   uchar8 *pucHandle )
+{
+    uchar8 ucIndex;     // loop to determine which Mbox can transmit
+    uchar8 ucCount;     // loop through the data bytes
+    struct MBOX* CurrentMBox;   // pointer to current mailbox
+    uint16 *Data;       // base data unit pointer
+    uint32 Mask;        // 32-bit mask for the current MBox
+    uint32 ShadowReg;   // shadow register, see notes on top of file
+
+    // only a single channel defined
+    assert( ucChannel == 0 );
+    // assert the frame
+    assert( ptzTxFrame );
+    // assert the Handle
+    assert( pucHandle );
+
+    if( candrv_fnIsTxBuffersEmpty() != FALSE )
+    {
+        candrv_fnResetTxPrio();
+    }
+
+    // we start looking for an empty buffer at the highest priority tx mbox
+    // in this module, that is the one with the highest numbered mailbox
+    ucIndex = CANDRV_NUM_RX_MBOXES + CANDRV_NUM_TX_MBOXES - 1;
+
+    do
+    {
+        // if the this current mailbox is not currently transmitting
+        if( ( ECanaRegs.CANTRS.all & ( 1L << ucIndex ) ) == 0 )
+        {
+            // get the mask for this mailbox
+            Mask = ( 1L << ucIndex );
+
+            // get a pointer to the current mailbox
+            CurrentMBox = ( ( struct MBOX* )( &ECanaMboxes.MBOX0 ) ) + ucIndex;
+
+            // disable the current mailbox because we have to write to the
+            // identifier area of this mailbox.  Any writes the mailbox ID
+            // field requires the disabling of the mailbox
+            ShadowReg = ECanaRegs.CANME.all & ( ~Mask );
+            ECanaRegs.CANME.all = ShadowReg;
+
+            // Copy the ID bytes
+            candrv_fnDataId2HwId( &CurrentMBox->MSGID,
+                                  &ptzTxFrame->tzCanId );
+
+            // assign the pointer to current mailbox data area
+            Data = ( uint16* )&CurrentMBox->MDL.all;
+
+            // This mbox has a message
+            // Pack the data from the registers
+            for( ucCount = 0; ucCount < CANDRV_MAX_BYTES_PER_FRAME; ++ucCount )
+            {
+                *Data = ptzTxFrame->aucData[ ucCount++ ] & CANDRV_BYTE_MASK;
+                *Data += ( ptzTxFrame->aucData[ ucCount ] & CANDRV_BYTE_MASK )
+                                                                  << XT_BITPOS8;
+                Data++;
+
+            }
+
+            // assign the byte count
+            CurrentMBox->MSGCTRL.bit.DLC = ptzTxFrame->ucByteCount;
+
+            // assign the priority
+            CurrentMBox->MSGCTRL.bit.TPL = ( candrv_ucTxPrio-- &
+                                                       CANDRV_MAX_TX_PRIORITY );
+
+            // assign the handle to the current mailbox number
+            *pucHandle = ( ucIndex - CANDRV_NUM_RX_MBOXES );
+
+            // re-enable this mailbox
+            ShadowReg = ECanaRegs.CANME.all | Mask;
+            ECanaRegs.CANME.all = ECanaRegs.CANME.all | Mask;//ShadowReg;
+
+            // allow register access
+            DEVICE_mACCESS_EN();
+
+            // clear the transmit acknowledge bit by setting it to 1
+            ECanaRegs.CANTA.all = Mask;
+
+            // start transmission by setting the Transmission Request register
+            // tranmission does not occur until the corresponding bit
+            // representing the appropriate mailbox is set
+            ShadowReg = ECanaRegs.CANTRS.all | Mask;
+            ECanaRegs.CANTRS.all = ShadowReg;
+
+            // disallow register access
+            DEVICE_mACCESS_DIS();
+
+            // return sucess
+            return ( CANDRV_eRET_SUCCESS );
+        }
+
+     // while our index reached the receive mailbox area
+    }while( ucIndex-- != CANDRV_NUM_RX_MBOXES );
+
+
+    // nothing available, CAN controller is busy
+    return( CANDRV_eRET_TX_BUSY );
+}
+
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnAbort
+
+PURPOSE:
+    Abort a transmitted frame
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+    Handle is an index to a transmit buffer
+
+OUTPUTS:
+    CANDRV_eRET_SUCCESS if all goes well
+
+NOTES:
+    This function will clear the transmit buffer but the user will have
+    to wait until the transmit interrupt to find out if the frame was
+    aborted or if it made it onto the bus before the abort could take effect.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 02/20/03  By: Tom Lightfoot
+    - Handle is now a number from 0 to 2 instead of a bitmask
+Version: 1.02  Date: 07/31/03  By: Dalem
+    - Convert handle to bitmask to check the CANTFLG bits
+Version: 1.03  Date: 02/08/05  By: BaldeeshK
+    - New version for 281x processor
+Version: 1.04  Date: 02/24/05  By: BaldeeshK
+    - Modified assert to use index instead of mbox number
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnAbort( uchar8 ucChannel,
+                                uchar8 ucHandle )
+{
+
+    // only a single channel defined
+    assert( ucChannel == 0 );
+    assert( ucHandle < CANDRV_NUM_TX_MBOXES );
+
+    // only abort if the message hasn't been sent yet, so make sure
+    // that their is a transmit still pending
+    if( ( ECanaRegs.CANTRS.all & ( 1L << ( ucHandle + CANDRV_NUM_RX_MBOXES ) ) ) != 0 )
+    {
+        ECanaRegs.CANAA.all |= 1L << ( ucHandle + CANDRV_NUM_RX_MBOXES );
+    }
+
+    return( CANDRV_eRET_SUCCESS );
+}
+
+
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnTxStatus
+
+PURPOSE:
+    Get transmitter status and optional error count
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+    pErrCount points to where to send the error count.  If NULL, it won't be
+    assigned.
+
+OUTPUTS:
+    An enum of the transmitter's error status.
+
+NOTES:
+    Status errors are the same for transmit and receive
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 05/27/03  By: Tom Lightfoot
+    - Used the right enum type when channel number out of range
+Version: 1.02  Date: 08/01/03  By: dalem
+    - Use merged bits for tx status from hardware
+Version: 1.03  Date: 02/08/05  By: BaldeeshK
+    - New version for 281x processor
+
+*******************************************************************************/
+
+CANDRV_teSTATUS CANDRV_fnTxStatus( uchar8 ucChannel,
+                                   uchar8 *pucErrCount )
+{
+    assert( ucChannel == 0 );
+
+    if( pucErrCount != NULL )
+    {
+        // read and store the tranmit error count
+        *pucErrCount = ECanaRegs.CANTEC.bit.TEC;
+    }
+    return ( candrv_fnGetError() );
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnRxStatus
+
+PURPOSE:
+    Get receiver status and optional error count
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+    pucErrCount points to where to send the error count.  If NULL, it won't be
+    assigned
+
+OUTPUTS:
+    An enum of the receiver's error status.
+
+NOTES:
+    Status errors are the same for transmit and receive
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 05/27/03  By: Tom Lightfoot
+    - Used the right enum type when channel number out of range
+Version: 1.02  Date: 08/01/03  By: dalem
+    - Use merged bits for rx status from hardware
+Version: 1.03  Date: 02/08/05  By: BaldeeshK
+    - New version for 281x processor
+
+*******************************************************************************/
+
+CANDRV_teSTATUS CANDRV_fnRxStatus( uchar8 ucChannel,
+                                   uchar8 *pucErrCount )
+{
+    assert( ucChannel == 0 );
+
+    if( pucErrCount != NULL )
+    {
+        // read and store the receive error count
+        *pucErrCount = ECanaRegs.CANREC.bit.REC;
+    }
+    return ( candrv_fnGetError() );
+
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnInitCbList
+
+PURPOSE:
+    Initialize the callback list to all NULLs
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    Call this function before any CAN channels are initialized.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 01/20/05  By: Baldeesh S. Khaira
+    - New version for TI 281x processor
+
+*******************************************************************************/
+
+void CANDRV_fnInitCbList( void )
+{
+    uchar8 Index;   // Counts through the callback list
+
+    // assign each callback a value of NULL
+    for( Index = 0; Index < CANDRV_eCB_LAST; Index++ )
+    {
+        candrv_apCallback[ Index ] = NULL;
+    }
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnInstallCb
+
+PURPOSE:
+    Install callbacks for handling interrupts
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+    CbType is an enum of what situation the function is to handle
+    pFunc is the pointer to the callback function.
+
+OUTPUTS:
+    Returns CANDRV_eRET_SUCCESS on completion, or a failure code.
+
+
+NOTES:
+    Call this function after calling CAN_fnInitCBList and before any
+    CAN channels are initialized.
+
+    The callback functions are called while the interrupt is being
+    handled so they should not do very much processing, mostly on the
+    order of queueing buffers and setting flags for task-level
+    processing later.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 07/31/03  By: dalem
+    - Added returning of return code
+Version: 1.02  Date: 01/20/05  By: Baldeesh S. Khaira
+    - New version for TI 281x processor
+
+*******************************************************************************/
+
+CANDRV_teRETURN CANDRV_fnInstallCb( uchar8 ucChannel,
+                                    CANDRV_teCB_TYPE CbType,
+                                    CANDRV_tpfnCALLBACK tpfnFunc )
+{
+    assert ( ucChannel == 0 );
+    assert( tpfnFunc );
+
+    // Make sure this is a valid callback type
+    if( CbType >= CANDRV_eCB_LAST )
+    {
+        // Index out of range
+        return( CANDRV_eRET_FAILURE );
+    }
+
+    // Install the pointer in the list
+    candrv_apCallback[ CbType ] = tpfnFunc;
+
+    // Complete
+    return( CANDRV_eRET_SUCCESS );
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnGetHandle
+
+PURPOSE:
+    Get the handle of the latest transmitted buffer
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+
+OUTPUTS:
+    Handle of the latest transmitted buffer
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/18/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+uchar8 CANDRV_fnGetHandle( uchar8 ucChannel )
+{
+    // only channel 0 is valid
+    assert( ucChannel == 0 );
+
+    // return the Handle
+    return ( candrv_ucHandle );
+}
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnInitMBoxes
+
+PURPOSE:
+    Initialize the mailbox control registers
+
+INPUTS:
+    pzCan points to the MSCAN module being initialized
+    FilterMode indicates if the filter is to be set to pass everything or nothing
+
+OUTPUTS:
+    CANDRV_eSUCCESS if all goes well
+
+NOTES:
+    This function is only to be called from CAN_fnInit
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/14/04  By: Baldeesh Khaira
+    - Created
+
+Version: 1.01  Date: 03/17/05  By: Baldeesh Khaira
+    - Initialized MSGCTRL field to all zeroes as required by the Enhanced
+      CAN reference guide
+
+*******************************************************************************/
+
+static tuiSTATUS candrv_fnInitMBoxes( CANDRV_teFILTER_MODE FilterMode )
+{
+    uchar8 ucIndex; // Index for counting
+    uint32 Mask;    // Acceptance mask for the filters, either all ones
+                    // for accepting anything, or all zeros
+    union CANLAM_REG * LamRegs = ( union CANLAM_REG * )&ECanaLAMRegs.LAM0;
+                                                // pointer to first acceptance
+                                                // mask register
+    struct MBOX *  CurrentMBox = ( struct MBOX * )&ECanaMboxes.MBOX0;
+                                                     // pointer to first mailbox
+    // disable the mailboxes before writing to them
+    ECanaRegs.CANME.all = 0;
+
+    if( FilterMode == CANDRV_eFILTER_PASS_ALL )
+    {
+        // Set all mask bytes to 0xFF to allow all frames to be received
+        // (A 1 in the mask means don't care)
+        Mask = CANDRV_ACCEPT_ALL;
+    }
+    else if( FilterMode == CANDRV_eFILTER_PASS_NONE )
+    {
+        // Set all mask bytes to 0x00 to not pass any frames
+        Mask = CANDRV_ACCEPT_NONE;
+    }
+    else
+    {
+        // Invalid filter parameter
+        return( eSTATUS_ERR );
+    }
+
+    // set the first CANDRV_NUM_RX_MBOXES to be RX mailboxes, and the rest
+    // to be TX mailboxes
+    // This sets the first CANDRV_NUM_RX_MBOXES number of bits in the register
+    // Note:  Setting it to 1 makes it a receive mailbox, setting it to 0 makes
+    //        it a transmit mailbox
+    ECanaRegs.CANMD.all = ( ( 1L << CANDRV_NUM_RX_MBOXES ) - 1 );
+
+    // set all mailboxes to not overwrite/enable overwrite protection
+    ECanaRegs.CANOPC.all = CANDRV_UINT32_MAX;
+
+    // loop through the mailboxes
+    for( ucIndex = 0; ucIndex < CANDRV_TOTAL_NUM_MBOXES; ucIndex++ )
+    {
+
+        // initialize the mailbox parameters
+        CurrentMBox->MSGCTRL.all = 0;
+        CurrentMBox->MSGID.all = Mask;
+
+        LamRegs->all = Mask;    // assign the mask
+        LamRegs++;              // increment the acceptance mask pointer
+        CurrentMBox++;          // increment the mailbox pointer
+
+    }
+
+    return ( eSTATUS_OK );
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnInitInterrupts
+
+PURPOSE:
+    Initialize the eCAN interrupt registers
+
+INPUTS:
+    None
+
+OUTPUTS:
+    none
+
+NOTES:
+    This function is only to be called from CAN_fnInit
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/24/05  By: Baldeesh S. Khaira
+    - Created
+
+Version: 1.01  Date: 02/24/05  By: Baldeesh S. Khaira
+    - Now setting all interrupt in this function, instead of only receive ones
+
+Version: 1.10    Date: March 21, 2005  By: John Bellini
+    - Added initialization of ISR to the vector table.
+    
+Version: 1.11  Date: 03/22/05  By: Baldeesh S. Khaira
+    - Removed device enable/disable
+        
+*******************************************************************************/
+
+static void candrv_fnInitInterrupts( void )
+{
+
+    // Enable the appropriate interrupt bits
+    ECanaRegs.CANGIM.all = CANDRV_INTERRUPT_ENABLE_BITS;
+
+    // Set the flags to error and warnings interrupt lines to route to
+    // ECAN0INT interrupt line
+    ECanaRegs.CANGIM.bit.GIL = 0;
+
+    // route the receive mailboxes to  ECAN1INT and all transmit interrupts
+    // to ECAN0INT
+    ECanaRegs.CANMIL.all = ( ( 1L << CANDRV_NUM_RX_MBOXES ) - 1 );
+
+    // enable all the mailbox interrupts
+    ECanaRegs.CANMIM.all = ( CANDRV_UINT32_MAX );
+
+
+    // Initialize interrupt vectors
+    //
+    PieVectTable.ECAN0INTA= &ISR_fnECAN0INT;
+    PieVectTable.ECAN1INTA= &ISR_fnECAN1INT;
+
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnDataId2HwId
+
+PURPOSE:
+    Copy the package header ID to the ID format found in the mailbox
+
+INPUTS:
+    ptzDestId points to an ID field in the mailbox
+    puSrcId points to an id field in the format the driver uses
+
+OUTPUTS:
+    Nothing
+
+NOTES:
+    This function is used both for sending frames as well as setting
+    hardware filtering parameters.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/24/05  By: Baldeesh S. Khaira
+    - Creation
+
+Version: 1.01  Date: 02/15/05  By: Baldeesh S. Khaira
+    - Bug fix when extracting the bits for EXTMSGID_H.  Previously, it was
+      masking with XT_BITPOS2, when it should have been XT_BIT2.
+
+*******************************************************************************/
+
+static void candrv_fnDataId2HwId( union CANMSGID_REG*    puDestId,
+                                  CANDRV_tzCAN_ID *ptzSrcId )
+{
+    assert( puDestId && ptzSrcId );
+
+    // first 16 bits of ID
+    puDestId->bit.EXTMSGID_L = ptzSrcId->ucId07_00 |
+                               ( ptzSrcId->ucId15_8 << XT_BITPOS8 );
+
+    // next 2 bits
+    puDestId->bit.EXTMSGID_H = ( ptzSrcId->ucId23_16 & ( XT_BIT2 - 1 ) );
+
+    // the starndard part of the extended ID message
+    puDestId->bit.STDMSGID = ( ptzSrcId->ucId23_16 >> XT_BITPOS2 ) |
+                             ( ptzSrcId->ucId28_24 << XT_BITPOS6 );
+
+    // IDE bit
+    puDestId->bit.IDE = ( ( ptzSrcId->ucId28_24 & CANDRV_ID_MSK_IDE ) != 0 )
+                                                                    ? 1 : 0;
+    // these next two aren't user modifiable
+    puDestId->bit.AME = 1;
+    puDestId->bit.AAM = 0;
+
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnHwId2DataId
+
+PURPOSE:
+    Copy a  mailbox ID to the ID found in the package header file.  Some
+    bit shifting and manipulation is required for this.
+
+INPUTS:
+    ptzDestId points to an id field in the format the driver uses
+    puSrcId points to an ID field in the mailbox
+
+OUTPUTS:
+    Nothing
+
+NOTES:
+    This function is used for receiving frames.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/24/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+
+static void candrv_fnHwId2DataId( CANDRV_tzCAN_ID *ptzDestId,
+                                  union CANMSGID_REG*  puSrcId )
+{
+    assert( ptzDestId && puSrcId );
+
+    // First part of the ID masked out
+    ptzDestId->ucId07_00 = ( puSrcId->bit.EXTMSGID_L & ( XT_BIT8 - 1 ) );
+
+    // Second part of the ID
+    ptzDestId->ucId15_8 = ( ( puSrcId->bit.EXTMSGID_L & ( CANDRV_UINT16_MAX ) )
+                                                                >> XT_BITPOS8 );
+
+    // Third part of the ID
+    ptzDestId->ucId23_16 = ( puSrcId->bit.EXTMSGID_H ) |
+                           ( ( puSrcId->bit.STDMSGID & ( XT_BIT6 - 1 ) )
+                                                            << XT_BITPOS2 );
+
+    // Fourth part of the ID
+    ptzDestId->ucId28_24 = ( puSrcId->bit.STDMSGID >> XT_BITPOS6 );
+
+    // if this frame has an extended identifier, then add the IDE bit to the
+    // most significant byte of the CAN frame ID
+    if( puSrcId->bit.IDE == 1 )
+    {
+        ptzDestId->ucId28_24 |= CANDRV_ID_MSK_IDE;
+    }
+
+
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnGetError
+
+PURPOSE:
+    Get the bus error conditions
+
+INPUTS:
+    None
+
+OUTPUTS:
+    An enum of the transmitter or receiver status.
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/12/03  By: Tom Lightfoot
+    - Creation
+Version: 1.01  Date: 02/20/03  By: Tom Lightfoot
+    - Fixed case numbers which were written in binary but interpreted in hex
+Version: 1.02  Date: 01/24/05  By: Baldeesh S. Khaira
+    - New version for 281x processor
+
+*******************************************************************************/
+
+static CANDRV_teSTATUS candrv_fnGetError( void )
+{
+    // bus off error gets highest priority
+    if( ECanaRegs.CANES.bit.BO == 1 )
+    {
+        return ( CANDRV_eSTATUS_BUSOFF );
+    }
+    // check for any other error bits
+    else if( ( ECanaRegs.CANES.all & CANDRV_ERROR_STATUS_BITS ) != 0 )
+    {
+        return ( CANDRV_eSTATUS_ERROR );
+    }
+    // check for the warning bits
+    else if( ECanaRegs.CANES.bit.EW == 1 )
+    {
+        return ( CANDRV_eSTATUS_WARNING );
+    }
+
+    // no errors or warnings
+    return( CANDRV_eSTATUS_OK );
+}
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnSetMode
+
+PURPOSE:
+    Change the mode of the CAN controller.  Can be initialization or normal.
+
+INPUTS:
+    ucMode - CANDRV_MODE_NORMAL or CANDRV_MODE_INIT
+
+OUTPUTS:
+    tuiSTATUS - eSTATUS_OK if okay
+              - eSTATUS_ERR if not
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/20/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+
+static tuiSTATUS candrv_fnSetMode( uchar8  ucMode )
+{
+    uint16  Index;       // Index for counting
+
+    // First make sure that the CAN controller is in the initialization mode
+    // No setup settings can be made until the CAN module is in init mode
+    ECanaRegs.CANMC.bit.CCR = ucMode;
+    Index = CANDRV_MAX_TRIES;
+
+    // loop until the configuration acceptance is initialized
+    // This may have to wait until the previous CAN frame has been received
+    // or transmitted
+    while( ECanaRegs.CANES.bit.CCE == ( !( ucMode ) ) )
+    {
+        // if our timeout ended
+        if( Index == 0 )
+        {
+            // return with a failure
+            return( eSTATUS_ERR );
+        }
+        Index--;
+    }
+
+    return ( eSTATUS_OK );
+}
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnIsTxBuffersEmpty
+
+PURPOSE:
+    Check to see if the transmit buffers are empty
+INPUTS:
+
+OUTPUTS:
+    TRUE - buffer is empty
+    FALSE - buffer is not empty
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/16/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+tucBOOL candrv_fnIsTxBuffersEmpty( void )
+{
+    uint32 ulShadowReg = 0;
+
+    // check the transmit buffers
+    ulShadowReg = ECanaRegs.CANTRS.all & ( ~( CANDRV_RX_MBOX_MASK ) );
+
+    // check the transmit set register
+    if( ulShadowReg == 0 )
+    {
+        // buffer is empty
+        return( TRUE );
+    }
+
+    // buffer is not empty
+    return( FALSE );
+
+
+}
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    candrv_fnResetTxPrio
+
+PURPOSE:
+    Reset the transmit priority
+
+INPUTS:
+   none
+
+OUTPUTS:
+   none
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 02/16/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+void candrv_fnResetTxPrio( void )
+{
+    candrv_ucTxPrio = CANDRV_MAX_TX_PRIORITY;
+}
+
+
+/*==============================================================================
+                           Interrupt Routines
+==============================================================================*/
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnECAN0INTIsr
+
+PURPOSE:
+    General purpose interrupt routine for transmit buffer empty.
+    This function determines if the buffer is empty because of a successful
+    transmission or because of an aborted frame and call either the
+    call back for transmit OK or abort as appropriate.
+    The interrupt for the empty buffer is then disabled.
+
+INPUTS:
+    ucChannel is the number of the CAN module to use, usually zero.
+
+OUTPUTS:
+    None
+
+NOTES:
+    This function is called from the transmit interrupt routines of
+    all channels.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/31/05  By: Baldeesh S. Khaira
+    - Created
+Version: 1.01  Date: 02/17/05  By: Baldeesh S. Khaira
+    - Fixed text error with a misplaced line
+Version: 1.02  Date: 02/24/05  By: Baldeesh S. Khaira
+    - Moved storing of handle to before clearing of CANTA, fixed bug with
+      clearing of CANTA
+
+*******************************************************************************/
+
+void CANDRV_fnECAN0INTIsr( void )
+{
+    uint32 ulShadowReg;
+    CANDRV_teCB_TYPE Reason;    // Reason for interrupt, indicating which callback
+
+    // This interrupt came from transmit mailbox
+    if( ECanaRegs.CANGIF0.bit.GMIF0 == 1 )
+    {
+        // store the handle, before it gets cleared by clearing tx acknowledge
+        candrv_ucHandle = ( ECanaRegs.CANGIF0.bit.MIV0 - CANDRV_NUM_RX_MBOXES );
+
+        // assign the bit to be cleared
+        ulShadowReg = 1L << ECanaRegs.CANGIF0.bit.MIV0;
+
+        // clear the transmit acknowledge bit
+        ECanaRegs.CANTA.all = ulShadowReg;
+
+        // assign the reason for the interrupt
+        Reason = CANDRV_eCB_TXOK;
+    }
+    else
+    {
+        // Was the frame aborted?
+        if( ECanaRegs.CANGIF0.bit.AAIF0 == 1 )
+        {
+            ulShadowReg = CANDRV_AAIF_BIT_POS;
+            Reason = CANDRV_eCB_TXABORT;
+        }
+        // interrupt cause by wakeup
+        else if( ECanaRegs.CANGIF0.bit.WUIF0 == 1 )
+        {
+            ulShadowReg = CANDRV_WUIF_BIT_POS;
+            Reason = CANDRV_eCB_WAKEUP;
+        }
+        // interrupt caused by receive message overflow
+        else if( ECanaRegs.CANGIF0.bit.RMLIF0 == 1 )
+        {
+            ulShadowReg = CANDRV_RMLI_BIT_POS;
+            Reason = CANDRV_eCB_OVERFLOW;
+        }
+        else
+        {
+            // misecllaneous status problem occured, ie bus off, error passive
+            ulShadowReg = CANDRV_STATUS_MASK_BITS;
+            Reason = CANDRV_eCB_STATUS;
+        }
+
+        ECanaRegs.CANGIF0.all = ulShadowReg;
+
+    }
+
+    // Call the function if there is a function
+    if( candrv_apCallback[ Reason ] != NULL )
+    {
+        // call the function with channel 0
+        candrv_apCallback[ Reason ]( 0 );
+    }
+
+    // set the appropriate acknoledge bit in the pie vector table
+    PieCtrlRegs.PIEACK.bit.ACK9 = 1;        // Issue PIE ACK
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    CANDRV_fnECAN1INTIsr
+
+PURPOSE:
+    Interrupt routine for CAN interrupt line 1.  This is a higher priority
+    interrupt line than interrupt line 0.  This driver dedicates interrupt
+    line 1 to be used for receive messages only.  Hence, only receive
+    messages will be routed to this routine.
+
+INPUTS:
+
+OUTPUTS:
+    None
+
+NOTES:
+
+VERSION HISTORY:
+
+Version: 1.00  Date: 01/31/05  By: Baldeesh S. Khaira
+    - Created
+
+*******************************************************************************/
+
+void CANDRV_fnECAN1INTIsr( void )
+{
+    // Call the function if there is a function
+    if( candrv_apCallback[ CANDRV_eCB_RECEIVE ] != NULL )
+    {
+        candrv_apCallback[ CANDRV_eCB_RECEIVE ]( 0 );
+    }
+
+    // set the appropriate acknoledge bit in the pie vector table
+    PieCtrlRegs.PIEACK.bit.ACK9 = 1;        // Issue PIE ACK
+}
+

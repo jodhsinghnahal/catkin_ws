@@ -1,0 +1,59 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\WorkSpaces\Xanbus_Mobile_FSW_Gen2\Software\Code\Pkgs\Protocols\XanBus\Targets\TI\281x\Make\XanBusLib\"
+ProjectType=Library
+CPUFamily=TMS320C28XX
+Tool="Archiver"
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbaddr.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbinit.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbmem.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbmltpkt.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbmsg.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbpack.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbtfx.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbtimers.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\canframe.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\dobholdr.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\PGNDOb.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\pgnrcvr.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\pgnxmtr.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\tfxlib.c"
+Source="..\..\..\..\..\Targets\TI\281x\Pkgs\Shim\Src\\canbuf.c"
+Source="..\..\..\..\..\Targets\TI\281x\Pkgs\Shim\Src\CDrive.c"
+Source="..\..\..\..\..\Targets\TI\281x\Pkgs\Shim\Src\cdrvapi.c"
+Source="..\..\..\..\..\Targets\TI\281x\Pkgs\Shim\Src\msghandl.c"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o"..\..\Lib\XBDebug.lib"
+
+["Archiver" Settings: "Release"]
+Options=-r -o"..\..\Lib\XB.lib"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"$(Proj_dir)\..\..\..\..\..\Targets\TI\281x\Make\XanBusLib\Debug" -i"$(Proj_dir)\..\..\..\..\..\..\..\..\Inc" -i"$(Proj_dir)\..\..\..\..\..\..\..\..\Pkgs\Targets\Inc" -i"$(Proj_dir)\..\..\..\..\..\..\..\..\Pkgs\Targets\TI\28x\281x\Inc" -i"$(Proj_dir)\..\..\..\..\..\Inc" -i"$(Proj_dir)\..\..\..\..\..\Common\Pkgs\Inc" -i"$(Proj_dir)\..\..\..\..\..\Targets\Inc" -i"$(Proj_dir)\..\..\..\..\..\Targets\TI\281x\Pkgs\Inc" -d"_DEBUG" -d"LARGE_MODEL" -d"_16BIT_ARCHITECTURE" -d"XT_FAR=" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o2 -fr"$(Proj_dir)\..\..\..\..\..\Targets\TI\281x\Make\XanBusLib\Release" -i"$(Proj_dir)\..\..\..\..\..\..\..\..\Inc" -i"$(Proj_dir)\..\..\..\..\..\..\..\..\Pkgs\Targets\Inc" -i"$(Proj_dir)\..\..\..\..\..\..\..\..\Pkgs\Targets\TI\28x\281x\Inc" -i"$(Proj_dir)\..\..\..\..\..\Inc" -i"$(Proj_dir)\..\..\..\..\..\Common\Pkgs\Inc" -i"$(Proj_dir)\..\..\..\..\..\Targets\Inc" -i"$(Proj_dir)\..\..\..\..\..\Targets\TI\281x\Pkgs\Inc" -d"LARGE_MODEL" -d"NDEBUG" -d"_16BIT_ARCHITECTURE" -d"XT_FAR=" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["..\..\..\..\..\Common\Pkgs\API\Src\xbpack.c" Settings: "Debug"]
+Options="Compiler" +{-pdsr770}
+
+["..\..\..\..\..\Common\Pkgs\API\Src\xbpack.c" Settings: "Release"]
+Options="Compiler" +{-pdsr770}
+
+
+

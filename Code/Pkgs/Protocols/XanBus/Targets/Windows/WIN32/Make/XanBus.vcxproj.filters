@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e34a98c0-4799-4c06-b573-5e81752195f3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Source Files\API">
+      <UniqueIdentifier>{84ccbb70-6fb0-4ae9-934a-60d79d2ec327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stack">
+      <UniqueIdentifier>{6ec0b541-9ec3-46bd-8fcf-60bd04a6c157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shim">
+      <UniqueIdentifier>{164f4aa4-70f7-412d-9743-62c5e0edc61d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Apox">
+      <UniqueIdentifier>{ce27fb2d-4c5e-41ee-b8ed-de4020f5abe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{69e9a3d2-a9a5-4133-9eb4-f06b0f15bbe4}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Code_Pkg_Prot_Xb_Inc">
+      <UniqueIdentifier>{da627935-32dc-4289-b3ff-ea46caca2010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc">
+      <UniqueIdentifier>{175304ab-a53b-4d23-9c14-7834089081d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc">
+      <UniqueIdentifier>{d10b80a0-4542-49a5-bcc1-cc7836aaad1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Code_Pkg_Prot_Xb_Tgt_Inc">
+      <UniqueIdentifier>{f95a05b3-bb72-4fde-bfed-aa058154a67d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Code_Pkg_Tgt_Inc">
+      <UniqueIdentifier>{a10e1a37-2961-42ce-b530-fbee152eb16a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Inc">
+      <UniqueIdentifier>{e19cf522-9fb6-4767-b3dd-954fa0b93ca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Code_Inc">
+      <UniqueIdentifier>{2731dcd4-e4ef-409a-a82e-fa1265387c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8ac0acbf-73dc-4acd-b346-223be8b5d2c3}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\sysabort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\XanBus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Devices\Diag\Src\xbpgntbl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\xbplatform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbaddr.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbinit.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbmem.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbmltpkt.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbmsg.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbpack.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbtfx.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Api\Src\xbtimers.c">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\canframe.c">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\dobholdr.c">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\PGNDOb.c">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\pgnrcvr.c">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\pgnxmtr.c">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Common\Pkgs\Stack\Src\tfxlib.c">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Shim\Src\apoxdrv.c">
+      <Filter>Source Files\Shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Shim\Src\canusb.c">
+      <Filter>Source Files\Shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Shim\Src\CDrive.c">
+      <Filter>Source Files\Shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Shim\Src\ifakdrv.c">
+      <Filter>Source Files\Shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Shim\Src\msghandl.c">
+      <Filter>Source Files\Shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Shim\Src\vector.c">
+      <Filter>Source Files\Shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Shim\Src\xanbr.c">
+      <Filter>Source Files\Shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Apox\Src\apox.cpp">
+      <Filter>Source Files\Apox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Apox\Src\Reg.cpp">
+      <Filter>Source Files\Apox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Pkgs\Apox\Src\USBFT.cpp">
+      <Filter>Source Files\Apox</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Devices\PROTOCOL_RVC\Inc\rvcapprxtx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Inc\pgnudefs.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Inc\xbgdefs.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Inc\xbpgfns.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Inc\xbrxtx.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Inc\xbudefs.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\cdrive.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\LibCfg.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\LibCore.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\libenv.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\msghandl.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\pgn.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Common\Pkgs\Inc\xbldefs.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Com_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Pkgs\Inc\apox.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Pkgs\Inc\Ftd2xx.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Pkgs\Inc\isCANdrv.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Pkgs\Inc\isCANext.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Pkgs\Inc\USBCAN.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Pkgs\Inc\USBFT.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Pkgs\Inc\VCanD.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Pkg_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Inc\canbuf.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Targets\Inc\candrv.h">
+      <Filter>Header Files\Code_Pkg_Tgt_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\config.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\stdafx.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\XanBus.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\xbwincb.h">
+      <Filter>Header Files\Code_Pkg_Prot_Xb_Tgt_Win_Win32_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\LIB_stddefs.h">
+      <Filter>Header Files\Code_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\LIB_stdtype.h">
+      <Filter>Header Files\Code_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\LIB_stdtype32.h">
+      <Filter>Header Files\Code_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\Inc\xassert.h">
+      <Filter>Header Files\Code_Inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Lib\FTD2XX.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+    <Library Include="..\Lib\isCANdrv.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+    <Library Include="..\Lib\vcandm32.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Src\XanBus.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

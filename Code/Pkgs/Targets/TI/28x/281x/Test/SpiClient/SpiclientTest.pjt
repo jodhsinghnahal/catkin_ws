@@ -1,0 +1,46 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="G:\AccuRev\NovaPfrmB\Software\Code\Pkgs\Targets\TI\281x\Test\SpiClient\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\..\..\..\..\ACB\Src\Isra.asm"
+Source="..\..\..\..\..\..\ACB\Src\Isrc.c"
+Source="..\..\..\..\..\..\ACB\Src\PieVect.c"
+Source="..\..\..\..\..\OS\uCOSII\Targets\TI\281x\Bin\Debug\uCOSII.lib"
+Source="..\..\..\Lib\rts2800_ml.lib"
+Source="..\..\Src\DSP281x_CodeStartBranch.asm"
+Source="..\..\Src\DSP281x_GlobalVariableDefs.c"
+Source="..\..\Src\init.c"
+Source="..\..\Src\spiclient.c"
+Source="..\..\Src\spidrv.c"
+Source="..\..\Src\SysClk.c"
+Source="spiclienttest.c"
+Source="..\..\Make\DSP281x_Headers_nonBIOS.cmd"
+Source="..\..\Make\F2812_EzDSP_RAM_lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"$(NovaACB_Common_Root)\Targets\TI\28x\Test\SpiClient\Obj" -i"$(NovaACB_Target_Root)\Pkgs\Inc" -i"$(NovaACB_Target_Root)\Pkgs\Digctrl\InvCtrl\test\ezdsp28x\sinewave" -i"$(NovaACB_Target_Root)\Pkgs\DigCtrl\InvCtrl\test\ezdsp28x" -i"$(NovaACB_Target_Root)\Pkgs\Services\Inc" -i"$(NovaACB_Target_Root)\Pkgs\HAL\Inc" -i"$(NovaACB_Target_Root)\Inc" -i"$(NovaACB_Code_Root)\Inc" -i"$(NovaACB_Pkgs_Root)\Targets\Inc" -i"$(NovaACB_Pkgs_Root)\OS\ucosII\Inc" -i"$(NovaACB_Pkgs_Root)\Protocols\XanBus\Inc" -i"$(NovaACB_Pkgs_Root)\OS\ucosII\Targets\TI\281x\Inc" -i"$(NovaACB_Pkgs_Root)\Targets\TI\281x\Inc" -d"_DEBUG" -d"LARGE_MODEL" -d"_16BIT_ARCHITECTURE" -d"CTRL_CONFIG_OPTION_6" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"$(NovaACB_Common_Root)G:\AccuRev\NovaPfrmB\Software\Code\Pkgs\Targets\TI\281x\Test\SpiClient\Bin\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -heap400 -m".\Bin\SpiclientTest.map" -o".\Bin\SpiclientTest.out" -stack400 -w -x
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\SpiclientTest.map" -o".\Bin\Release\SpiclientTest.out" -w -x
+

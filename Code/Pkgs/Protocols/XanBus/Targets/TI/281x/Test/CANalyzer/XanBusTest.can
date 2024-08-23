@@ -1,0 +1,206 @@
+/*@@var:*/
+variables
+{
+	const byte CAPL = 0xf1;
+	msTimer tmBump;
+}
+/*@@end*/
+
+/*@@pg:XanBus::DcSrcSts (0x1F001X):*/
+on pg DcSrcSts
+{
+	pg DcSrcSts sts;
+	pg IsoAck isoAck;
+
+	// Ignore my own output
+	if ( this.dir == TX )
+	{
+		return;
+	}
+
+	// Filter out component frames of fastpacket
+	if ( this.DLC > 8 )
+	{
+		GetThisMessage( sts, sts.DLC );
+	}
+	else
+	{
+		return;
+	}
+
+	if( ( sts.MsgCount == 0 )
+	 && ( sts.RsvBits == 0x03 )
+	 && ( sts.DcSrcId == 7 )
+	 && ( sts.Voltage == 0x12345678 )
+	 && ( sts.Current == -24680 )
+	 && ( sts.TempSensId == 4 )
+	 && ( sts.Temp == 27300 )
+	 && ( sts.Soc == 81 )
+	 && ( sts.TimeRemain == 129 )
+	 && ( sts.Soh == 95 )
+	 && ( sts.BattCapRemain == 125 )
+	 && ( sts.BattCapPer == 75 )
+	 && ( sts.Pwr == 369 )
+   )
+   {
+   		isoAck.CtrlByte = 0;				// ACK
+		isoAck.GroupFunctionValue = 255;	// Don't Care
+		isoAck.ParmGrpNum = this.pgn;		// PGN
+
+		isoAck.da = this.sa;
+		isoAck.sa = CAPL;
+
+		output( isoAck );
+
+		// Now send a DC Source Status message
+		SendDcSrcSts();
+
+		// Also send Date Time Status message
+		SendDateTimeSts();
+   }
+   else
+   {
+   		isoAck.CtrlByte = 1;				// NAK
+		isoAck.GroupFunctionValue = 245;	// Data Invalid
+		isoAck.ParmGrpNum = this.pgn;		// PGN
+
+		isoAck.da = this.sa;
+		isoAck.sa = 0xf1;
+
+		output( isoAck );
+   }
+}
+
+/*@@end*/
+
+/*@@pg:*:*/
+on pg *
+{
+  output( this );
+}
+/*@@end*/
+
+/*@@caplFunc:SendDcSrcSts():*///function
+SendDcSrcSts()
+{
+	pg XanBus::DcSrcSts sts;
+	
+	sts.MsgCount = 0;
+	sts.DcSrcId = 8;
+	sts.Voltage = 119456;
+	sts.Current = -12400;
+	sts.TempSensId = 5;
+	sts.Temp = 29300;
+	sts.Soc = 100;
+	sts.TimeRemain = 160;
+	sts.Soh = 96;
+	sts.BattCapRemain = 120;
+	sts.BattCapPer = 70;
+	sts.Pwr = 1300;
+   
+	sts.sa = CAPL;
+
+	output( sts );
+}
+   
+/*@@end*/
+
+/*@@key:'s':*/
+on key 's'
+{
+	SendDcSrcSts();
+}
+/*@@end*/
+
+/*@@caplFunc:SendDateTimeSts():*///function
+SendDateTimeSts ()
+{
+	pg DateTimeSts sts;
+
+	sts.MsgCount = 0;
+	sts.UtcTime = 0x23456789;
+	sts.LocalDow = 5;
+	sts.LocalOffsetMins = 480;
+
+	sts.sa = CAPL;
+
+	output( sts );
+}
+/*@@end*/
+
+/*@@caplFunc:SendClaim(byte):*///function
+SendClaim( byte addr)
+{
+	pg IsoAddrClaim claim;
+
+	claim.UniqueNumber = 12;
+	claim.ManufacturerCode = 0x7FF;
+	claim.DeviceInstanceLower = 0;
+	claim.DeviceInstanceUpper = 0;
+	claim.DeviceFunction = 80;
+	claim.RsvBit = 0;
+	claim.DeviceClass = 0x1e;
+	claim.SystemInstance = 0;
+	claim.IndustryGroup = 0;
+	claim.SystemInstance = 0;
+	claim.SelfCfgAddr = 1;
+
+	claim.sa = addr;
+	claim.da = 0xFF;
+
+	output( claim );
+}
+/*@@end*/
+
+/*@@caplFunc:SendCfg(int,byte):*///function
+SendCfg ( int code, byte addr )
+{
+	pg Cfg cfg;
+
+	cfg.CfgType = 0xFF;
+	cfg.ConcurAccCtr = 0xFF;
+	cfg.EntHibTo = 0xFFFF;
+	cfg.EntSleepTo = 0xFFFF;
+	cfg.FaultAutoRst = 0xFF;
+	cfg.IdPeriod = code;
+	cfg.MsgCount = 0xFF;
+	cfg.RsvBits = 0xFF;
+
+	cfg.sa = CAPL;
+	cfg.da = addr;
+
+	output( cfg );
+}
+/*@@end*/
+
+/*@@msg:XanBus::Cfg (0x14700X):*/
+on pg Cfg
+{
+	pg Cfg cfg;
+	byte newAddr;
+
+	// Ignore my own output
+	if ( this.dir == TX )
+	{
+		return;
+	}
+
+	if ( this.IdPeriod == 1 )
+	{
+		SendClaim( this.Sa );
+
+		newAddr = this.SA;
+		newAddr = newAddr + 1;
+
+		setTimer( tmBump, 250 );
+	}
+}
+/*@@end*/
+
+/*@@timer:tmBump:*/
+on timer tmBump
+{
+	sendCfg( 1, 0xFF );
+}
+/*@@end*/
+

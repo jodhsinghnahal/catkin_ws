@@ -1,0 +1,328 @@
+/*@@var:*/
+variables
+{
+}
+/*@@end*/
+
+/*@@msg:0x1X:*/
+on message 0x000001x
+{
+	message 0xA245C7x test1;
+	message 0xA4CD44x test2;
+	message 0x246D8Fx test3;
+	message 0xAB2DD2x test4;
+
+	test1.dlc = 8;
+	test1.byte(0) = 0xBA;
+	test1.byte(1) = 0x7B;
+	test1.byte(2) = 0xBE;
+	test1.byte(3) = 0xC0;
+	test1.byte(4) = 0x2C;
+	test1.byte(5) = 0x75;
+	test1.byte(6) = 0x58;
+	test1.byte(7) = 0x60;
+
+	test2.dlc = 8;
+	test2.byte(0) = 0xCA;
+	test2.byte(1) = 0xEB;
+	test2.byte(2) = 0x2F;
+	test2.byte(3) = 0x06;
+	test2.byte(4) = 0x8C;
+	test2.byte(5) = 0x4D;
+	test2.byte(6) = 0xF6;
+	test2.byte(7) = 0xCA;
+
+	test3.dlc = 8;
+	test3.byte(0) = 0x7D;
+	test3.byte(1) = 0xBB;
+	test3.byte(2) = 0x3D;
+	test3.byte(3) = 0x70;
+	test3.byte(4) = 0x95;
+	test3.byte(5) = 0x03;
+	test3.byte(6) = 0x26;
+	test3.byte(7) = 0x71;
+
+	test4.dlc = 8;
+	test4.byte(0) = 0x3D;
+	test4.byte(1) = 0x92;
+	test4.byte(2) = 0x84;
+	test4.byte(3) = 0x6B;
+	test4.byte(4) = 0x39;
+	test4.byte(5) = 0xC0;
+	test4.byte(6) = 0x94;
+	test4.byte(7) = 0xA2;
+
+	output( test1 );
+	output( test2 );
+	output( test3 );
+	output( test4 );
+
+}
+/*@@end*/
+
+/*@@key:'x':*/
+on key 'x'
+{
+	message 0x15123456x test;
+
+	test.dlc = 8;
+	test.byte(0) = 0;
+	test.byte(1) = 1;
+	test.byte(2) = 2;
+	test.byte(3) = 3;
+	test.byte(4) = 4;
+	test.byte(5) = 5;
+	test.byte(6) = 6;
+	test.byte(7) = 7;
+	write( "something" );
+	output( test );
+}
+/*@@end*/
+
+/*@@key:'y':*/
+on key 'y'
+{
+	pg 0xf123x test = { DLC = 20 }; // sets dlc for memory usage
+
+	test.dlc = 8;
+	test.byte(0) = 0;
+	test.byte(1) = 1;
+	test.byte(2) = 2;
+	test.byte(3) = 3;
+	test.byte(4) = 4;
+	test.byte(5) = 5;
+	test.byte(6) = 6;
+	test.byte(7) = 7;
+
+	output( test );
+}
+/*@@end*/
+
+/*@@msg:0xAA5533X:*/
+on message 0xAA5533x
+{
+	message 0x4E1B65Dx test1;
+	message 0xB7E660x test2;
+	message 0x727B06x test3;
+	message 0xFB739Fx test4;
+
+	test1.dlc = 8;
+	test1.byte(0) = 0xCC;
+	test1.byte(1) = 0xFE;
+	test1.byte(2) = 0xEF;
+	test1.byte(3) = 0x70;
+	test1.byte(4) = 0x8D;
+	test1.byte(5) = 0xDE;
+	test1.byte(6) = 0xB6;
+	test1.byte(7) = 0x28;
+
+	test2.dlc = 8;
+	test2.byte(0) = 0x33;
+	test2.byte(1) = 0x1B;
+	test2.byte(2) = 0x5C;
+	test2.byte(3) = 0x2B;
+	test2.byte(4) = 0xB3;
+	test2.byte(5) = 0x3F;
+	test2.byte(6) = 0x7B;
+	test2.byte(7) = 0x23;
+
+	test3.dlc = 8;
+	test3.byte(0) = 0xE1;
+	test3.byte(1) = 0xB6;
+	test3.byte(2) = 0x5D;
+	test3.byte(3) = 0xAB;
+	test3.byte(4) = 0x2D;
+	test3.byte(5) = 0xD2;
+	test3.byte(6) = 0xB4;
+	test3.byte(7) = 0x77;
+
+	test4.dlc = 8;
+	test4.byte(0) = 0x33;
+	test4.byte(1) = 0x1B;
+	test4.byte(2) = 0x5C;
+	test4.byte(3) = 0x2B;
+	test4.byte(4) = 0xB3;
+	test4.byte(5) = 0x3F;
+	test4.byte(6) = 0x7B;
+	test4.byte(7) = 0x23;
+
+
+	output( test1 );
+	output( test2 );
+	output( test3 );
+	output( test4 );
+
+}
+/*@@end*/
+
+/*@@msg:0xEE4466X:*/
+on message 0xEE4466x
+{
+	message 0xF33AAFx test1;
+	message 0xEF4466x test2;
+	message 0x231764x test3;
+	message 0x042056x test4;
+
+	test1.dlc = 8;
+	test1.byte(0) = 0x02;
+	test1.byte(1) = 0x9D;
+	test1.byte(2) = 0xBA;
+	test1.byte(3) = 0x52;
+	test1.byte(4) = 0xDB;
+	test1.byte(5) = 0xF1;
+	test1.byte(6) = 0xC6;
+	test1.byte(7) = 0xBE;
+
+	test2.dlc = 8;
+	test2.byte(0) = 0x4A;
+	test2.byte(1) = 0xB0;
+	test2.byte(2) = 0xC5;
+	test2.byte(3) = 0xA0;
+	test2.byte(4) = 0x50;
+	test2.byte(5) = 0x8D;
+	test2.byte(6) = 0x6B;
+	test2.byte(7) = 0xA5;
+
+	test3.dlc = 8;
+	test3.byte(0) = 0xB5;
+	test3.byte(1) = 0x78;
+	test3.byte(2) = 0x4F;
+	test3.byte(3) = 0xA2;
+	test3.byte(4) = 0x84;
+	test3.byte(5) = 0x03;
+	test3.byte(6) = 0x82;
+	test3.byte(7) = 0x1E;
+
+	test4.dlc = 8;
+	test4.byte(0) = 0xF8;
+	test4.byte(1) = 0x37;
+	test4.byte(2) = 0x12;
+	test4.byte(3) = 0xBC;
+	test4.byte(4) = 0xCB;
+	test4.byte(5) = 0x90;
+	test4.byte(6) = 0xE2;
+	test4.byte(7) = 0x86;
+
+
+	output( test1 );
+	output( test2 );
+	output( test3 );
+	output( test4 );
+
+}
+/*@@end*/
+
+/*@@msg:0x123456X:*/
+on message 0x123456x
+{
+	message 0x6A640Ax test1;
+	message 0x40F4768x test2;
+	message 0xF14B13x test3;
+	message 0x13F92Dx test4;
+
+	test1.dlc = 8;
+	test1.byte(0) = 0x98;
+	test1.byte(1) = 0x2E;
+	test1.byte(2) = 0x0C;
+	test1.byte(3) = 0x26;
+	test1.byte(4) = 0xF1;
+	test1.byte(5) = 0xDA;
+	test1.byte(6) = 0xE5;
+	test1.byte(7) = 0x1D;
+
+	test2.dlc = 8;
+	test2.byte(0) = 0xA3;
+	test2.byte(1) = 0x25;
+	test2.byte(2) = 0x05;
+	test2.byte(3) = 0xF0;
+	test2.byte(4) = 0x89;
+	test2.byte(5) = 0x98;
+	test2.byte(6) = 0xB4;
+	test2.byte(7) = 0x3F;
+
+	test3.dlc = 8;
+	test3.byte(0) = 0x85;
+	test3.byte(1) = 0x9C;
+	test3.byte(2) = 0x73;
+	test3.byte(3) = 0x9B;
+	test3.byte(4) = 0xE7;
+	test3.byte(5) = 0x45;
+	test3.byte(6) = 0xB0;
+	test3.byte(7) = 0xB0;
+
+	test4.dlc = 8;
+	test4.byte(0) = 0xC5;
+	test4.byte(1) = 0x6A;
+	test4.byte(2) = 0xB8;
+	test4.byte(3) = 0xDA;
+	test4.byte(4) = 0x37;
+	test4.byte(5) = 0xB4;
+	test4.byte(6) = 0xC1;
+	test4.byte(7) = 0xE3;
+
+
+	output( test1 );
+	output( test2 );
+	output( test3 );
+	output( test4 );
+
+}
+/*@@end*/
+
+/*@@msg:0x4221764X:*/
+on message 0x4221764x
+{
+	message 0x55A1B2x test1;
+	message 0x546567x test2;
+	message 0xEA4466x test3;
+	message 0x12064F0x test4;
+
+	test1.dlc = 8;
+	test1.byte(0) = 0xC3;
+	test1.byte(1) = 0x3D;
+	test1.byte(2) = 0x4E;
+	test1.byte(3) = 0x5F;
+	test1.byte(4) = 0xFE;
+	test1.byte(5) = 0x56;
+	test1.byte(6) = 0x76;
+	test1.byte(7) = 0xB3;
+
+	test2.dlc = 8;
+	test2.byte(0) = 0xEF;
+	test2.byte(1) = 0xDA;
+	test2.byte(2) = 0xC5;
+	test2.byte(3) = 0x44;
+	test2.byte(4) = 0x62;
+	test2.byte(5) = 0x74;
+	test2.byte(6) = 0x13;
+	test2.byte(7) = 0x12;
+
+	test3.dlc = 8;
+	test3.byte(0) = 0x34;
+	test3.byte(1) = 0x37;
+	test3.byte(2) = 0x02;
+	test3.byte(3) = 0x76;
+	test3.byte(4) = 0x45;
+	test3.byte(5) = 0x15;
+	test3.byte(6) = 0x75;
+	test3.byte(7) = 0x61;
+
+	test4.dlc = 8;
+	test4.byte(0) = 0xBA;
+	test4.byte(1) = 0x3B;
+	test4.byte(2) = 0x47;
+	test4.byte(3) = 0x9B;
+	test4.byte(4) = 0x6E;
+	test4.byte(5) = 0x2D;
+	test4.byte(6) = 0xF4;
+	test4.byte(7) = 0x6A;
+
+
+	output( test1 );
+	output( test2 );
+	output( test3 );
+	output( test4 );
+
+}
+/*@@end*/
+

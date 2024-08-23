@@ -1,0 +1,493 @@
+/*==============================================================================
+Copyright 2004 Xantrex International.  All rights reserved.
+
+This source file is proprietary to Xantrex International. and protected by
+copyright. The reproduction, in whole or in part, by anyone without the written
+approval of Xantrex is prohibited.
+
+FILE NAME:
+    TmrdrvTest.gel
+
+PURPOSE:
+    The purpose of this file is to provide scripting support for the unit test
+    to test the timer driver.  This file allows the user to run various tests
+    on all the (EV) timers on the F28x.
+
+    This file is required to properly perform the unit test.
+
+FUNCTION(S):
+    Setup_Breakpoints  - sets up the conditional breakpoints and GEL windows
+    StatusOutput - outputs to a specified GEL window
+    Close_Gel_Windows  - closes all GEL windows related to ADC unit test
+
+NOTES:
+
+CHANGE HISTORY:
+$Log: TmrdrvTest.gel $
+
+    ***********************************************
+    Revision: NovaPfrmB_Local_HorstM/1
+    User: HorstM     Date: 02/18/05  Time: 01:09AM
+    adjusted to changed timer object member names
+    
+
+    ***********************************************
+    Revision: NovaPfrmB_JohnB/1
+    User: JohnB     Date: 12/16/04  Time: 06:05PM
+    Made .out path loading relative.
+    
+
+    ***********************************************
+    Revision: NovaPfrmB_HorstM/2
+    User: HorstM     Date: 12/08/04  Time: 08:45PM
+    latest version to work with Accurev project structure
+    
+
+    ***********************************************
+    Revision: NovaPfrmB_HorstM/1
+    User: HorstM     Date: 12/07/04  Time: 09:38PM
+    fixed header tags/comments;
+    
+    
+Date:  DEC-3-2004 - Horst Maurer
+    -   Created
+    
+
+==============================================================================*/
+/*==============================================================================
+                              Defines
+==============================================================================*/
+// General Defines
+#define DO_NOT_APPEND               0   // Overwrite line in GEL window
+#define APPEND                      1   // Don't overwrite line in GEL window
+#define BLACK_TEXT                  0   // font is black
+#define BLUE_TEXT                   1   // font is blue
+#define RED_TEXT                    2   // font is red
+#define NON_SCROLLING_WINDOW        1   // window will not scroll
+#define SCROLLING_WINDOW            0   // window will not scroll
+#define GEL_WINDOW_NAME_1           "Timer Driver Test Output"
+#define NUM_OF_LINES_IN_WINDOW      16  // number of lines in window
+
+
+#define FIRST_BLOCK                 0
+
+#define TIMER_OUT                   "\nTimer: %d; Int: %d; Comp: %d; Err: %d"
+#define SYNC_OUT                    "\nSync master: %d; Syn: %d; Err: %d"
+#define TOP_OUT                     "\nFinished testing timer: %d; Exit error code: %d\n"
+#define TOP2_OUT                    "\nFinished testing sync mode: %d; Exit error code: %d\n"
+#define ERR_OUT_0                   "\n\nFailure while testing timer:"
+#define ERR_OUT                     "\nTimer: %d; Int: %d; Comp: %d; \nExit error code: %d\n"
+#define ERR_SYNC_0                  "\nFailure while testing timer sync:"
+#define ERR_SYNC                    "\nMaster Timer: %d; Slave Timer: %d; \nExit error code: %d\n"
+
+#define README                      "Congratulations. You are now in TmrDrvTest\nSelect a test from the Gel menu.\n\n"
+/*==============================================================================
+                           Local/Private Variables
+==============================================================================*/
+// Creates the menu item in the GEL menu in CCS
+menuitem "Timer Driver Unit Tests";
+
+/*==============================================================================
+                           Function Definitions
+==============================================================================*/
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    StartUp
+
+PURPOSE:
+    The GEL scripts that are to be run when this file is loaded and started.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    Naming convention can't really apply here given the restrictions of the
+    GEL scripting language
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+\*****************************************************************************/
+StartUp()
+{
+    // Work around later.  Find a way to wait for build to finish
+    // GEL_ProjectBuild();
+    GEL_Load(".\\Bin\\TmrDrv.out");
+    Setup_Breakpoints();
+} // StartUp
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    OnFileLoaded
+
+PURPOSE:
+    The GEL scripts that are to be run when the output file is loaded
+
+INPUTS:
+    Passed by system.
+
+OUTPUTS:
+    None
+
+NOTES:
+    Naming convention can't really apply here given the restrictions of the
+    GEL scripting language
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+\*****************************************************************************/
+OnFileLoaded(int nErrorCode, int bSymbolsOnly)
+{
+    GEL_Go(main);
+    Setup_Breakpoints();
+}
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    TestTimer
+
+PURPOSE:
+    runs the unist test on the specified timer with the specified options
+
+INPUTS:
+    Timer number (1, 2, 3, or 4)
+	Compare mode
+	Interrupt type
+
+OUTPUTS:
+    status
+
+NOTES:
+    Naming convention can't really apply here given the restrictions of the
+    GEL scripting language
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+\*****************************************************************************/
+hotmenu Run_Timer_Tests()
+{
+    GEL_Go(main);
+    GEL_Run();
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    Close_Gel_Windows
+
+PURPOSE:
+    This just closes GEL windows, GEL_WINDOW_NAME_1 and GEL_WINDOW_NAME_2.
+
+INPUTS:
+    None.
+
+OUTPUTS:
+    None.
+
+NOTES:
+    This function was created since you can't just click the X button to get
+    rid of a GEL window in CCS, you actually have to close the window in order
+    to clear it.
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+*******************************************************************************/
+hotmenu Close_Gel_Windows()
+{
+   GEL_CloseWindow(GEL_WINDOW_NAME_1);
+} // Close_Gel_Windows
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    Setup_Breakpoints
+
+PURPOSE:
+    This function uses the GEL langauge to setup the neccessary conditional
+    breakpoints that allow us to update our ADC readings on the fly and have
+    a realtime-like interface.
+
+INPUTS:
+    None.
+
+OUTPUTS:
+    None.
+
+NOTES:
+    Unfortunately the lines below must be as long as they are.  They can not be
+    broken on to multiple lines since the second parameter passed to
+    GEL_BreakPtAdd must be one continuous string and putting it on to multiple
+    lines screws up the creation of the breakpoint in CCS.  Sorry. :)
+
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+*******************************************************************************/
+hotmenu Setup_Breakpoints()
+{
+    // close any existing windows with the name GEL_WINDOW_NAME_1 before proceeding
+    GEL_CloseWindow( GEL_WINDOW_NAME_1 );
+
+    // open a new window with the name GEL_WINDOW_NAME_1 and make it non-scrolling
+    GEL_OpenWindow( GEL_WINDOW_NAME_1, SCROLLING_WINDOW );
+
+    GEL_TextOut( README, GEL_WINDOW_NAME_1, BLUE_TEXT );
+    
+    // delete any breakpoints at our break location so we don't start having
+    // duplicates gumming up our system
+    GEL_BreakPtReset( );
+
+    // Put a text title in the window
+    StatusOutput(GEL_WINDOW_NAME_1, GEL_WINDOW_NAME_1, RED_TEXT, FIRST_BLOCK);
+
+    // set up breakpoints to report test status at various points
+
+    GEL_BreakPtAdd( _TimerBreakHere, "StatusOutput( TIMER_OUT, GEL_WINDOW_NAME_1, ( ptzTimer->ucTimerID + 1 ), ptzTimer->teTimerInt, ptzTimer->teTimerCompMode, errvalue )" );
+
+    GEL_BreakPtAdd( _SyncBreakHere, "SyncOutput( SYNC_OUT, GEL_WINDOW_NAME_1, ( ptzTimerMaster->ucTimerID + 1 ), ptzTimerSlave->teTimerSyn, errvalue )" );
+
+    GEL_BreakPtAdd( _TopBreakHere, "TopOutput( TOP_OUT, GEL_WINDOW_NAME_1, eTmr, errvalue )" );
+
+    GEL_BreakPtAdd( _TopBreakHere2, "TopOutput2( TOP2_OUT, GEL_WINDOW_NAME_1, eSyn, errvalue )" );
+
+    GEL_BreakPtAdd( _ErrBreakHere, "ErrorOutput( ERR_OUT, GEL_WINDOW_NAME_1, eTmrErr, eIntErr, eCmpErr, errvalue )" );
+} // Setup_Breakpoints
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    StatusOutput
+
+PURPOSE:
+    This is a generalized function created to allow the user to output any text
+    output to the GEL windows.
+
+INPUTS:
+    OutputString - The string to display
+    WindowName   - The name of the window to write to.
+    Param1 - 4   - The paramaters required as defined by the OutputString
+
+OUTPUTS:
+    Always returns 0.
+
+NOTES:
+    The reason that this is used instead of just calling GEL_TextOut is because
+    we need to have a function that returns a value of 0 to the debugger so
+    that it will continue execution but still output the text.
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+*******************************************************************************/
+StatusOutput( OutputString, WindowName, Param1, Param2, Param3, Param4 )
+{
+    int Color = BLUE_TEXT;
+
+    if( Param4 != 0 )
+    {
+        Color = RED_TEXT;
+    }
+
+    GEL_TextOut( OutputString, WindowName, Color, , APPEND, Param1, Param2, Param3, Param4 );
+
+    return 0;
+} // StatusOutput
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    TopOutput
+
+PURPOSE:
+    This is a generalized function created to allow the user to output any text
+    output to the GEL windows.
+
+INPUTS:
+    OutputString - The string to display
+    WindowName   - The name of the window to write to.
+    Param1 - 2   - The paramaters required as defined by the OutputString
+
+OUTPUTS:
+    Always returns 0.
+
+NOTES:
+    The reason that this is used instead of just calling GEL_TextOut is because
+    we need to have a function that returns a value of 0 to the debugger so
+    that it will continue execution but still output the text.
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+*******************************************************************************/
+TopOutput( OutputString, WindowName, Param1, Param2 )
+{
+    int Color = BLUE_TEXT;
+
+    if( Param1 == 0 )
+    {
+        GEL_TextOut( "\nTesting Timer Sync Modes\n", WindowName, Color, , APPEND );
+        return 0;
+    }
+    else if( Param2 != 0 )
+    {
+        Color = RED_TEXT;
+    }
+
+    GEL_TextOut( OutputString, WindowName, Color, , APPEND, Param1, Param2 );
+
+    return 0;
+} // TopOutput
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    ErrorOutput
+
+PURPOSE:
+    This is a generalized function created to allow the user to output any text
+    output to the GEL windows.
+
+INPUTS:
+    OutputString - The string to display
+    WindowName   - The name of the window to write to.
+    Param1 - 4   - The paramaters required as defined by the OutputString
+
+OUTPUTS:
+    Always returns 0.
+
+NOTES:
+    The reason that this is used instead of just calling GEL_TextOut is because
+    we need to have a function that returns a value of 0 to the debugger so
+    that it will continue execution but still output the text.
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+*******************************************************************************/
+ErrorOutput( OutputString, WindowName, Param1, Param2, Param3, Param4 )
+{
+    if( Param2 == 0 )
+    {
+        GEL_TextOut( ERR_SYNC_0, WindowName, BLUE_TEXT );
+        GEL_TextOut( ERR_SYNC, WindowName, RED_TEXT, , APPEND, Param1, Param1 + 1, Param4 );
+    }
+    else
+    {
+        GEL_TextOut( ERR_OUT_0, WindowName, BLUE_TEXT );
+        GEL_TextOut( OutputString, WindowName, RED_TEXT, , APPEND, Param1, Param2, Param3, Param4 );
+    }
+
+    return 0;
+} // ErrorOutput
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    SyncOutput
+
+PURPOSE:
+    This is a generalized function created to allow the user to output any text
+    output to the GEL windows.
+
+INPUTS:
+    OutputString - The string to display
+    WindowName   - The name of the window to write to.
+    Param1 - 3   - The paramaters required as defined by the OutputString
+
+OUTPUTS:
+    Always returns 0.
+
+NOTES:
+    The reason that this is used instead of just calling GEL_TextOut is because
+    we need to have a function that returns a value of 0 to the debugger so
+    that it will continue execution but still output the text.
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+*******************************************************************************/
+SyncOutput( OutputString, WindowName, Param1, Param2, Param3 )
+{
+    int Color = BLUE_TEXT;
+
+    if( Param3 != 0 )
+    {
+        Color = RED_TEXT;
+    }
+
+    GEL_TextOut( OutputString, WindowName, Color, , APPEND, Param1, Param2, Param3 );
+
+    return 0;
+} // SyncOutput
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    TopOutput2
+
+PURPOSE:
+    This is a generalized function created to allow the user to output any text
+    output to the GEL windows.
+
+INPUTS:
+    OutputString - The string to display
+    WindowName   - The name of the window to write to.
+    Param1       - The paramaters required as defined by the OutputString
+
+OUTPUTS:
+    Always returns 0.
+
+NOTES:
+    The reason that this is used instead of just calling GEL_TextOut is because
+    we need to have a function that returns a value of 0 to the debugger so
+    that it will continue execution but still output the text.
+
+VERSION HISTORY:
+
+Version 1.00    Date: DEC-3-2004     By: Horst Maurer
+    - Created
+
+*******************************************************************************/
+TopOutput2( OutputString, WindowName, Param1, Param2 )
+{
+    int Color = BLUE_TEXT;
+
+    if( Param2 != 0 )
+    {
+        Color = RED_TEXT;
+    }
+
+    GEL_TextOut( OutputString, WindowName, Color, , APPEND, Param1, Param2 );
+
+    return 0;
+} // TopOutput2
+

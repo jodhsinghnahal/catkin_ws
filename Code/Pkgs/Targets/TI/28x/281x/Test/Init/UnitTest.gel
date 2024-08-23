@@ -1,0 +1,527 @@
+/*==============================================================================
+Copyright © 2004 Xantrex Technology, Inc. All rights reserved.
+
+This source file and the information contained in it are confidential and
+proprietary to Xantrex Technology, Inc. The reproduction or disclosure, in
+whole or in part, to anyone outside of Xantrex without the written approval of
+a Xantrex officer under a Non-Disclosure Agreement, or to any employee of
+Xantrex who has not previously obtained written authorization for access from
+the individual responsible for the source code, will have a significant
+detrimental effect on Xantrex and is expressly prohibited.
+
+FILE NAME:
+    UnitTest.gel
+
+PURPOSE:
+    GEL file for interrogating the system registers on the C28x after the
+    initialization of the system is complete.  This allows us to check
+    the register values without having to actually change them or affect
+    their values.  This will allow us to confirm that init.c properly
+    set up the registers.
+
+FUNCTION(S):
+
+    local:
+        hotmenu Check_System_Registers()
+        hotmenu Check_Interrupt_Registers()
+        fnOutputRegStatus( char cRegName, int *iRegAddr, int iRegTargVal )
+
+NOTES:
+
+CHANGE HISTORY:
+$Log: UnitTest.gel $
+
+    ***********************************************
+    Revision: NovaPfrmB_TrevorM/1
+    User: TrevorM     Date: 02/09/05  Time: 03:47PM
+    Modified workspace and project for first use in "AccuRev"
+    folder heirarchy.
+    
+;   
+;   *****************  Version 1  *****************
+;   User: Brentt       Date: 6/22/04    Time: 2:50p
+;   Created in $/PD/Common/Targets/TI/c28x/HAL/Test/Init
+
+==============================================================================*/
+
+/*==============================================================================
+                              Includes
+==============================================================================*/
+
+/*==============================================================================
+                              Defines
+==============================================================================*/
+//-----------------------------------------------------------------------------
+// Defines for IO pin configuration
+//-----------------------------------------------------------------------------
+
+// Individual pins can be initialized to one of 4 states:
+// 1.  Secondary function (General Purpose I/O) Input
+// 2.  Secondary function (General Purpose I/O) Output low
+// 3.  Secondary function (General Purpose I/O) Output high
+// 4   Primary function (As defined by respective peripheral)
+
+#define PIN_INPUT       ( unsigned int ) ( 0x0000 )    //Bit pattern for pin as input
+#define PIN_OUTPUT_LOW  ( unsigned int ) ( 0x8000 )    //Bit pattern for pin as low output
+#define PIN_OUTPUT_HIGH ( unsigned int ) ( 0x8080 )    //Bit pattern for pin as high output
+#define PIN_PRIMARY     ( unsigned int ) ( 0x0001 )    //Bit pattern for pin as primary function
+#define FUNC_MSK        ( unsigned int ) ( 0x0001 )    //Mask used for function
+#define DIR_MSK         ( unsigned int ) ( 0x8000 )    //Mask used for direction
+#define DAT_MSK         ( unsigned int ) ( 0x0080 )   //Mask used for the data of the pin
+
+//
+// Location Explanation
+//
+// 0x#000 - Direction of PIN ( 8 - output; 0 - input )
+// 0x0#00 - Unused
+// 0x00#0 - Data Value of PIN ( 8 - high; 0 - low )
+// 0x000# - Function of pin  ( 1 - primary; 0 - I/O )
+
+// Bit Masks
+#define XT_BIT0   ( unsigned int ) 0x0001
+#define XT_BIT1   ( unsigned int ) 0x0002
+#define XT_BIT2   ( unsigned int ) 0x0004
+#define XT_BIT3   ( unsigned int ) 0x0008
+#define XT_BIT4   ( unsigned int ) 0x0010
+#define XT_BIT5   ( unsigned int ) 0x0020
+#define XT_BIT6   ( unsigned int ) 0x0040
+#define XT_BIT7   ( unsigned int ) 0x0080
+#define XT_BIT8   ( unsigned int ) 0x0100
+#define XT_BIT9   ( unsigned int ) 0x0200
+#define XT_BIT10  ( unsigned int ) 0x0400
+#define XT_BIT11  ( unsigned int ) 0x0800
+#define XT_BIT12  ( unsigned int ) 0x1000
+#define XT_BIT13  ( unsigned int ) 0x2000
+#define XT_BIT14  ( unsigned int ) 0x4000
+#define XT_BIT15  ( unsigned int ) 0x8000
+
+#define PIN_PULL_UP     ( unsigned int ) ( 0x0080 )   // OR Mask if there is a pull up on the pin
+#define PIN_PULL_DOWN   ( unsigned int ) ( 0x0000 )
+#define PIN_FLOAT       ( unsigned int ) ( 0x0000 )   // AND Mask for a floating pin (No PU/PD)
+#define NO_MASK         ( unsigned int ) ( 0xFFFF )
+
+#define COMCON_MSK      ( unsigned int ) ( NO_MASK & ~XT_BIT8 )
+#define GPG_MSK         ( unsigned int ) ( XT_BIT4 | XT_BIT5 )
+#define GPF_MSK         ( unsigned int ) ( NO_MASK & ~XT_BIT15 )
+
+// we have to null the data values on these ports for Unit Test 2 since
+// the values have no PU's or PD's and thus we cannot predict the DAT value on
+// the pin.
+#define GPGDAT_MSK_2    ( unsigned int ) ( 0x0000 )
+#define GPFDAT_MSK_2    ( unsigned int ) ( NO_MASK &    \
+                                           ~XT_BIT0 &   \
+                                           ~XT_BIT1 &   \
+                                           ~XT_BIT2 &   \
+                                           ~XT_BIT3 &   \
+                                           ~XT_BIT12 &  \
+                                           ~XT_BIT15    \
+                                         )
+#define GPTCONX_MSK     ( unsigned int ) ( NO_MASK &    \
+                                           ~XT_BIT15 &  \
+                                           ~XT_BIT14 &  \
+                                           ~XT_BIT13    \
+                                         )
+
+/*==============================================================================
+                            Type Definitions
+==============================================================================*/
+
+
+/*==============================================================================
+                                Enums
+==============================================================================*/
+
+
+/*=============================================================================
+                              Structures
+==============================================================================*/
+
+
+/*==============================================================================
+                           Local/Private Constants
+==============================================================================*/
+menuitem "Init Unit Test";  // adds item to GEL menu in CCS
+
+/*==============================================================================
+                           Local/Private Variables
+==============================================================================*/
+
+
+/*==============================================================================
+                        Local/Private Function Protoypes
+==============================================================================*/
+
+
+/*==============================================================================
+                           Function Definitions
+==============================================================================*/
+
+
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    StartUp( )
+
+PURPOSE:
+    The GEL scripts that are to be run when this file is loaded and started.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    Naming convention can't really apply here given the restrictions of the
+    GEL scripting language
+
+VERSION HISTORY:
+
+Version 1.00    Date: June 03, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+StartUp()
+{
+    GEL_LoadGel(".\\UnitTest0.gel");
+    GEL_LoadGel(".\\UnitTest1.gel");
+    GEL_LoadGel(".\\UnitTest2.gel");
+
+} // Startup()
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    hotmenu System_Registers
+
+PURPOSE:
+    A GEL Script that interrogates the main system registers.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    The Function name is used for the menu entry so for the purposes of
+    readability in the IDE a non-standard name was chosen.
+
+VERSION HISTORY:
+
+Version 1.00    Date: May 27, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+hotmenu System_Registers()
+{
+
+    // PLL, Clocking, Watchdog and Low-Power Mode System Registers.
+    //
+    // pointers that store the addresses to the System Control Registers
+    int *HISPCP = 0x701A;
+    int *LOSPCP = 0x701B;
+    int *PCLKCR = 0x701C;
+    int *LPMCR0 = 0x701E;
+    int *LPMCR1 = 0x701F;
+    int *PLLCR  = 0x7021;
+    int *SCSR   = 0x7022;
+    int *WDCR   = 0x7029;
+
+    // the XXXXX_Target variables are to be set by the user and represent
+    // the intended value for the register after init.c is completed.
+    unsigned int HISPCP_Target = 0x0000;
+    unsigned int LOSPCP_Target = 0x0000;
+    unsigned int PCLKCR_Target = 0x0000;
+    unsigned int LPMCR0_Target = 0x00FC;
+    unsigned int LPMCR1_Target = 0x0000;
+    unsigned int PLLCR_Target = 0x0006;
+    unsigned int SCSR_Target = 0x0005;
+    unsigned int WDCR_Target = 0x0047;
+
+    GEL_TextOut( "\n\nInit Unit Test - Check System and Control Registers\n\n",,1 );
+
+    // Check High-Speed Peripheral Control Register
+    fnOutputRegStatus( "HISPCP", HISPCP, HISPCP_Target, NO_MASK );
+
+    // Check Low-Speed Peripheral Control Register
+    fnOutputRegStatus( "LOSPCP", LOSPCP, LOSPCP_Target, NO_MASK );
+
+    // Peripheral Clock Control Register
+    fnOutputRegStatus( "PCLKCR", PCLKCR, PCLKCR_Target, NO_MASK );
+
+    // Low Power Mode Control Register 0
+    fnOutputRegStatus( "LPMCR0", LPMCR0, LPMCR0_Target, NO_MASK );
+
+    // Low Power Mode Control Register 1
+    fnOutputRegStatus( "LPMCR1", LPMCR1, LPMCR1_Target, NO_MASK );
+
+    // PLL Control Register
+    fnOutputRegStatus( "PLLCR", PLLCR, PLLCR_Target, NO_MASK );
+
+    // System Control and Status Register
+    fnOutputRegStatus( "SCSR", SCSR, SCSR_Target, NO_MASK );
+
+    // WDT Control Register
+    fnOutputRegStatus( "WDCR", WDCR, WDCR_Target, NO_MASK );
+
+} // hotmenu System_Registers()
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    hotmenu Interrupt_Registers
+
+PURPOSE:
+    A GEL Script that interrogates the registers used for handling the interrupts.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    The Function name is used for the menu entry so for the purposes of
+    readability in the IDE a non-standard name was chosen.
+
+VERSION HISTORY:
+
+Version 1.00    Date: May 27, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+hotmenu Interrupt_Registers()
+{
+
+    // Interrupt registers.
+
+    // this is the first PIEIER register and we'll use it's address as a base.
+    int *PIEIER1 = 0x0CE2;
+
+    int *PIECTRL = 0x0CE0;
+    int *IFR     = 0x701E;
+    int *IER     = 0x701F;
+    int *XINT1CR = 0x7070;
+    int *XINT2CR = 0x7071;
+    int *XNMICR  = 0x7077;
+
+    // the XXXXX_Target variables are to be set by the user and represent
+    // the intended value for the register after init.c is completed.
+    //
+    // we want both registers to be reading 0x0000 since that represents
+    // no interrupts enabled and ALSO no interrupt flags
+    unsigned int PIEIER_PIEIFR_Target = 0x0000;
+
+    unsigned int PIECTRL_Target     = 0x0000;
+    unsigned int IFR_Target         = 0x00FC;
+    unsigned int IER_Target         = 0x0000;
+
+    unsigned int XINT1CR_Target     = 0x0000;
+    unsigned int XINT2CR_Target     = 0x0000;
+    unsigned int XNMICR_Target      = 0x0000;
+
+    int i;  // counter variable
+
+    GEL_TextOut( "\n\nInit Unit Test - Check Interrupt Registers\n\n",,1 );
+
+    // Peripheral Clock Control Register
+    fnOutputRegStatus( "PIECTRL", PIECTRL, PIECTRL_Target );
+
+    for ( i = 0; i < 12; i++)
+    {
+        // Peripheral Interrupt Expansion (PIE) Interrupt Enable Register
+        if ( *( PIEIER1 + ( i * 2 ) ) == PIEIER_PIEIFR_Target )
+        {
+            GEL_TextOut( "(PIEIER%d): OK\n",,,,, (i + 1) );
+        }
+        else
+        {
+            GEL_TextOut( "(PIEIER%d): FAILED - desired:%x actual:%x\n",,2,,,    \
+                         PIEIER_PIEIFR_Target, *( PIEIER1 + ( i * 2 ) ) );
+        }   // if
+
+        // Peripheral Interrupt Expansion (PIE) Interrupt Flag Register
+        if ( *( PIEIER1 + ( i * 2 + 1 ) ) == PIEIER_PIEIFR_Target )
+        {
+            GEL_TextOut( "(PIEIFR%d): OK\n",,,,, ( i + 1 ) );
+        }
+        else
+        {
+            GEL_TextOut( "(PIEIFR%d): FAILED - desired:%x actual:%x\n",,2,,,    \
+                         PIEIER_PIEIFR_Target, *( PIEIER1 + ( i * 2 + 1 ) ) );
+        } // if
+    } // for
+
+    // Interrupt Flag Register
+    fnOutputRegStatus( "IFR", IFR, IFR_Target, NO_MASK );
+
+    // Interrupt Enable Register
+    fnOutputRegStatus( "IER", IER, IER_Target, NO_MASK );
+
+    // External Interrupt Control Registers
+    fnOutputRegStatus( "XINT1CR", XINT1CR, XINT1CR_Target, NO_MASK );
+    fnOutputRegStatus( "XINT2CR", XINT2CR, XINT2CR_Target, NO_MASK );
+    fnOutputRegStatus( "XNMICR", XNMICR, XNMICR_Target, NO_MASK );
+
+} // hotmenu Interrupt_Registers()
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    hotmenu EV_Registers
+
+PURPOSE:
+    A GEL Script that interrogates the Event Manager registers.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    The Function name is used for the menu entry so for the purposes of
+    readability in the IDE a non-standard name was chosen.
+
+VERSION HISTORY:
+
+Version 1.00    Date: May 26, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+hotmenu EV_Registers()
+{
+    // Event Manager A and B General Purpose Control Registers
+    int *GPTCONA = 0x7400;  // Overall GP Timer Control Register A
+    int *T1CON   = 0x7404;  // Timer 1 Control Register
+    int *T2CON   = 0x7408;  // Timer 2 Control Register
+    int *EXTCONA = 0x7409;  // Extension Control Register A
+    int *COMCONA = 0x7411;  // Compare Control Register A
+    int *ACTRA   = 0x7413;  // Compare Action Control Register A
+    int *DBTCONA = 0x7415;  // Dead Band Timer Control Register A
+    int *CAPCONA = 0x7420;  // Capture Control Register A
+
+    // the B registers are located at 0x0100 higher than the A registers so
+    // we can just add that to the address sent.
+
+    // the targets will be the same for both A and B EV's since they are
+    // identical.
+
+    unsigned int GTPCONA_Target = 0x0000;
+    unsigned int T1CON_Target   = 0x0000;
+    unsigned int T2CON_Target   = 0x0000;
+    unsigned int EXTCONA_Target = 0x0000;
+    unsigned int COMCONA_Target = 0x0000;   // Affected by value on PIN 8
+    unsigned int ACTRA_Target   = 0x0000;
+    unsigned int DBTCONA_Target = 0x0000;
+    unsigned int CAPCONA_Target = 0x0000;
+
+    GEL_TextOut( "\n\nInit Unit Test - Check EV-A/B Registers\n\n",,1 );
+
+    GEL_TextOut( "\nEV-A Registers\n\n",,1 );
+
+    // output the EVA registers
+    fnOutputRegStatus( "GPTCONA", GPTCONA, GTPCONA_Target, GPTCONX_MSK );
+    fnOutputRegStatus( "T1CON", T1CON, T1CON_Target, NO_MASK );
+    fnOutputRegStatus( "T2CON", T2CON, T2CON_Target, NO_MASK );
+    fnOutputRegStatus( "EXTCONA", EXTCONA, EXTCONA_Target, NO_MASK );
+    fnOutputRegStatus( "COMCONA", ( COMCONA ), COMCONA_Target, COMCON_MSK );
+    fnOutputRegStatus( "ACTRA", ACTRA, ACTRA_Target, NO_MASK );
+    fnOutputRegStatus( "DBTCONA", DBTCONA, DBTCONA_Target, NO_MASK );
+    fnOutputRegStatus( "CAPCONA", CAPCONA, CAPCONA_Target, NO_MASK );
+
+    // output the EVB registers which are located at 0x0100 higher.
+    GEL_TextOut( "\nEV-B Registers\n\n",,1 );
+
+    fnOutputRegStatus( "GPTCONB", ( GPTCONA + 0x0100 ), GTPCONA_Target, GPTCONX_MSK );
+    fnOutputRegStatus( "T3CON", ( T1CON + 0x0100 ), T1CON_Target, NO_MASK );
+    fnOutputRegStatus( "T4CON", ( T2CON + 0x0100 ), T2CON_Target, NO_MASK );
+    fnOutputRegStatus( "EXTCONB", ( EXTCONA + 0x0100 ), EXTCONA_Target, NO_MASK );
+    fnOutputRegStatus( "COMCONB", ( COMCONA + 0x0100 ), COMCONA_Target, COMCON_MSK );
+    fnOutputRegStatus( "ACTRB", ( ACTRA + 0x0100 ), ACTRA_Target, NO_MASK );
+    fnOutputRegStatus( "DBTCONB", ( DBTCONA + 0x0100 ), DBTCONA_Target, NO_MASK );
+    fnOutputRegStatus( "CAPCONB", ( CAPCONA + 0x0100 ), CAPCONA_Target, NO_MASK );
+
+} // hotmenu EV_Registers()
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    hotmenu ADC_Registers
+
+PURPOSE:
+    A GEL Script that interrogates the ADC Registers.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    The Function name is used for the menu entry so for the purposes of
+    readability in the IDE a non-standard name was chosen.
+
+VERSION HISTORY:
+
+Version 1.00    Date: May 29, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+hotmenu ADC_Registers()
+{
+
+    // ADC registers used during init.
+    int *ADCTRL3 = 0x7118;  // ADC Control Register 3
+
+    int ADCTRL3_Target = 0x0000;
+
+    GEL_TextOut( "\n\nInit Unit Test - Check ADC Register(s)\n\n",,1 );
+
+    // output the ADC register(s)
+    fnOutputRegStatus( "ADCTRL3", ADCTRL3, ADCTRL3_Target, NO_MASK );
+
+}  // hotmenu ADC_Registers()
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    fnOutputRegStatus
+
+PURPOSE:
+    A GEL Script that is used by all the other functions to output information
+    to the GEL console window.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    The Function name is used for the menu entry so for the purposes of
+    readability in the IDE a non-standard name was chosen.
+
+VERSION HISTORY:
+
+Version 1.00    Date: June 03, 2004     By: Brent Tokarchuk
+    -   Created
+\*****************************************************************************/
+fnOutputRegStatus( char cRegName,
+                   int *iRegAddr,
+                   unsigned int uiRegTargVal,
+                   unsigned int uiBitMask
+                 )
+{
+
+    // there are some registers that we have no control over the value, ie.
+    // some that reflect the current status of a certain pin, so we must
+    // mask out certain pins on certain registers.
+    if ( ( *iRegAddr & uiBitMask ) == uiRegTargVal )
+    {
+        GEL_TextOut( "(%s): OK\n",,,,, cRegName );
+    } // if
+    else
+    {
+        GEL_TextOut( "(%s): FAILED - desired:%x actual:%x (mask: %x)\n",,2,,,   \
+                      cRegName, uiRegTargVal, ( *iRegAddr & uiBitMask ), uiBitMask );
+    } // else
+
+} // fnOutputRegStatus

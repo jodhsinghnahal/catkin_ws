@@ -1,0 +1,174 @@
+/*==============================================================================
+Copyright © 2003 Xantrex Technology, Inc. All rights reserved.
+
+This source file and the information contained in it are confidential and 
+proprietary to Xantrex Technology, Inc. The reproduction or disclosure, in 
+whole or in part, to anyone outside of Xantrex without the written approval of 
+a Xantrex officer under a Non-Disclosure Agreement, or to any employee of 
+Xantrex who has not previously obtained written authorization for access from 
+the individual responsible for the source code, will have a significant 
+detrimental effect on Xantrex and is expressly prohibited.
+
+FILE NAME:  
+    device.h
+
+PURPOSE:
+    The file includes processor specific defines.  It includes the appropriate
+    register mapping file.  It also contains basic device macros for enabling/
+    disabling interrupts and the watchdog timer
+
+FUNCTION(S):
+     none
+   
+    local:
+     none
+   
+NOTES:
+    #$-VIEW:C Coding Standard-$#
+    **If you do not see a button above this, either use CodeWright or ignore 
+    **the text.
+    
+HISTORY:
+$Log: device.h $
+
+    ***********************************************
+    Revision: XanBus_HollyZ/1
+    User: HollyZ     Date: 01/20/06  Time: 11:34PM
+    Added defines for processor HCS12X
+    
+    *****************  Version 15  *****************
+    User: Albertl      Date: 5.26.04    Time: 4:47p
+    Updated in $/PD/Network_Extensions/Code/UI/SCP/baseline/Inc
+    safety check on the DEVICE_mWD_EN() macro
+    
+    *****************  Version 14  *****************
+    User: Baldeeshk    Date: 26/05/04   Time: 4:35p
+    Updated in $/PD/Network_Extensions/Code/UI/SCP/baseline/Inc
+    - Fixed DEVICE_mWD_EN so that it only writes to the register once
+    
+    *****************  Version 12  *****************
+    User: Ronm         Date: 1/09/04    Time: 3:13p
+    Updated in $/PD/Inverter_Charger/Nova_Series/Code/Baseline/HCS12/Inc
+    - Removed erroneous parantheses () from reset macro
+    
+    *****************  Version 11  *****************
+    User: Ronm         Date: 1/09/04    Time: 3:07p
+    Updated in $/PD/Inverter_Charger/Nova_Series/Code/Baseline/HCS12/Inc
+    - Fixed the reset macro so that it will actually reset.
+    
+    *****************  Version 10  *****************
+    User: Albertl      Date: 1/06/04    Time: 11:39a
+    Updated in $/PD/Network_Extensions/Code/UI/SCP/baseline/Inc
+    made the watchdog reset an infinite loop
+    
+    *****************  Version 9  *****************
+    User: Albertl      Date: 1/06/04    Time: 9:57a
+    Updated in $/PD/Network_Extensions/Code/UI/SCP/baseline/Inc
+    - added in the proper prefixing names to the macros
+    - added in macros to shutdown and reset device
+    
+    *****************  Version 8  *****************
+    User: Hueyd        Date: 19/12/03   Time: 1:28p
+    Updated in $/PD/Inverter_Charger/Inverter/SolarStorm_Series/Code/Res_Series/SS2500/HCS12/Packages/PowSeq/Test
+    Removed include for HCS12RegBitDefs.h for Solar Storm project
+    
+    *****************  Version 7  *****************
+    User: Hueyd        Date: 18/12/03   Time: 5:15p
+    Updated in $/PD/Inverter_Charger/Inverter/SolarStorm_Series/Code/Res_Series/SS2500/HCS12/PreAmdl/Build
+    included hcs12 regbitdefs
+    
+    *****************  Version 4  *****************
+    User: Dalem        Date: 7/29/03    Time: 11:11a
+    Updated in $/PD/Common/Protocols/XanBus/Code/Windows/CANCardX/Test/DiagEx/Inc
+    Removed WIN32 - no longer included in that environment
+    
+    *****************  Version 3  *****************
+    User: Dalem        Date: 7/24/03    Time: 2:35p
+    Updated in $/PD/Common/Protocols/XanBus/Code/Windows/CANCardX/Test/DiagEx/Inc
+    Added a WIN32 check for windows environment
+    
+    *****************  Version 2  *****************
+    User: Alant        Date: 24/07/03   Time: 11:03a
+    Updated in $/PD/Common/FieldReprogram/Loader/Test/XanBus/Motorola/HCS12
+    - Added old defines to processor header includes
+    - Fixed macros
+    
+    *****************  Version 1  *****************
+    User: Baldeeshk    Date: 21/07/03   Time: 1:29p
+    Created in $/PD/Network_Extensions/Code/Common/HAL/Inc
+    Initial checkin for device.h
+    
+==============================================================================*/
+
+#ifndef DEVICE_INCL
+#define DEVICE_INCL
+
+/*==============================================================================
+                              Includes
+==============================================================================*/
+
+/*==============================================================================
+                              Defines
+==============================================================================*/
+
+#if defined( MC9S12DG256B ) || defined( MCU_S12DG256B )
+  #include <6812dg256b.h>
+
+#elif defined( MC9S12DP256B ) || defined( MCU_S12DP256B )
+  #include <6812dp256b.h>
+
+#elif defined( MC9S12DG128B ) || defined( MCU_S12DG128B )
+  #include <6812dg128b.h>
+  
+#elif defined( MC9S12XDT512 ) 
+  #include <mc9s12xdt512.h>
+
+#else
+#error "Processor type not defined/recognized."
+#endif
+
+
+// define the watchdog reset keys
+#define WDKEY_FIRST			(0x55)
+#define WDKEY_SECOND		(0xAA)
+
+/*==============================================================================
+                              Macros
+==============================================================================*/
+
+// enable interrupts
+#define DEVICE_mGLOBAL_INT_EN( )     	 _asm( CLI )
+
+// disable interrupts
+#define DEVICE_mGLOBAL_INT_DIS( )    	 _asm( SEI )
+
+
+// enables the watchdog timer with the rate supplied by user
+// Options:  disable windowed COP mode, stop watchdog in Active BDM mode
+// Note:     Valid values of Rate are 0...7
+#define DEVICE_mWD_EN( Rate ) 	         COPCTL_CR = Rate & 0x07
+
+// disables the watchdog timer
+// writes a value to the divider register, effectively disabling it                                 
+#define DEVICE_mWD_DIS( )     	    	 COPCTL_CR = 0
+
+// reset the watchdog timer
+#define DEVICE_mWD_RST()	        	 ARMCOP = WDKEY_FIRST; \
+                                    	 ARMCOP = WDKEY_SECOND
+
+// Shutdown the Device - in the HCS12 Case,  the CLKSEL register
+// specifies what clocks are disabled when this command is executed.
+#define DEVICE_mSHUTDOWN()        		 _asm( WAI )
+
+// trigger a Watchdog Reset
+#define DEVICE_mWD_TRIGGER()        	 DEVICE_mWD_EN( 1 ); \
+                                        for( ;; ) \
+                                    	   ARMCOP = 1
+
+// reset the Device - in the HCS12 case, timeout the Watchdog
+#define DEVICE_mCPU_RST()          		 COPCTL_CR = 1;\
+                                         for(;;)       \
+                                         ARMCOP = 0x0000
+
+
+#endif  // DEVICE_INCL

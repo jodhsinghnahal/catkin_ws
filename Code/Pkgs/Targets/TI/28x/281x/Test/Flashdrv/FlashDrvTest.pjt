@@ -1,0 +1,46 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="G:\Accurev\FieldPrgm\Software\Code\Common\Targets\TI\28x\Test\FlashDrv\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\2811\Lib\Flash2811_API_V100.lib"
+Source="..\..\2812\Lib\Flash2812_API_V100.lib"
+Source="..\..\Src\DSP281x_CodeStartBranch.asm"
+Source="..\..\Src\DSP281x_DefaultIsr.c"
+Source="..\..\Src\DSP281x_GlobalVariableDefs.c"
+Source="..\..\Src\DSP281x_PieCtrl.c"
+Source="..\..\Src\DSP281x_PieVect.c"
+Source="..\..\Src\DSP281x_usDelay.asm"
+Source="..\..\Src\FlashDrv.c"
+Source="FlashDrvMain.c"
+Source="FlashKey.asm"
+Source="init.c"
+Source="..\..\Make\DSP281x_Headers_nonBIOS.cmd"
+Source="Flash2812_EzDSP.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"G:\Accurev\FieldPrgm\Software\Code\Common\Targets\TI\28x\Test\FlashDrv\Debug" -i"../Inc" -i"../../../../Inc" -i"../../../../../Inc" -i"../../Inc" -i"../Test/FlashDrv" -i"../../../Inc" -i"." -d"_DEBUG" -d"LARGE_MODEL" -d"_16BIT_ARCHITECTURE" -d"CTRL_CONFIG_OPTION_6" -d"SPIDRV_UNIT_TEST" -d"GLBL_DTOR_EN" -d"PROCESSOR_F2812" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"G:\Accurev\FieldPrgm\Software\Code\Common\Targets\TI\28x\Test\FlashDrv\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -heap800 -m".\Debug\FlashDrvTest.map" -o".\Debug\FlashDrvTest.out" -stack800 -w -x -l"rts2800_ml.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\SpidrvTest.map" -o".\Release\SpidrvTest.out" -w -x
+

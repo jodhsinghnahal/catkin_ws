@@ -1,0 +1,48 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="$(NovaACB_Code_Root)\Pkgs\Targets\TI\281x\Test\PwmDrv\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\..\..\..\..\ACB\Src\Isra.asm"
+Source="..\..\..\..\..\..\ACB\Src\Isrc.c"
+Source="..\..\..\..\..\..\ACB\Src\PieVect.c"
+Source="..\..\..\..\..\OS\uCOSII\Targets\TI\281x\Bin\Debug\ucosII.lib"
+Source="..\..\Src\DSP281x_CodeStartBranch.asm"
+Source="..\..\Src\DSP281x_DefaultIsr.c"
+Source="..\..\Src\DSP281x_GlobalVariableDefs.c"
+Source="..\..\Src\DSP281x_PieCtrl.c"
+Source="..\..\Src\DSP281x_usDelay.asm"
+Source="..\..\Src\init.c"
+Source="..\..\Src\Pwmdrv.c"
+Source="..\..\Src\SysClk.c"
+Source="..\..\Src\Tmrdrv.c"
+Source="PwmDrvTest.c"
+Source="..\..\Make\DSP281x_Headers_nonBIOS.cmd"
+Source="..\..\Make\F2812_EzDSP_RAM_lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -pdv -fr".\Obj" -i"." -i"$(NovaACB_Code_Root)\Inc" -i"$(NovaACB_Target_Root)\Inc" -i"$(NovaACB_Target_Root)\Pkgs\Inc" -i"$(NovaACB_Pkgs_Root)\Targets\Inc" -i"$(NovaACB_Pkgs_Root)\Targets\TI\281x\Inc" -i"$(NovaACB_Target_Root)\Pkgs\HAL\Inc" -i"$(NovaACB_Pkgs_Root)\OS\uCOSII\Inc" -i"$(NovaACB_Pkgs_Root)\OS\uCOSII\Targets\TI\281x\Inc" -d"_DEBUG" -d"LARGE_MODEL" -d"_16BIT_ARCHITECTURE" -d"CTRL_CONFIG_OPTION_6" -d"FBT" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr".\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -heap400 -m".\Bin\PwmDrvTest.map" -o".\Bin\PwmDrvTest.out" -stack400 -w -x -i"$(NovaACB_TargetLib_Path)" -l"$(NovaACB_TargetLib_Path)\rts2800_ml.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\PwmDrvTest.map" -o".\Bin\Release\PwmDrvTest.out" -w -x
+

@@ -1,0 +1,74 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="G:\AccuRev_Working\Xanbus\Software\Code\Pkgs\Protocols\XanBus\Targets\TI\281x\Test\NoLibTest\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Src\candrv.c"
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Src\DSP281x_CodeStartBranch.asm"
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Src\DSP281x_DefaultIsr.c"
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Src\DSP281x_GlobalVariableDefs.c"
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Src\DSP281x_PieCtrl.c"
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Src\DSP281x_PieVect.c"
+Source="..\..\..\..\..\..\..\Targets\TI\Lib\rts2800_ml.lib"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbaddr.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbinit.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbmem.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbmsg.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbpack.c"
+Source="..\..\..\..\..\Common\Pkgs\API\Src\xbtimers.c"
+Source="..\..\..\..\..\Common\Pkgs\Iso\Src\isoaddr.c"
+Source="..\..\..\..\..\Common\Pkgs\Iso\Src\isopgn.c"
+Source="..\..\..\..\..\Common\Pkgs\Iso\Src\isotp.c"
+Source="..\..\..\..\..\Common\Pkgs\PgDrv\Src\pgdrv.c"
+Source="..\..\..\..\..\Common\Pkgs\PgDrv\Src\pgpack.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\canframe.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\dobholdr.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\PGNDOb.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\pgnrcvr.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\pgnxmtr.c"
+Source="..\..\..\..\..\Common\Pkgs\Stack\Src\tfxlib.c"
+Source="..\..\Pkgs\Shim\Src\canbuf.c"
+Source="..\..\Pkgs\Shim\Src\CDrive.c"
+Source="..\..\Pkgs\Shim\Src\cdrvapi.c"
+Source="..\..\Pkgs\Shim\Src\msghandl.c"
+Source="..\Src\init.c"
+Source="..\Src\SysClk.c"
+Source="..\Src\TestMain.c"
+Source="..\Src\testmsgs.c"
+Source="..\Src\xbpgntbl.c"
+Source="..\Src\xbplatform.c"
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Make\DSP281x_Headers_nonBIOS.cmd"
+Source="..\..\..\..\..\..\..\Targets\TI\281x\Make\F2812_EzDSP_RAM_lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"G:\AccuRev_Working\Xanbus\Software\Code\Pkgs\Protocols\XanBus\Targets\TI\281x\Test\NoLibTest\Debug" -i"$(XB_TEST)\ILIBLESS)" -i"$(XB_TEST)\Inc" -i"$(STD_INC)" -i"$(TARG_INC)" -i"$(281X_INC)" -i"$(XB_INC)" -i"$(XB_INT_INC)" -i"$(XB_TARG_INC)" -i"$(XB_281X_INC)" -d"_DEBUG" -d"LARGE_MODEL" -d"_16BIT_ARCHITECTURE" -d"XT_FAR=" -d"CTRL_CONFIG_OPTION_6" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"G:\AccuRev_Working\Xanbus\Software\Code\Pkgs\Protocols\XanBus\Targets\TI\281x\Test\NoLibTest\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\NoLibTest.map" -o".\Debug\NoLibTest.out" -stack400 -w -x
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\NoLibTest.map" -o".\Release\NoLibTest.out" -w -x
+
+["..\..\..\..\..\Common\Pkgs\PgDrv\Src\pgpack.c" Settings: "Debug"]
+Options="Compiler" +{-pdsr770}
+
+["..\Src\xbpgntbl.c" Settings: "Debug"]
+Options="Compiler" +{-pdsr770}
+

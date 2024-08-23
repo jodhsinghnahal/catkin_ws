@@ -1,0 +1,44 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="$(NovaACB_Code_Root)\Pkgs\Targets\TI\281x\Test\spidrv\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\Src\DSP281x_CodeStartBranch.asm"
+Source="..\..\Src\DSP281x_DefaultIsr.c"
+Source="..\..\Src\DSP281x_GlobalVariableDefs.c"
+Source="..\..\Src\DSP281x_PieCtrl.c"
+Source="..\..\Src\DSP281x_PieVect.c"
+Source="..\..\Src\DSP281x_usDelay.asm"
+Source="..\..\Src\init.c"
+Source="..\..\Src\spidrv.c"
+Source="..\..\Src\SysClk.c"
+Source="SpiDrvTest.c"
+Source="..\..\Make\DSP281x_Headers_nonBIOS.cmd"
+Source="..\..\Make\F2812_EzDSP_RAM_lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr".\Obj" -i"$(NovaACB_Code_Root)\Inc" -i"$(NovaACB_Target_Root)\Inc" -i"$(NovaACB_Target_Root)\Pkgs\HAL\Inc" -i"$(NovaACB_Target_Root)\Pkgs\Inc" -i"$(NovaACB_Pkgs_Root)\Targets\Inc" -i"$(NovaACB_Pkgs_Root)\Targets\TI\281x\Inc" -d"_DEBUG" -d"LARGE_MODEL" -d"_16BIT_ARCHITECTURE" -d"CTRL_CONFIG_OPTION_6" -d"SPIDRV_UNIT_TEST" -d"GLBL_DTOR_EN" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr".\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -heap800 -m".\Bin\SpidrvTest.map" -o".\Bin\SpidrvTest.out" -stack800 -w -x -i"$(NovaACB_TargetLib_Path)" -l"$(NovaACB_TargetLib_Path)\rts2800_ml.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\SpidrvTest.map" -o".\Release\SpidrvTest.out" -w -x
+

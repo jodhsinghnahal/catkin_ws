@@ -1,0 +1,29 @@
+
+// A GEL Function showcasing GELs ability 
+// to automate common tasks
+
+menuitem "CapDrv Unit Test";
+hotmenu Run()
+{		
+	// Call standard GEL library function to load project
+	GEL_ProjectLoad(".\\CapDrvTest.pjt");
+
+	// Call standard GEL library function to build project
+	GEL_ProjectBuild();
+	
+	// Call standard GEL library function to load the DSP program
+	GEL_Load(".\\Bin\\CapDrvTest.out");
+
+      GEL_WatchAdd("tzZeroX1Cap");
+      GEL_WatchAdd("tzZeroX2Cap");
+      GEL_WatchAdd("uiArray");
+      GEL_WatchAdd("uiFifostatus");
+      GEL_WatchAdd("uiArray2");
+      GEL_WatchAdd("uiFifostatus2");
+	
+	// Call standard GEL library function to run the project
+	GEL_Run();
+	
+	// Indicate that the GEL script is finished
+	GEL_TextOut("Finished Executing GEL Script!");			
+}

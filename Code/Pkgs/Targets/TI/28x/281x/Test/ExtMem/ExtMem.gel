@@ -1,0 +1,220 @@
+/*==============================================================================
+Copyright 2005 Xantrex International.  All rights reserved.
+
+This source file is proprietary to Xantrex International. and protected by
+copyright. The reproduction, in whole or in part, by anyone without the written
+approval of Xantrex is prohibited.
+
+FILE NAME:
+    ExtMem.gel
+
+PURPOSE:
+    
+
+FUNCTION(S):
+    Setup_Breakpoints  - sets up the conditional breakpoints and GEL windows
+    NonScrollingOutput - outputs to a specified GEL window
+    Close_Gel_Windows  - closes all GEL windows related to External Memory unit test
+
+NOTES:
+
+
+CHANGE HISTORY:
+$Log: $
+
+
+==============================================================================*/
+
+#define DO_NOT_APPEND               0   // Overwrite line in GEL window
+#define APPEND                      1   // Don't overwrite line in GEL window
+#define BLACK_TEXT                  0   // font is black
+#define BLUE_TEXT                   1   // font is blue
+#define RED_TEXT                    2   // font is red
+#define NON_SCROLLING_WINDOW        1   // window will not scroll
+#define GEL_WINDOW_NAME_1           "Test Results"
+#define NUM_OF_LINES_IN_WINDOW      5  // number of lines in window
+
+#define README						"Gel Loaded and Running"
+
+// Strings for the channel outputs.
+#define HEADER_TXT_1                "Memory Test Results"
+#define MAIN_OP_TXT_1_LN2		"Test: %d, Passed: %d, Failed: %d "
+
+#define FIRST_BLOCK                 0
+#define SECOND_BLOCK				(FIRST_BLOCK + 4)
+
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    StartUp
+
+PURPOSE:
+    The GEL scripts that are to be run when this file is loaded and started.
+
+INPUTS:
+    None
+
+OUTPUTS:
+    None
+
+NOTES:
+    Naming convention can't really apply here given the restrictions of the
+    GEL scripting language
+
+VERSION HISTORY:
+
+Version 1.00    Date: Feb 21, 2005     By: Trevor Monk
+    -   Created
+\*****************************************************************************/
+StartUp()
+{
+	GEL_CloseWindow(GEL_WINDOW_NAME_1);
+	GEL_OpenWindow(GEL_WINDOW_NAME_1, NON_SCROLLING_WINDOW, NUM_OF_LINES_IN_WINDOW);
+	Setup_Breakpoints();
+}
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    Setup_Breakpoints
+
+PURPOSE:
+    This function uses the GEL langauge to setup the neccessary conditional
+    breakpoints that allow us to track the memory test progress and have
+    a realtime-like interface.
+
+INPUTS:
+    None.
+
+OUTPUTS:
+    None.
+
+NOTES:
+    Unfortunately the lines below must be as long as they are.  They can not be
+    broken on to multiple lines since the second parameter passed to
+    GEL_BreakPtAdd must be one continuous string and putting it on to multiple
+    lines screws up the creation of the breakpoint in CCS.  Sorry. :)
+
+*******************************************************************************/
+hotmenu Setup_Breakpoints()
+{
+    // close any existing windows with the name GEL_WINDOW_NAME_1 before proceeding
+    GEL_CloseWindow(GEL_WINDOW_NAME_1);
+
+    // open a new window with the name GEL_WINDOW_NAME_n and make it non-scrolling
+    GEL_OpenWindow(GEL_WINDOW_NAME_1, NON_SCROLLING_WINDOW, NUM_OF_LINES_IN_WINDOW);
+
+    // delete any breakpoints at our break location so we don't start having
+    // duplicates gumming up our system
+    GEL_BreakPtDel(_MEM_TEST_DONE);
+
+    // Put a text title in the window
+    NonScrollingOutput(GEL_WINDOW_NAME_1, GEL_WINDOW_NAME_1, BLUE_TEXT, FIRST_BLOCK);
+    NonScrollingOutput(HEADER_TXT_1, GEL_WINDOW_NAME_1, BLUE_TEXT, FIRST_BLOCK);
+    
+    // this block sets up the breakpoints for outputting the register values
+    // and displaying the mapped channel
+    //
+    GEL_BreakPtAdd(_MEM_TEST_DONE, "NonScrollingOutput(MAIN_OP_TXT_1_LN2, GEL_WINDOW_NAME_1, RED_TEXT, 2, testnum, numPassed, numFailed )");
+}
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    NonScrollingOuput
+
+PURPOSE:
+    This is a generalized function created to allow the user to output any text
+    output to the GEL windows.
+
+INPUTS:
+    OutputString - The string to display for example: "Register 15: %d"
+    WindowName   - The name of the window to write to.
+    Color        - Color of the Text you want to use
+    Line         - What line to write to
+    Param1 - 3   - The paramaters required as defined by the OutputString
+
+OUTPUTS:
+    Always returns 0.
+
+NOTES:
+    The reason that this is used instead of just calling GEL_TextOut is because
+    we need to have a function that returns a value of 0 to the debugger so
+    that it will continue execution but still output the text.
+
+*******************************************************************************/
+NonScrollingOutput(OutputString, WindowName, Color, Line, Param1, Param2, Param3)
+{
+	int i;
+    GEL_TextOut(OutputString, WindowName, Color, ( Line + 1 ), DO_NOT_APPEND, Param1, Param2, Param3);
+    
+    //Give some time for the results to display.
+    i=0;
+    while( i < 4000 )
+    {
+        i++;
+    }
+    
+    return 0;
+}
+
+/*****************************************************************************\
+
+FUNCTION NAME:
+    OnFileLoaded
+
+PURPOSE:
+    The GEL scripts that are to be run when the output file is loaded
+
+INPUTS:
+    Passed by system.
+
+OUTPUTS:
+    None
+
+NOTES:
+    None
+
+VERSION HISTORY:
+
+Version 1.00    Date: Feb 21, 2005     By: Trevor Monk
+    -   Created
+\*****************************************************************************/
+OnFileLoaded(int nErrorCode, int bSymbolsOnly)
+{
+    GEL_Go(main);   // performa go main
+    GEL_Run();      // run the code
+} // OnFileLoaded
+
+
+/*******************************************************************************
+
+FUNCTION NAME:
+    Close_Gel_Windows
+
+PURPOSE:
+    This just closes the GEL window, GEL_WINDOW_NAME_1.
+
+INPUTS:
+    None.
+
+OUTPUTS:
+    None.
+
+NOTES:
+    This function was created since you can't just click the X button to get
+    rid of a GEL window in CCS, you actually have to close the window in order
+    to clear it.
+
+VERSION HISTORY:
+
+Version: 1.00  Date: Feb 21, 2005  By: Trevor Monk
+    - Created
+
+*******************************************************************************/
+hotmenu Close_Gel_Windows()
+{
+   GEL_CloseWindow(GEL_WINDOW_NAME_1);
+}
