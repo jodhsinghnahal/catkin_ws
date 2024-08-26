@@ -1,0 +1,9 @@
+prefix=/home/pi/usr
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: cpp_redis
+Description: C++11 Lightweight Redis client: async, thread-safe, no dependency, pipelining, multi-platform.
+Version: 4.4.0
+Libs: -L${libdir} -lcpp_redis
+Cflags: -I${includedir}

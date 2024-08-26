@@ -1,0 +1,12 @@
+/usr/local/lib/libtacopie.a
+/usr/local/lib/pkgconfig/tacopie.pc
+/usr/local/include/tacopie/tacopie
+/usr/local/include/tacopie/network/io_service.hpp
+/usr/local/include/tacopie/network/tcp_client.hpp
+/usr/local/include/tacopie/network/tcp_server.hpp
+/usr/local/include/tacopie/network/self_pipe.hpp
+/usr/local/include/tacopie/network/tcp_socket.hpp
+/usr/local/include/tacopie/utils/error.hpp
+/usr/local/include/tacopie/utils/thread_pool.hpp
+/usr/local/include/tacopie/utils/logger.hpp
+/usr/local/include/tacopie/utils/typedefs.hpp

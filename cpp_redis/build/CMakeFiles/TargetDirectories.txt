@@ -1,0 +1,14 @@
+/home/pi/catkin_ws/cpp_redis/build/CMakeFiles/install/strip.dir
+/home/pi/catkin_ws/cpp_redis/build/CMakeFiles/install.dir
+/home/pi/catkin_ws/cpp_redis/build/CMakeFiles/list_install_components.dir
+/home/pi/catkin_ws/cpp_redis/build/CMakeFiles/install/local.dir
+/home/pi/catkin_ws/cpp_redis/build/CMakeFiles/rebuild_cache.dir
+/home/pi/catkin_ws/cpp_redis/build/CMakeFiles/edit_cache.dir
+/home/pi/catkin_ws/cpp_redis/build/CMakeFiles/cpp_redis.dir
+/home/pi/catkin_ws/cpp_redis/build/tacopie/CMakeFiles/install/strip.dir
+/home/pi/catkin_ws/cpp_redis/build/tacopie/CMakeFiles/install.dir
+/home/pi/catkin_ws/cpp_redis/build/tacopie/CMakeFiles/list_install_components.dir
+/home/pi/catkin_ws/cpp_redis/build/tacopie/CMakeFiles/install/local.dir
+/home/pi/catkin_ws/cpp_redis/build/tacopie/CMakeFiles/rebuild_cache.dir
+/home/pi/catkin_ws/cpp_redis/build/tacopie/CMakeFiles/edit_cache.dir
+/home/pi/catkin_ws/cpp_redis/build/tacopie/CMakeFiles/tacopie.dir
