@@ -1,0 +1,7911 @@
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 0
+Malloc Fail: 0
+Heap Free Min: 32672
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32624
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 1
+Malloc Fail: 0
+Heap Free Min: 32576
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 4
+Malloc Fail: 0
+Heap Free Min: 30896
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 23
+Malloc Fail: 0
+Heap Free Min: 27104
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
+Rx Timeout: 0
+Tx Timeout: 0
+Late CTS: 0
+Late EOM: 0
+Late Abort: 0
+Late Xfer: 0
+Max Active Dobs: 33
+Malloc Fail: 0
+Heap Free Min: 24752
