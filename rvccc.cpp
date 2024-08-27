@@ -11,10 +11,10 @@
 // }
 #include <queue>
 #include <iostream>
-#define REDISCPP_HEADER_ONLY
+// #define REDISCPP_HEADER_ONLY
 
-#include "redis-cpp/stream.h"
-#include "redis-cpp/execute.h"
+// #include "redis-cpp/stream.h"
+// #include "redis-cpp/execute.h"
 
 // #include <redis-cpp/connection.h>
 // #include <redis-cpp/publish.h>
@@ -1295,9 +1295,6 @@ void checkCommStats() {
 
 int main( void )
 {    
-    cpp_redis::client client;
-        client.connect("127.0.0.1", 6379);
-
     struct sigaction sigint_action, sigterm_action;
 
     // Set up the SIGINT handler
